@@ -1,0 +1,25 @@
+
+.card {
+    min-height: 100%;
+    padding: 16pt;
+}
+
+.card-img-top {
+    width: 120pt;
+    height: 120pt;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pin-button {
+    position: absolute; /* set the position of the button */
+    bottom: 16pt; /* pin the button to the bottom of the container */
+    left: 50%; /* position the button in the center horizontally */
+    transform: translateX(-50%); /* center the button */
+    width: 90%; /* set the width of the button to the width of the container */
+}
+
+.card-text {
+    margin-bottom: 24pt;
+}

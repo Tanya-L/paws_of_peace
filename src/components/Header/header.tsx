@@ -13,28 +13,29 @@ export const Header = () => (
 
     <ul className="nav nav-pills">
       <li className="nav-item">
-        <a href="#" className="nav-link active" aria-current="page">
+        <a href="/" className="nav-link active" aria-current="page">
           Home
         </a>
       </li>
+
       <li className="nav-item">
-        <a href="#" className="nav-link">
-          Services
-        </a>
-      </li>
-      <li className="nav-item">
-        <a href="#" className="nav-link">
+        <a href="/faq" className="nav-link">
           FAQs
         </a>
       </li>
       <li className="nav-item">
-        <a href="#" className="nav-link">
+        <a href="/about" className="nav-link">
           About
         </a>
       </li>
       <li className="nav-item">
-        <a href="#" className="nav-link">
+        <a href="/contact" className="nav-link">
           Contact
+        </a>
+      </li>
+      <li className="nav-item">
+        <a href="/donate" className="nav-link">
+          Donate
         </a>
       </li>
     </ul>

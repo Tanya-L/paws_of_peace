@@ -2,10 +2,10 @@ import React from "react";
 
 interface CardProps {
   image: string;
-  title: string;
-  text: string;
-  buttonText: string;
-  buttonLink: string;
+  title?: string;
+  text?: string;
+  buttonText?: string;
+  buttonLink?: string;
 }
 
 export const Card = ({
@@ -20,7 +20,7 @@ export const Card = ({
     <div className="card-body">
       <h5 className="card-title">{title}</h5>
       <p className="card-text">{text}</p>
-      <a href={buttonLink} className="btn btn-primary">
+      <a href={buttonLink} className="btn btn-success pin-button">
         {buttonText}
       </a>
     </div>

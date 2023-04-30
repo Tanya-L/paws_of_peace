@@ -1,9 +1,11 @@
 import React from "react";
 import { Card } from "./Card";
-import needHelp from "../../Img/needHelp.png";
-import donateFood from "../../Img/donateFood.png";
-import swishNUF from "../../Img/swishNUF.png";
-export const Services = () => (
+import needHelp from "../Img/needHelp.png";
+import donateFood from "../Img/donateFood.png";
+import swishNUF from "../Img/swishNUF.png";
+import "./card.css";
+
+export const ServicesSection = () => (
   <div className="container text-center">
     <div className="row">
       <div className="col">
@@ -11,7 +13,7 @@ export const Services = () => (
           image={needHelp}
           title={"Потрібна допомога?"}
           text={
-            "Будь ласка, заповніть цю форму, і ми зробимо все можливе, щоб допомогти вам! "
+            "Заповніть цю форму, і ми зробимо все можливе, щоб допомогти вам! "
           }
           buttonText={"Заповнити форму"}
           buttonLink={"https://forms.gle/TepTjSrgbSpELcv66"}

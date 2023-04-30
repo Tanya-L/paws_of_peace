@@ -1,27 +1,28 @@
 import React from "react";
+import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import { Header } from "./components/Header/header";
-import { Footer } from "./components/footer";
-import { Team } from "./components/team";
-import { Services } from "./components/Services/services";
-import { Feature_benefits } from "./components/feature_benefits";
-import { Partners } from "./components/partners";
-import { Main } from "./components/Main/main";
-import { Faq } from "./components/faq";
+
+import { HomePage } from "./pages/Home";
+import { About } from "./pages/About";
+import { Contact } from "./pages/Contact";
+import { Donate } from "./pages/Donate";
+import { Faq } from "./pages/Faq";
+
 function App() {
   return (
-    <div className="container">
-      <Header />
-      <Main />
-      <Services />
-      <Partners />
-      <Feature_benefits />
-      <Faq />
-      <Team />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/donate" element={<Donate />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
