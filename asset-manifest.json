@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/paws_of_peace/static/css/main.ab80dcbe.css",
+    "main.js": "/paws_of_peace/static/js/main.53569df5.js",
+    "static/js/787.8f7d87d9.chunk.js": "/paws_of_peace/static/js/787.8f7d87d9.chunk.js",
+    "static/media/hub.png": "/paws_of_peace/static/media/hub.29ae6718c6f85fd7b23b.png",
+    "static/media/donation.png": "/paws_of_peace/static/media/donation.ce74b00f8d2199630f87.png",
+    "static/media/needHelp.png": "/paws_of_peace/static/media/needHelp.cf0b4f3459ae32feeb26.png",
+    "static/media/kattstallet.png": "/paws_of_peace/static/media/kattstallet.cded2fbc0ea2d24809c8.png",
+    "static/media/donateFood.png": "/paws_of_peace/static/media/donateFood.500ce02d93f7fe3cad24.png",
+    "static/media/catAndDog.png": "/paws_of_peace/static/media/catAndDog.99447b25b934b06101f3.png",
+    "static/media/gerb.png": "/paws_of_peace/static/media/gerb.871ed212cac4742dee5f.png",
+    "static/media/hundstallet.png": "/paws_of_peace/static/media/hundstallet.88cac126a3e7b73a7be2.png",
+    "static/media/logo.png": "/paws_of_peace/static/media/logo.e310e53f7884032c28b3.png",
+    "static/media/swishNUF.png": "/paws_of_peace/static/media/swishNUF.bd063e7c3c301ddf9546.png",
+    "static/media/fb.png": "/paws_of_peace/static/media/fb.be8b09eea2ddd5f4f42f.png",
+    "static/media/insta.svg": "/paws_of_peace/static/media/insta.f19834e51679ce931f126f2b526d11f5.svg",
+    "index.html": "/paws_of_peace/index.html",
+    "main.ab80dcbe.css.map": "/paws_of_peace/static/css/main.ab80dcbe.css.map",
+    "main.53569df5.js.map": "/paws_of_peace/static/js/main.53569df5.js.map",
+    "787.8f7d87d9.chunk.js.map": "/paws_of_peace/static/js/787.8f7d87d9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab80dcbe.css",
+    "static/js/main.53569df5.js"
+  ]
+}
