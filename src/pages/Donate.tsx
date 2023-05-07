@@ -6,7 +6,7 @@ function Donate() {
   return (
     <div className="container">
       <Header />
-      <Donate />
+      {/*<DonateSection />*/}
       <Footer />
     </div>
   );

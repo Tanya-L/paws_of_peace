@@ -6,7 +6,7 @@ import Facebook from "../Img/fb.png";
 export const Footer = () => (
   <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top footer">
     <div className="col-md-4 d-flex align-items-center">
-      <span className="mb-3 mb-md-0 text-body-secondary">
+      <span className="mb-3 mb-md-0 text-body-secondary ">
         © 2023 Paws of Peace
       </span>
     </div>
@@ -26,7 +26,10 @@ export const Footer = () => (
         </a>
       </li>
       <li className="ms-3">
-        <a className="text-body-secondary" href="#">
+        <a
+          className="text-body-secondary"
+          href="https://www.facebook.com/pawsofpeace"
+        >
           <img src={Facebook} width={32} />
         </a>
       </li>
