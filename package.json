@@ -2,7 +2,7 @@
   "name": "paws_of_peace",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://tanya-l.github.io/paws_of_peace",
+  "homepage": "https://pawsofpeace.se/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
