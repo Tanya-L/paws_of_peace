@@ -1,27 +1,38 @@
 {
   "files": {
-    "main.css": "/static/css/main.ab80dcbe.css",
-    "main.js": "/static/js/main.593e63ba.js",
+    "main.css": "/static/css/main.c950dfd4.css",
+    "main.js": "/static/js/main.d9c7439a.js",
     "static/js/787.8f7d87d9.chunk.js": "/static/js/787.8f7d87d9.chunk.js",
     "static/media/hub.png": "/static/media/hub.29ae6718c6f85fd7b23b.png",
     "static/media/donation.png": "/static/media/donation.ce74b00f8d2199630f87.png",
     "static/media/needHelp.png": "/static/media/needHelp.cf0b4f3459ae32feeb26.png",
     "static/media/kattstallet.png": "/static/media/kattstallet.cded2fbc0ea2d24809c8.png",
     "static/media/donateFood.png": "/static/media/donateFood.500ce02d93f7fe3cad24.png",
+    "static/media/Karina.png": "/static/media/Karina.23bc3bc4b7cff5f1d916.png",
+    "static/media/BMClogo.png": "/static/media/BMClogo.e25a84b95434602abe5a.png",
+    "static/media/PPlogo.png": "/static/media/PPlogo.9ce55b2e0ae1b874b943.png",
     "static/media/catAndDog.png": "/static/media/catAndDog.99447b25b934b06101f3.png",
     "static/media/gerb.png": "/static/media/gerb.871ed212cac4742dee5f.png",
+    "static/media/BG.png": "/static/media/BG.d0c1a950d20f3920d069.png",
     "static/media/hundstallet.png": "/static/media/hundstallet.88cac126a3e7b73a7be2.png",
+    "static/media/PoPquestion.png": "/static/media/PoPquestion.04f1a0db58de062aebbd.png",
     "static/media/logo.png": "/static/media/logo.e310e53f7884032c28b3.png",
     "static/media/swishNUF.png": "/static/media/swishNUF.bd063e7c3c301ddf9546.png",
+    "static/media/linktree.png": "/static/media/linktree.2cbb321533ad5fbdf7b3.png",
+    "static/media/Uliana.png": "/static/media/Uliana.59c29b787c2941356201.png",
     "static/media/fb.png": "/static/media/fb.be8b09eea2ddd5f4f42f.png",
-    "static/media/insta.svg": "/static/media/insta.f19834e51679ce931f126f2b526d11f5.svg",
+    "static/media/Tanya.png": "/static/media/Tanya.5655d2966bf67452e389.png",
+    "static/media/insta1.png": "/static/media/insta1.edb90ecc706a7a25542b.png",
+    "static/media/logo2.png": "/static/media/logo2.4632aef07c7dd69c2a39.png",
+    "static/media/linkedin.png": "/static/media/linkedin.aac2bd0e899c2f82cb7b.png",
+    "static/media/Julia.png": "/static/media/Julia.b9c648efaf797b2f42bb.png",
     "index.html": "/index.html",
-    "main.ab80dcbe.css.map": "/static/css/main.ab80dcbe.css.map",
-    "main.593e63ba.js.map": "/static/js/main.593e63ba.js.map",
+    "main.c950dfd4.css.map": "/static/css/main.c950dfd4.css.map",
+    "main.d9c7439a.js.map": "/static/js/main.d9c7439a.js.map",
     "787.8f7d87d9.chunk.js.map": "/static/js/787.8f7d87d9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ab80dcbe.css",
-    "static/js/main.593e63ba.js"
+    "static/css/main.c950dfd4.css",
+    "static/js/main.d9c7439a.js"
   ]
 }
