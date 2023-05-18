@@ -23,11 +23,15 @@
 }
 
 .footer {
-    background-color: aqua;
+    background-color: white;
 }
 
 .black-and-white {
     filter: grayscale(100%);
+}
+
+.gray {
+    filter: grayscale(100%) brightness(120%);
 }
 
 .button {
@@ -45,3 +49,17 @@
 .main {
     padding: 24pt;
 }
+
+ul.vertical-list {
+    list-style: none;
+}
+
+ul.vertical-list li img {
+    margin: 8pt 16pt 8pt 0;
+}
+ul.vertical-list li {
+    text-align: left;
+    margin-left: 20pt;
+}
+
+

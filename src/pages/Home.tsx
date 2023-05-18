@@ -1,8 +1,7 @@
 import React from "react";
 
-import { Header } from "../components/Header/header";
+import { Header } from "../components/header";
 import { Footer } from "../components/footer";
-import { TeamSection } from "../components/teamSection";
 import { ServicesSection } from "../components/servicesSection";
 import { FeatureBenefitsSection } from "../components/featureBenefitsSection";
 import { PartnersSection } from "../components/partnersSection";
@@ -13,13 +12,12 @@ function HomePage() {
   return (
     <div>
       <div className="container">
-        <Header />
+        <Header activeItem="home" />
         <MainSection />
         <ServicesSection />
         <FeatureBenefitsSection />
         <PartnersSection />
         <FAQSection />
-        <TeamSection />
         <Footer />
       </div>
     </div>

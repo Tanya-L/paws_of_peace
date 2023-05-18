@@ -8,10 +8,10 @@ export const FAQSection = () => (
         <div className="col">
           <h3>What is Paws of Peace?</h3>
           <p>
-            Paws of Peace is a non-profit organization that helps animal
-            shelters in Ukraine. We collect donations of pet food and supplies,
-            and send them to shelters in Ukraine. We also help with fundraising
-            and awareness campaigns for animal shelters in Ukraine.
+            Paws of Peace is a non-profit organization that helps animals in
+            Ukraine. We collect donations of pet food and supplies, and send
+            them to shelters in Ukraine. We also help with fundraising and
+            awareness campaigns for animal shelters in Ukraine.
           </p>
         </div>
         <div className="col">
@@ -26,7 +26,7 @@ export const FAQSection = () => (
           <h3>How can I donate?</h3>
           <p>
             You can donate pet food and supplies by sending them to our address
-            in Sweden. You can donate money by sending a Swish payment to our
+            in Stockholm. You can donate money by sending a Swish payment to our
             Swish number. You can also donate money by sending a bank transfer
             to our bank account.
           </p>

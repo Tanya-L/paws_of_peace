@@ -1,4 +1,5 @@
 import React from "react";
+// import Accordion from "./Accordion";
 
 export const FaqUkr = () => (
   <div>
@@ -17,6 +18,10 @@ export const FaqUkr = () => (
           волонтерством у вільний час і не отримуємо за це гроші. 100% всієї
           допомоги, яку отримуємо, ми направляємо в Україну.
         </p>
+        {/*<Accordion title="Section 1" content="Lorem ipsum dolor sit amet." />*/}
+        {/*<Accordion title="Section 2" content="Consectetur adipiscing elit." />*/}
+        {/*<Accordion title="Section 3" content="Sed do eiusmod tempor incididunt." />*/}
+
         <ol>
           <li className="fw-bold">Як отримати допомогу? </li>
           <p>

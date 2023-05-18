@@ -6,8 +6,7 @@ export const AboutUs = () => (
       <h1>About us</h1>
       <div className="row">
         <div className="col">
-          <h3>What is Paws of Peace?</h3>
-          <p>
+          <p className="text-start">
             Paws of Peace is a non-profit organization that helps animal
             shelters in Ukraine. We collect donations of pet food and supplies,
             and send them to shelters in Ukraine. We also help with fundraising

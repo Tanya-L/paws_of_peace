@@ -1,13 +1,14 @@
 import React from "react";
-import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
-
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 import "./App.css";
 
 import { HomePage } from "./pages/Home";
 import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
-import { Donate } from "./pages/Donate";
+import { DonateFood } from "./pages/DonateFood";
+import { DonateMoney } from "./pages/DonateMoney";
 import { Faq } from "./pages/Faq";
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/donate" element={<Donate />} />
+          <Route path="/donateMoney" element={<DonateMoney />} />
+          <Route path="/donateFood" element={<DonateFood />} />
         </Routes>
       </div>
     </BrowserRouter>

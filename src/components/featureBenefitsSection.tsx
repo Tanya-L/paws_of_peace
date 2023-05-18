@@ -1,6 +1,6 @@
 import React from "react";
 
-import donation from "../Img/donation.png";
+import donation from "../Img/donate/donation.png";
 
 export const FeatureBenefitsSection = () => (
   <div>

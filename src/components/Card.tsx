@@ -1,4 +1,5 @@
 import React from "react";
+import "./card.css";
 
 interface CardProps {
   image: string;
@@ -20,9 +21,11 @@ export const Card = ({
     <div className="card-body">
       <h5 className="card-title">{title}</h5>
       <p className="card-text">{text}</p>
-      <a href={buttonLink} className="btn btn-success pin-button">
-        {buttonText}
-      </a>
+      {buttonText && (
+        <a href={buttonLink} className="btn btn-success pin-button">
+          {buttonText}
+        </a>
+      )}
     </div>
   </div>
 );
