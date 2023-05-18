@@ -1,5 +1,6 @@
 import React from "react";
 import "./card.css";
+import { Link } from "react-router-dom";
 
 interface CardProps {
   image: string;
@@ -21,10 +22,10 @@ export const Card = ({
     <div className="card-body">
       <h5 className="card-title">{title}</h5>
       <p className="card-text">{text}</p>
-      {buttonText && (
-        <a href={buttonLink} className="btn btn-success pin-button">
+      {buttonText && buttonLink && (
+        <Link to={buttonLink} className="btn btn-success pin-button">
           {buttonText}
-        </a>
+        </Link>
       )}
     </div>
   </div>

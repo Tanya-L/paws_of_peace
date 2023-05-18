@@ -1,6 +1,8 @@
-import logo from "../Img/logo.png";
 import React, { FC } from "react";
+import { Link } from "react-router-dom";
+
 import "./header.css";
+import logo from "../Img/logo.png";
 
 interface HeaderProps {
   activeItem: string;
@@ -16,43 +18,43 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
   };
   return (
     <header className="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-      <a
-        href="/"
+      <Link
+        to="/"
         className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
       >
-        <img src={logo} width={48} />
-      </a>
+        <img src={logo} width={48} alt="Paws of Peace" />
+      </Link>
 
       <ul className="nav nav-pills">
         <li className="nav-item">
-          <a href="/" className={isActive("home")} aria-current="page">
+          <Link to="/" className={isActive("home")} aria-current="page">
             Home
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a href="/donateMoney" className={isActive("donateMoney")}>
+          <Link to="/donateMoney" className={isActive("donateMoney")}>
             Donate Money
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a href="/donateFood" className={isActive("donateFood")}>
+          <Link to="/donateFood" className={isActive("donateFood")}>
             Donate Supplies
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a href="/faq" className={isActive("faq")}>
+          <Link to="/faq" className={isActive("faq")}>
             FAQs
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a href="/about" className={isActive("about")}>
+          <Link to="/about" className={isActive("about")}>
             About
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a href="/contact" className={isActive("contact")}>
+          <Link to="/contact" className={isActive("contact")}>
             Contact
-          </a>
+          </Link>
         </li>
       </ul>
     </header>
