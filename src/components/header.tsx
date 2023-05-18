@@ -30,27 +30,27 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
           </a>
         </li>
         <li className="nav-item">
-          <a href="/DonateMoney" className={isActive("donateMoney")}>
+          <a href="/donateMoney" className={isActive("donateMoney")}>
             Donate Money
           </a>
         </li>
         <li className="nav-item">
-          <a href="/DonateFood" className={isActive("donateFood")}>
+          <a href="/donateFood" className={isActive("donateFood")}>
             Donate Supplies
           </a>
         </li>
         <li className="nav-item">
-          <a href="/Faq" className={isActive("faq")}>
+          <a href="/faq" className={isActive("faq")}>
             FAQs
           </a>
         </li>
         <li className="nav-item">
-          <a href="/About" className={isActive("about")}>
+          <a href="/about" className={isActive("about")}>
             About
           </a>
         </li>
         <li className="nav-item">
-          <a href="/Contact" className={isActive("contact")}>
+          <a href="/contact" className={isActive("contact")}>
             Contact
           </a>
         </li>
