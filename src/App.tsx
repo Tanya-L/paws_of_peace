@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 import { HomePage } from "./pages/Home";
-import { About } from "./pages/About";
+import { Team } from "./pages/About";
 import { Contact } from "./pages/Contact";
 import { DonateFood } from "./pages/DonateFood";
 import { DonateMoney } from "./pages/DonateMoney";
@@ -18,7 +18,7 @@ function App() {
         <div>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/team" element={<Team />} />
             <Route path="/faq" element={<Faq />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/donateMoney" element={<DonateMoney />} />

@@ -15,9 +15,9 @@ function HomePage() {
         <Header activeItem="home" />
         <MainSection />
         <ServicesSection />
-        <FeatureBenefitsSection />
+        {/*<FeatureBenefitsSection />*/}
         <PartnersSection />
-        <FAQSection />
+        {/*<FAQSection />*/}
         <Footer />
       </div>
     </div>

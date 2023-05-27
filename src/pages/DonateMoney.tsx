@@ -18,8 +18,7 @@ function DonateMoney() {
               image={swishNUF}
               title={"Donate by Swish"}
               text={
-                "For donations by Swish, please use the following number: 123 437 52 83. " +
-                "Label your donation with the message Paws of Peace. Only for Swedish supporters. Thank you!"
+                "Label your donation with the message `Paws of Peace`. Only for Swedish supporters. Thank you!"
               }
               buttonText={"Swish 123 437 52 83"}
               buttonLink={"https://www.swish.nu/"}
@@ -30,8 +29,7 @@ function DonateMoney() {
               image={BG}
               title={"BANKGIRO: 280 82 28"}
               text={
-                "For donations, please use the following number and label your donation with the message Paws of Peace." +
-                " Only for Swedish supporters. Thank you!"
+                "Label your donation with the message `Paws of Peace`. Only for Swedish supporters. Thank you!"
               }
               buttonText={"BANKGIRO: 280 8228 Nordic Ukraine Forum"}
               buttonLink={"https://nuforum.se/support-us/donate/"}
@@ -42,23 +40,19 @@ function DonateMoney() {
           <div className="col">
             <Card
               image={PPlogo}
-              title={"Donate by PayPal!"}
-              text={
-                "Want to help with a coin? For international supporters. Thank you!"
-              }
+              title={"Donate by PayPal"}
+              text={"For international supporters. Thank you!"}
               buttonText={"Donate by PayPal"}
               buttonLink={
-                "https://paypal.me/PawsOfPeace?country.x=SE&locale.x=sv_SE"
+                "https://www.paypal.com/donate/?hosted_button_id=CESU98W7BR43S"
               }
             />
           </div>
           <div className="col">
             <Card
               image={BMClogo}
-              title={"Donate in our ByMeACoffee fundraiser!"}
-              text={
-                "Want to help with a coin? For international supporters. Thank you!"
-              }
+              title={"Donate in our ByMeACoffee fundraiser"}
+              text={"For international supporters. Thank you!"}
               buttonText={"Donate in ByMeACoffee"}
               buttonLink={"https://www.buymeacoffee.com/TanyaL"}
             />

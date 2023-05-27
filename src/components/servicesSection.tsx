@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from "./Card";
 import needHelp from "../Img/donate/needHelp.png";
-import donateFood from "../Img/donate/donateFood.png";
+import dogfood from "../Img/donate/dogfood.png";
 import swishNUF from "../Img/donate/swishNUF.png";
 import "../App.css";
 
@@ -21,7 +21,7 @@ export const ServicesSection = () => (
       </div>
       <div className="col">
         <Card
-          image={donateFood}
+          image={dogfood}
           title={"Help Ukrainian animal shelters now!"}
           text={
             "Got some extra pet food or supplies laying around? Donate them to a shelter in Ukraine!"
@@ -33,8 +33,8 @@ export const ServicesSection = () => (
       <div className="col">
         <Card
           image={swishNUF}
-          title={"Donate Coins, Save Lives!"}
-          text={"Want to help with a coin? Donate to Paws of Peace today!"}
+          title={"Donate, Save Lives!"}
+          text={"Want to help with a money? Donate to Paws of Peace today!"}
           buttonText={"Donate Money"}
           buttonLink={"/donateMoney"}
         />

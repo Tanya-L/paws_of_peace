@@ -26,9 +26,11 @@ export const FAQSection = () => (
           <h3>How can I donate?</h3>
           <p>
             You can donate pet food and supplies by sending them to our address
-            in Stockholm. You can donate money by sending a Swish payment to our
-            Swish number. You can also donate money by sending a bank transfer
-            to our bank account.
+            in <b>Stockholm, Sveavägen 162B, Sundays 2-6pm.</b> You can donate
+            money by sending a Swish payment to our{" "}
+            <b>Swish number 123 437 52 83.</b>
+            You can also donate money by sending a bank transfer to our bank
+            account.
           </p>
         </div>
       </div>

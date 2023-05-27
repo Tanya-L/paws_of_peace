@@ -4,15 +4,15 @@ import { Footer } from "../components/footer";
 import { AboutUs } from "../components/about";
 import { TeamSection } from "../components/teamSection";
 
-function About() {
+function Team() {
   return (
     <div className="container">
       <Header activeItem="about" />
-      <AboutUs />
+      {/*<AboutUs />*/}
       <TeamSection />
       <Footer />
     </div>
   );
 }
 
-export { About };
+export { Team };

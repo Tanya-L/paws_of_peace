@@ -1,7 +1,5 @@
 import React from "react";
-import UnderConstraction from "../Img/Under-Construction.png";
 import { Card } from "./Card";
-import swishNUF from "../Img/donate/swishNUF.png";
 import logo2 from "../Img/logo2.png";
 import logo from "../Img/logo.png";
 import Tanya from "../Img/teamPhoto/Tanya.png";
@@ -22,10 +20,7 @@ export const TeamSection = () => {
                 <Card
                   image={Tanya}
                   title={"Tanya Lytovchenko"}
-                  text={
-                    "Co-Founder Paws of Peace, Project Manager, Social Media Manager, Web Developer, Volunteer Coordinator, " +
-                    "Fundraiser and more!"
-                  }
+                  text={"Co-Founder Paws of Peace"}
                   buttonText={"Contact Tanya"}
                   buttonLink={"https://www.linkedin.com/in/tanyalytovchenko/"}
                 />
@@ -34,9 +29,7 @@ export const TeamSection = () => {
                 <Card
                   image={Karina}
                   title={"Karina SH"}
-                  text={
-                    "Spokesperson Paws of Peace, Project Manager, Social Media Manager, Volunteer Coordinator, Fundraiser, Translator, and more!"
-                  }
+                  text={"Co-Founder Paws of Peace"}
                   buttonText={"Contact Karina"}
                   buttonLink={"https://www.linkedin.com/in/karina-shyrokykh/"}
                 />
@@ -48,9 +41,7 @@ export const TeamSection = () => {
                 <Card
                   image={Uliana}
                   title={"Uliana Kostiv"}
-                  text={
-                    "Volunteer, Social Media Coordinator, Fundraiser, Translator and more!"
-                  }
+                  text={"Volunteer"}
                   buttonText={"Contact Uliana"}
                   buttonLink={
                     "https://www.linkedin.com/in/uliana-kostiv-%F0%9F%87%BA%F0%9F%87%A6-681b14148/?trk=public_profile_browsemap&originalSubdomain=se"
@@ -61,9 +52,7 @@ export const TeamSection = () => {
                 <Card
                   image={TanyaK}
                   title={"Tanya Kozorez"}
-                  text={
-                    "Volunteer, Social Media Coordinator, Fundraiser and more!"
-                  }
+                  text={"Volunteer"}
                   buttonText={"Contact Tanya Kozorez"}
                   buttonLink={
                     "https://www.linkedin.com/in/tetiana-kozoriz-support/"
@@ -74,7 +63,7 @@ export const TeamSection = () => {
                 <Card
                   image={Julia}
                   title={"Julia A"}
-                  text={"Volunteer, Social Media Coordinator and more!"}
+                  text={"Volunteer"}
                   buttonText={"Contact Julia"}
                   buttonLink={"https://www.linkedin.com/in/julia-ah/"}
                 />
@@ -92,7 +81,7 @@ export const TeamSection = () => {
                   />
                 </div>
               </div>
-              <h1>Supporters Paws of Peace</h1>
+              <h1>Supporters of Paws of Peace</h1>
               <div className="container text-center">
                 <div className="row gray">
                   <div className="col">
@@ -106,6 +95,20 @@ export const TeamSection = () => {
                     <Card
                       image={logo2}
                       title={"Dmytro Lytovchenko"}
+                      text={"Supporter"}
+                    />
+                  </div>
+                  <div className="col">
+                    <Card
+                      image={logo2}
+                      title={"Nikolay Kotov"}
+                      text={"Supporter"}
+                    />
+                  </div>
+                  <div className="col">
+                    <Card
+                      image={logo2}
+                      title={"Max Giryk"}
                       text={"Supporter"}
                     />
                   </div>
