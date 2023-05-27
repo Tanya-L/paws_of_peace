@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 import { HomePage } from "./pages/Home";
-import { Team } from "./pages/About";
+import { Team } from "./pages/Team";
 import { Contact } from "./pages/Contact";
 import { DonateFood } from "./pages/DonateFood";
 import { DonateMoney } from "./pages/DonateMoney";

@@ -71,13 +71,13 @@ export const TeamSection = () => {
             </div>
             <div className="container text-center ">
               <div className="row bg-light main">
-                <h1>Becoming volunteer Paws of Peace</h1>
+                <h1>Becoming a volunteer in Paws of Peace</h1>
                 <div className="col">
                   <Card
                     image={logo}
                     title={"Do you want to join?"}
                     buttonText={"Contact us"}
-                    buttonLink={"/contact"}
+                    buttonLink={"https://forms.gle/19He16iWwyUtJ8Dm9"}
                   />
                 </div>
               </div>

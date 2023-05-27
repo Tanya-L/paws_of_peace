@@ -1,7 +1,6 @@
 import React from "react";
 import { Header } from "../components/header";
 import { Footer } from "../components/footer";
-import Maps from "../Img/maps.png";
 
 function DonateFood() {
   return (
@@ -33,7 +32,6 @@ function DonateFood() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
-              {/*<img src={Maps} />*/}
             </div>
             <h4 className="text-danger text-center p-5">
               100% of your donation goes towards aiding to help animals in

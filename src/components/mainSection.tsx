@@ -10,17 +10,14 @@ export const MainSection = () => (
         <div>
           <h1>We help animals in Ukraine</h1>
           <h4>Our mission</h4>
-          <div>
+          <div className="text-start">
             We support animal sterilization and vaccination projects in Ukraine,
             and also help provide homeless and abandoned animals with food and
-            medical treatment.
+            medical treatment. Join Paws of Peace in supporting animal shelters
+            in Ukraine by donating pet food, pet care products, or money to help
+            us make a difference.
           </div>
-          <div>
-            <p>
-              Join Paws of Peace in supporting animal shelters in Ukraine by
-              donating pet food, pet care products, or money to help us make a
-              difference.
-            </p>
+          <div className="text-start">
             <h3>About Paws of Peace</h3>
             <div className="text-start">
               We are a nonprofit organization based in Sweden dedicated to
@@ -38,14 +35,15 @@ export const MainSection = () => (
               make a significant difference in the lives of these animals.
             </div>
             <h3>How can you help?</h3>
-            <p>
+            <div className="text-start">
               You can donate pet food and supplies by sending them to our
-              address in <b>Stockholm, Sveavägen 162B, Sundays 2-6pm.</b> You
-              can donate money by sending a Swish payment to our{" "}
-              <b>Swish number 123 437 52 83.</b>
-              You can also donate money by sending a bank transfer to our bank
-              account.
-            </p>
+              address in <b>Stockholm, Sveavägen 162B, Sundays 14-18.</b>{" "}
+              <p>
+                You can donate money by sending a Swish payment to our
+                <b> Swish number 123 437 52 83.</b> You can also donate money by
+                sending a bank transfer to our bank account.
+              </p>
+            </div>
           </div>
         </div>
       </div>
