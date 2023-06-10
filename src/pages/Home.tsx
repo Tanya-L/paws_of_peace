@@ -13,6 +13,15 @@ function HomePage() {
         <Header activeItem="home" />
         <MainSection />
         <ServicesSection />
+        <div className="container text-center">
+          {/*<iframe*/}
+          {/*  src="https://goo.gl/maps/jR7fqn8ov32TiWfD8"*/}
+          {/*  width="600"*/}
+          {/*  height="450"*/}
+          {/*  loading="lazy"*/}
+          {/*  referrerPolicy="no-referrer-when-downgrade"*/}
+          {/*></iframe>*/}
+        </div>
         <PartnersSection />
         <Footer />
       </div>

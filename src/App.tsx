@@ -10,6 +10,7 @@ import { Contact } from "./pages/Contact";
 import { DonateFood } from "./pages/DonateFood";
 import { DonateMoney } from "./pages/DonateMoney";
 import { Faq } from "./pages/Faq";
+import { Reports } from "./pages/Reports";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/donateMoney" element={<DonateMoney />} />
             <Route path="/donateFood" element={<DonateFood />} />
+            <Route path="/reports" element={<Reports />} />
           </Routes>
         </div>
       </HashRouter>

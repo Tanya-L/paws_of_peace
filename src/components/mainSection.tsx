@@ -2,6 +2,9 @@ import React from "react";
 import cat3 from "../Img/cat3.png";
 import dog from "../Img/dog.png";
 import "../App.css";
+import Facebook from "../Img/contact/fb.png";
+import Instagram from "../Img/contact/insta1.png";
+import { Link } from "react-router-dom";
 
 export const MainSection = () => (
   <div className="container text-center bg-light main">
@@ -37,11 +40,32 @@ export const MainSection = () => (
             <h3>How can you help?</h3>
             <div className="text-start">
               You can donate pet food and supplies by sending them to our
-              address in <b>Stockholm, Sveavägen 162B, Sundays 14-18.</b>{" "}
+              address in <b>Stockholm, Sveavägen 162B, Sundays 14-18.</b>
               <p>
                 You can donate money by sending a Swish payment to our
                 <b> Swish number 123 437 52 83.</b> You can also donate money by
                 sending a bank transfer to our bank account.
+              </p>
+            </div>
+            <h3>Our activity reports</h3>
+            <div className="text-start">
+              Everyday activity report in our social media accounts: Facebook
+              page
+              <a
+                className="text-body-secondary p-1"
+                href="https://www.facebook.com/pawsofpeace"
+              >
+                <img src={Facebook} width={32} />
+              </a>
+              Instagram page
+              <a
+                className="text-body-secondary p-1"
+                href="https://www.instagram.com/thepawsofpeace/"
+              >
+                <img src={Instagram} className="black-and-white" width={32} />
+              </a>
+              <p>
+                <Link to="/reports">Monthly reports</Link>
               </p>
             </div>
           </div>
