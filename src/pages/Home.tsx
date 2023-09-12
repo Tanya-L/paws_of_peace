@@ -14,6 +14,7 @@ function HomePage() {
         <MainSection />
         <ServicesSection />
         <div className="container text-center">
+          {/* place for google maps*/}
           {/*<iframe*/}
           {/*  src="https://goo.gl/maps/jR7fqn8ov32TiWfD8"*/}
           {/*  width="600"*/}

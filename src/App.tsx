@@ -11,6 +11,7 @@ import { DonateFood } from "./pages/DonateFood";
 import { DonateMoney } from "./pages/DonateMoney";
 import { Faq } from "./pages/Faq";
 import { Reports } from "./pages/Reports";
+import { HeedHelp } from "./pages/HeedHelp";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/team" element={<Team />} />
             <Route path="/faq" element={<Faq />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/needHelp" element={<HeedHelp />} />
             <Route path="/donateMoney" element={<DonateMoney />} />
             <Route path="/donateFood" element={<DonateFood />} />
             <Route path="/reports" element={<Reports />} />

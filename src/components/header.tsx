@@ -32,6 +32,11 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
           </Link>
         </li>
         <li className="nav-item">
+          <Link to="/needHelp" className={isActive("needHelp")}>
+            Need help?
+          </Link>
+        </li>
+        <li className="nav-item">
           <Link to="/donateMoney" className={isActive("donateMoney")}>
             Donate Money
           </Link>

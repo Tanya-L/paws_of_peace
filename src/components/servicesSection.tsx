@@ -16,7 +16,7 @@ export const ServicesSection = () => (
             "Заповніть цю форму, і ми зробимо все можливе, щоб допомогти вам! "
           }
           buttonText={"Заповнити форму"}
-          buttonLink={"https://forms.gle/TepTjSrgbSpELcv66"}
+          buttonLink={"/needHelp"}
         />
       </div>
       <div className="col">
