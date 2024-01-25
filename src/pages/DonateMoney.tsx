@@ -1,7 +1,7 @@
 import React from "react";
 import { Header } from "../components/headerAndFooter/header";
 import { Footer } from "../components/headerAndFooter/footer";
-import { ButtonStyle, Card } from "../components/Card";
+import { Card } from "../components/Card";
 import swishNUF from "../Img/donate/swishNUF.png";
 import BMClogo from "../Img/donate/BMClogo.png";
 import BG from "../Img/donate/BG.png";
