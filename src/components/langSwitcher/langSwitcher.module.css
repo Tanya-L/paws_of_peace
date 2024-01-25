@@ -1,0 +1,14 @@
+img.langIcon {
+    height: 1.5em;
+    display: inline-flex;
+    margin-top: 0.5em;
+}
+
+img.inactive {
+    /*filter: saturate(50%);*/
+    opacity: 0.5;
+}
+
+img.inactive:hover {
+    opacity: 1;
+}

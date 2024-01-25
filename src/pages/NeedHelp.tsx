@@ -4,11 +4,31 @@ import { Footer } from "../components/headerAndFooter/footer";
 import { ButtonStyle, Card } from "../components/Card";
 import secondHelp from "../Img/donate/secondHelp.png";
 import needHelp from "../Img/donate/needHelp.png";
+import {
+  PawsLangStrings,
+  PawsLanguage,
+  useTranslate,
+} from "../components/langSwitcher/langSwitcher";
 
-const HeedHelp = () => (
-  <>
-    <Header activeItem="needHelp" />
-    <div className="container text-center">
+const strings: PawsLangStrings = {
+  [PawsLanguage.Ukr]: {
+    "eng.Disclaimer": "",
+  },
+  [PawsLanguage.Eng]: {
+    "eng.Disclaimer":
+      "Disclaimer: This page is to be used by those who are in need of help and located in Ukraine.",
+  },
+};
+
+const NeedHelp = () => {
+  const { translate } = useTranslate();
+
+  return (
+    <>
+      <Header activeItem="needHelp" />
+
+      <p>{translate(strings, "eng.Disclaimer")}</p>
+
       <div className="row">
         <div className="col">
           <Card
@@ -42,9 +62,9 @@ const HeedHelp = () => (
           />
         </div>
       </div>
-    </div>
-    <Footer />
-  </>
-);
+      <Footer />
+    </>
+  );
+};
 
-export { HeedHelp };
+export { NeedHelp };

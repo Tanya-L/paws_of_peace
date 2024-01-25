@@ -2,40 +2,72 @@ import React from "react";
 import { Header } from "../components/headerAndFooter/header";
 import { Footer } from "../components/headerAndFooter/footer";
 import { PawsMap } from "../components/main/pawsMap";
+import {
+  PawsLangStrings,
+  PawsLanguage,
+  useTranslate,
+} from "../components/langSwitcher/langSwitcher";
+import {
+  Paws100Percent,
+  PawsAddress,
+  PawsContactUs,
+  PawsOpeningHours,
+} from "../components/constants";
 
-const DonateFood = () => (
-  <>
-    <Header activeItem="donateFood" />
-    <div>
-      <div className="container text-center">
-        <h1>Donate food or/and supplies to Paws of Peace</h1>
-        <div className="text-start p-4">
-          We welcome donations of
-          <ul>
-            <li>animal food 🐾 (new, open, slightly expired)</li>
-            <li>cages</li>
-            <li>pet blankets</li>
-            <li>toys (old, new)</li>{" "}
-            <li>medications (deworming, medical collars, etc.)</li>
-          </ul>
-          <p className="fw-bold m-1">
-            You can bring your donations to Stockholm, Sveavägen 162, on Sundays
-            from 14:00 to 18:00 OR contact us to arrange a pick-up.
-          </p>
-          <p>
-            ❓ If you have any questions, please don't hesitate to send us a
-            message.
-          </p>
-          <PawsMap />
-          <h4 className="text-danger text-center p-5">
-            100% of your donation goes towards aiding to help animals in
-            war-affected zones of Ukraine.
-          </h4>
+const strings: PawsLangStrings = {
+  [PawsLanguage.Ukr]: {
+    "donate.title": "Пожертвувати їжу та речі для тварин",
+    "We welcome donations of": "Ми приймаємо негрошові пожертви",
+    "list.animal food":
+      "їжа для тварин 🐾 (нова, відкрита, навіть дещо прострочена)",
+    cages: "клітки (переноски) для тварин",
+    "pet blankets": "ковдрочки для укривання",
+    "toys (old, new)": "іграшки (старі та нові)",
+    "list.medications":
+      "ліки та медичні засоби, що не потребують рецепту лікаря (протипаразитарні засоби, медичні ошийники тощо)",
+    "text.bringWhere":
+      "Приносьте та привозьте пожертви на нашу адресу, або можна домовитись про місце і час, де ми заберемо вашу пожертву (якщо багато речей).",
+  },
+  [PawsLanguage.Eng]: {
+    "donate.title": "Donate food and supplies to Paws of Peace",
+    "list.animal food": "animal food 🐾 (new, open, slightly expired)",
+    "list.medications": "medications (deworming, medical collars, etc.)",
+    "text.bringWhere":
+      "You can bring your donations to our location OR contact us to arrange a pick-up.",
+  },
+};
+
+const DonateFood = () => {
+  const { translate } = useTranslate();
+
+  return (
+    <>
+      <Header activeItem="donateFood" />
+      <div>
+        <div className="container text-center">
+          <h1>{translate(strings, "donate.title")}</h1>
+          <div className="text-start p-4">
+            {translate(strings, "We welcome donations of")}
+            <ul>
+              <li>{translate(strings, "list.animal food")}</li>
+              <li>{translate(strings, "cages")}</li>
+              <li>{translate(strings, "pet blankets")}</li>
+              <li>{translate(strings, "toys (old, new)")}</li>{" "}
+              <li>{translate(strings, "list.medications")}</li>
+            </ul>
+            <p className="fw-bold m-1">
+              {translate(strings, "text.bringWhere")} <PawsAddress />{" "}
+              <PawsOpeningHours />
+            </p>
+            <PawsContactUs />
+            <PawsMap />
+            <Paws100Percent />
+          </div>
         </div>
       </div>
-    </div>
-    <Footer />
-  </>
-);
+      <Footer />
+    </>
+  );
+};
 
 export { DonateFood };
