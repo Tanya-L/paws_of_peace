@@ -26,14 +26,6 @@
     background-color: white;
 }
 
-.black-and-white {
-    filter: grayscale(100%);
-}
-
-.gray {
-    filter: grayscale(100%) brightness(120%);
-}
-
 .button {
     background-color: #4CAF50;
     /* Green */
@@ -62,4 +54,19 @@ ul.vertical-list li {
     margin-left: 20pt;
 }
 
+.gray {
+    filter: grayscale(100%) brightness(120%);
+}
 
+/*
+* Image Styles
+*/
+
+img.textInline {
+    display: inline-block;
+    width: 1.5em;
+}
+
+img.black-and-white {
+    filter: grayscale(100%);
+}

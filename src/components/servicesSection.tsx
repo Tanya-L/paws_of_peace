@@ -3,7 +3,7 @@ import { Card } from "./Card";
 import needHelp from "../Img/donate/needHelp.png";
 import dogfood from "../Img/donate/dogfood.png";
 import swishNUF from "../Img/donate/swishNUF.png";
-import "../App.css";
+import "../App.module.css";
 
 export const ServicesSection = () => (
   <div className="container text-center">
