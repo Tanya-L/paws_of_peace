@@ -5,7 +5,7 @@ import styles from "./Main.module.css";
 export const PawsMap = () => (
   <>
     <iframe
-      className="mt-4"
+      className="mt-1"
       width="100%"
       height="350"
       src="https://www.openstreetmap.org/export/embed.html?bbox=18.048208951950077%2C59.349312133306896%2C18.05640578269959%2C59.35294921548818&amp;layer=mapnik&amp;marker=59.35113345775011%2C18.052307198870494"

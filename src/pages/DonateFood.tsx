@@ -10,7 +10,7 @@ import {
 import {
   Paws100Percent,
   PawsAddress,
-  PawsContactUs,
+  PawsIfYouHaveQuestions,
   PawsOpeningHours,
 } from "../components/constants";
 
@@ -38,28 +38,28 @@ const strings: PawsLangStrings = {
 };
 
 const DonateFood = () => {
-  const { translate } = useTranslate();
+  const { translate } = useTranslate(strings);
 
   return (
     <>
       <Header activeItem="donateFood" />
       <div>
         <div className="container text-center">
-          <h1>{translate(strings, "donate.title")}</h1>
+          <h1>{translate("donate.title")}</h1>
           <div className="text-start p-4">
-            {translate(strings, "We welcome donations of")}
+            {translate("We welcome donations of")}
             <ul>
-              <li>{translate(strings, "list.animal food")}</li>
-              <li>{translate(strings, "cages")}</li>
-              <li>{translate(strings, "pet blankets")}</li>
-              <li>{translate(strings, "toys (old, new)")}</li>{" "}
-              <li>{translate(strings, "list.medications")}</li>
+              <li>{translate("list.animal food")}</li>
+              <li>{translate("cages")}</li>
+              <li>{translate("pet blankets")}</li>
+              <li>{translate("toys (old, new)")}</li>{" "}
+              <li>{translate("list.medications")}</li>
             </ul>
             <p className="fw-bold m-1">
-              {translate(strings, "text.bringWhere")} <PawsAddress />{" "}
+              {translate("text.bringWhere")} <PawsAddress />{" "}
               <PawsOpeningHours />
             </p>
-            <PawsContactUs />
+            <PawsIfYouHaveQuestions />
             <PawsMap />
             <Paws100Percent />
           </div>

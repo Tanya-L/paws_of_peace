@@ -10,50 +10,72 @@ import {
   PawsFacebookFeed,
   PawsFacebookScript,
 } from "../components/PawsFacebookFeed";
+import {
+  PawsLangStrings,
+  PawsLanguage,
+  useTranslate,
+} from "../components/langSwitcher/langSwitcher";
+import { PawsIfYouHaveQuestions } from "../components/constants";
 
-const Reports = () => (
-  <>
-    <PawsFacebookScript />
+const strings: PawsLangStrings = {
+  [PawsLanguage.Ukr]: {
+    "Activity reports": "Звіти про діяльність",
+    "text.reports": "Ми публікуємо регулярні звіти про нашу діяльність",
+  },
+  [PawsLanguage.Eng]: {
+    "text.reports":
+      "We regularly publish activity reports in our social media accounts",
+  },
+};
 
-    <Header activeItem="reports" />
+const Reports = () => {
+  const { translate } = useTranslate(strings);
 
-    <h1>Our activity reports </h1>
+  return (
+    <>
+      <PawsFacebookScript />
 
-    <div className="text-start p-4">
-      <h3>Everyday activity reports</h3>
+      <Header activeItem="reports" />
+
+      <h1>{translate("Activity reports")}</h1>
       <div className="text-start">
         <div className="text-start">
-          Everyday activity report in our social media accounts: Facebook page
-          <a
-            className="text-body-secondary p-1"
-            href="https://www.facebook.com/pawsofpeace"
-          >
-            <img src={Facebook} className={styles.textInline} alt="Facebook" />
-          </a>
-          Instagram page
-          <a
-            className="text-body-secondary p-1"
-            href="https://www.instagram.com/thepawsofpeace/"
-          >
-            <img
-              src={Instagram}
-              className={classNames(styles.textInline, "black-and-white")}
-              alt="Instagram"
-            />
-          </a>
-          <p className="mt-4">
-            ❓ If you have any questions, please don't hesitate to send us a
-            message.
+          <p>
+            {translate("text.reports")}: Facebook
+            <a
+              className="text-body-secondary p-1"
+              href="https://www.facebook.com/pawsofpeace"
+            >
+              <img
+                src={Facebook}
+                className={styles.textInline}
+                alt="Facebook"
+              />
+            </a>
+            Instagram
+            <a
+              className="text-body-secondary p-1"
+              href="https://www.instagram.com/thepawsofpeace/"
+            >
+              <img
+                src={Instagram}
+                className={classNames(styles.textInline, "black-and-white")}
+                alt="Instagram"
+              />
+            </a>
+          </p>
+          <p>
+            <PawsIfYouHaveQuestions />
           </p>
         </div>
       </div>
       {/*<h3>Monthly activity reports</h3>*/}
       {/*<img src={Construction} alt={""} />*/}
 
-      <PawsFacebookFeed />
-    </div>
-    <Footer />
-  </>
-);
+      {/*<PawsFacebookFeed />*/}
+      <Footer />
+    </>
+  );
+};
 
 export { Reports };

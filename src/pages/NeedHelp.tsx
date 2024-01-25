@@ -21,13 +21,13 @@ const strings: PawsLangStrings = {
 };
 
 const NeedHelp = () => {
-  const { translate } = useTranslate();
+  const { translate } = useTranslate(strings);
 
   return (
     <>
       <Header activeItem="needHelp" />
 
-      <p>{translate(strings, "eng.Disclaimer")}</p>
+      <p>{translate("eng.Disclaimer")}</p>
 
       <div className="row">
         <div className="col">

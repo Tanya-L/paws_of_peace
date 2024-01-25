@@ -10,7 +10,8 @@ const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {
     "paws.address":
       "Ми знаходимося у м. Стокгольм, Швеція, вул. Sveavägen 162B.",
-    "paws.hours": "Ми відкриті кожної неділі, з 14:00 до 18:00.",
+    "paws.hours":
+      "Ми відкриті кожної неділі, з 14:00 до 18:00, інші дні лише за домовленістю для відвантаження відправлень.",
     "paws.contactUs":
       "Якщо у вас є питання, будь ласка, обов'язково надішліть нам повідомлення.",
     "paws.100%":
@@ -18,7 +19,8 @@ const strings: PawsLangStrings = {
   },
   [PawsLanguage.Eng]: {
     "paws.address": "We are located in Stockholm on Sveavägen 162B.",
-    "paws.hours": "We are open on Sundays, from 14:00 to 18:00.",
+    "paws.hours":
+      "We are open on Sundays, from 14:00 to 18:00, other days negotiable only for cargo handling.",
     "paws.contactUs":
       "If you have any questions, please don't hesitate to send us a message.",
     "paws.100%":
@@ -27,31 +29,29 @@ const strings: PawsLangStrings = {
 };
 
 export const PawsAddress = () => {
-  const { translate } = useTranslate();
-  return <>{translate(strings, "paws.address")}</>;
+  const { translate } = useTranslate(strings);
+  return <>{translate("paws.address")}</>;
 };
 
 export const PawsOpeningHours = () => {
-  const { translate } = useTranslate();
-  return <>{translate(strings, "paws.hours")}</>;
+  const { translate } = useTranslate(strings);
+  return <>{translate("paws.hours")}</>;
 };
 
 export const Paws100Percent = () => {
-  const { translate } = useTranslate();
+  const { translate } = useTranslate(strings);
   return (
     <>
-      <h4 className="text-danger text-center p-5">
-        {translate(strings, "paws.100%")}
-      </h4>
+      <h4 className="text-danger text-center p-5">{translate("paws.100%")}</h4>
     </>
   );
 };
 
-export const PawsContactUs = () => {
-  const { translate } = useTranslate();
+export const PawsIfYouHaveQuestions = () => {
+  const { translate } = useTranslate(strings);
   return (
     <>
-      ❓ <Link to="/contact">{translate(strings, "paws.contactUs")}</Link>
+      ❓ <Link to="/contact">{translate("paws.contactUs")}</Link>
     </>
   );
 };

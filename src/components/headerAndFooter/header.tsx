@@ -41,7 +41,7 @@ interface HeaderProps {
 }
 
 export const Header: FC<HeaderProps> = ({ activeItem }) => {
-  const { translate } = useTranslate();
+  const { translate } = useTranslate(strings);
 
   const isActive = (item: string): string => {
     if (activeItem === item) {
@@ -58,42 +58,42 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
       <ul className="nav nav-pills">
         <li className="nav-item">
           <Link to="/" className={isActive("home")} aria-current="page">
-            {translate(strings, "Home")}
+            {translate("Home")}
           </Link>
         </li>
         <li className="nav-item">
           <Link to="/needHelp" className={isActive("needHelp")}>
-            {translate(strings, "Need help?")}
+            {translate("Need help?")}
           </Link>
         </li>
         <li className="nav-item">
           <Link to="/donateMoney" className={isActive("donateMoney")}>
-            {translate(strings, "Donate Money")}
+            {translate("Donate Money")}
           </Link>
         </li>
         <li className="nav-item">
           <Link to="/donateFood" className={isActive("donateFood")}>
-            {translate(strings, "Donate Supplies")}
+            {translate("Donate Supplies")}
           </Link>
         </li>
         <li className="nav-item">
           <Link to="/faq" className={isActive("faq")}>
-            {translate(strings, "FAQs")}
+            {translate("FAQs")}
           </Link>
         </li>
         <li className="nav-item">
           <Link to="/team" className={isActive("team")}>
-            {translate(strings, "Team")}
+            {translate("Team")}
           </Link>
         </li>
         <li className="nav-item">
           <Link to="/reports" className={isActive("reports")}>
-            {translate(strings, "Reports")}
+            {translate("Reports")}
           </Link>
         </li>
         <li className="nav-item">
           <Link to="/contact" className={isActive("contact")}>
-            {translate(strings, "Contact")}
+            {translate("Contact")}
           </Link>
         </li>
         <li className="nav-item">

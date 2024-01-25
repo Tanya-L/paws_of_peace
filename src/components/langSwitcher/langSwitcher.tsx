@@ -24,11 +24,11 @@ export type PawsLangStrings = {
   [lang in PawsLanguage]: { [key: string]: string };
 };
 
-export const useTranslate = () => {
+export const useTranslate = (strings: PawsLangStrings) => {
   const [cookies] = useCookies(["lang"]);
   const lang = (cookies.lang as PawsLanguage) || PawsLanguage.Eng;
 
-  const translate = (strings: PawsLangStrings, key: string) => {
+  const translate = (key: string) => {
     const candidate = strings[lang][key];
     return candidate !== undefined ? candidate : key;
   };

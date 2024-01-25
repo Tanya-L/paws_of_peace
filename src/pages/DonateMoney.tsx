@@ -36,7 +36,7 @@ const strings: PawsLangStrings = {
 };
 
 const DonateMoney = () => {
-  const { translate } = useTranslate();
+  const { translate } = useTranslate(strings);
 
   return (
     <>
@@ -46,11 +46,11 @@ const DonateMoney = () => {
           <div className="col">
             <Card
               image={swishNUF}
-              title={translate(strings, "Donate by Swish")}
+              title={translate("Donate by Swish")}
               text={
                 <>
-                  {translate(strings, "swish.text")}: <code>Paws of Peace</code>
-                  . {translate(strings, "Thank you!")}
+                  {translate("swish.text")}: <code>Paws of Peace</code>.{" "}
+                  {translate("Thank you!")}
                 </>
               }
               buttonText={"Swish 123 437 52 83"}
@@ -60,11 +60,11 @@ const DonateMoney = () => {
           <div className="col">
             <Card
               image={BG}
-              title={translate(strings, "Donate by Bankgiro")}
+              title={translate("Donate by Bankgiro")}
               text={
                 <>
-                  {translate(strings, "bankgiro.text")}:{" "}
-                  <code>Paws of Peace</code>. {translate(strings, "Thank you!")}
+                  {translate("bankgiro.text")}: <code>Paws of Peace</code>.{" "}
+                  {translate("Thank you!")}
                 </>
               }
               buttonText={"BANKGIRO: 280 8228 Nordic Ukraine Forum"}
@@ -76,11 +76,11 @@ const DonateMoney = () => {
           <div className="col">
             <Card
               image={PPlogo}
-              title={translate(strings, "Donate by PayPal")}
+              title={translate("Donate by PayPal")}
               text={
                 <>
-                  {translate(strings, "For international supporters.")}{" "}
-                  {translate(strings, "Thank you!")}
+                  {translate("For international supporters.")}{" "}
+                  {translate("Thank you!")}
                 </>
               }
               buttonText={"PayPal"}
@@ -92,11 +92,11 @@ const DonateMoney = () => {
           <div className="col">
             <Card
               image={BMClogo}
-              title={translate(strings, "Donate in our ByMeACoffee fundraiser")}
+              title={translate("Donate in our ByMeACoffee fundraiser")}
               text={
                 <>
-                  {translate(strings, "For international supporters.")}{" "}
-                  {translate(strings, "Thank you!")}
+                  {translate("For international supporters.")}{" "}
+                  {translate("Thank you!")}
                 </>
               }
               buttonText={"ByMeACoffee"}

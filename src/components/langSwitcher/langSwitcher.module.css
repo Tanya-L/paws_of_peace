@@ -2,6 +2,7 @@ img.langIcon {
     height: 1.5em;
     display: inline-flex;
     margin-top: 0.5em;
+    margin-left: 0.5em;
 }
 
 img.inactive {
