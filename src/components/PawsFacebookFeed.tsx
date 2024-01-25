@@ -21,7 +21,7 @@ export const PawsFacebookFeed = () => {
   return (
     <div
       className="fb-page"
-      data-href="https://www.facebook.com/facebook"
+      data-href="https://www.facebook.com/pawsofpeace"
       data-tabs="timeline"
       data-width=""
       data-height=""
@@ -31,10 +31,10 @@ export const PawsFacebookFeed = () => {
       data-show-facepile="true"
     >
       <blockquote
-        cite="https://www.facebook.com/facebook"
+        cite="https://www.facebook.com/pawsofpeace"
         className="fb-xfbml-parse-ignore"
       >
-        <a href="https://www.facebook.com/facebook">Facebook</a>
+        <a href="https://www.facebook.com/pawsofpeace">Facebook</a>
       </blockquote>
     </div>
   );
