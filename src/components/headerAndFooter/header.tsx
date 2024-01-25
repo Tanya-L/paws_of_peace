@@ -1,19 +1,20 @@
 import React, { FC } from "react";
 import { Link } from "react-router-dom";
 
-import "./header.css";
-import logo from "../Img/logo.png";
+import styles from "./header.module.css";
+import logo from "../../Img/logo.png";
+import classNames from "classnames";
 
 interface HeaderProps {
   activeItem: string;
 }
 
 export const Header: FC<HeaderProps> = ({ activeItem }) => {
-  const isActive = (item: string) => {
+  const isActive = (item: string): string => {
     if (activeItem === item) {
-      return "nav-link active";
+      return classNames("btn", "btn-link", styles.navLink, styles.active);
     } else {
-      return "nav-link";
+      return classNames("btn", "btn-link", styles.navLink);
     }
   };
   return (

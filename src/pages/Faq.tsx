@@ -1,14 +1,14 @@
 import React from "react";
 import { FaqUkr } from "../components/faqUkr";
-import { Header } from "../components/header";
-import { Footer } from "../components/footer";
+import { Header } from "../components/headerAndFooter/header";
+import { Footer } from "../components/headerAndFooter/footer";
 
 const Faq = () => (
-  <div className="container">
+  <>
     <Header activeItem="faq" />
     <FaqUkr />
     <Footer />
-  </div>
+  </>
 );
 
 export { Faq };

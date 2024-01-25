@@ -1,12 +1,14 @@
 import React from "react";
-import { Header } from "../components/header";
-import { Footer } from "../components/footer";
+import { Header } from "../components/headerAndFooter/header";
+import { Footer } from "../components/headerAndFooter/footer";
 import Facebook from "../Img/contact/fb.png";
 import Instagram from "../Img/contact/insta1.png";
-import Construction from "../Img/Under-Construction.png";
+// import Construction from "../Img/Under-Construction.png";
+import styles from "../App.module.css";
+import classNames from "classnames";
 
 const Reports = () => (
-  <div className="container">
+  <>
     <Header activeItem="reports" />
     <div>
       <div className="container text-center">
@@ -21,28 +23,36 @@ const Reports = () => (
                 className="text-body-secondary p-1"
                 href="https://www.facebook.com/pawsofpeace"
               >
-                <img src={Facebook} width={32} />
+                <img
+                  src={Facebook}
+                  className={styles.textInline}
+                  alt="Facebook"
+                />
               </a>
               Instagram page
               <a
                 className="text-body-secondary p-1"
                 href="https://www.instagram.com/thepawsofpeace/"
               >
-                <img src={Instagram} className="black-and-white" width={32} />
+                <img
+                  src={Instagram}
+                  className={classNames(styles.textInline, "black-and-white")}
+                  alt="Instagram"
+                />
               </a>
-              <p>
+              <p className="mt-4">
                 ❓ If you have any questions, please don't hesitate to send us a
                 message.
               </p>
             </div>
           </div>
-          <h3>Monthly activity reports</h3>
-          <img src={Construction} alt={""} />
+          {/*<h3>Monthly activity reports</h3>*/}
+          {/*<img src={Construction} alt={""} />*/}
         </div>
         <Footer />
       </div>
     </div>
-  </div>
+  </>
 );
 
 export { Reports };

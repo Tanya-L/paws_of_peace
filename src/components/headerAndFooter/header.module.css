@@ -1,8 +1,13 @@
-/* Link style*/
+/* Link style */
 a.nav-link {
     color: black;
 }
 
 a.active {
     background-color: green !important;
+    color: white;
+}
+
+a.active:hover {
+    color: white;
 }

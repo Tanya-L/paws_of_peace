@@ -16,6 +16,16 @@ export const PawsMap = () => (
         View Larger Map
       </a>
     </small>
+
+    {/*<div className="container text-center">*/}
+    {/*  <iframe*/}
+    {/*    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2033.9319460839704!2d18.05064343155672!3d59.350783795347844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9dc7a7492c15%3A0x5652629a8ef134f8!2sPaws%20Of%20Peace!5e0!3m2!1sen!2sse!4v1685167710001!5m2!1sen!2sse"*/}
+    {/*    width="600"*/}
+    {/*    height="450"*/}
+    {/*    loading="lazy"*/}
+    {/*    referrerPolicy="no-referrer-when-downgrade"*/}
+    {/*  ></iframe>*/}
+    {/*</div>*/}
   </>
 );
 

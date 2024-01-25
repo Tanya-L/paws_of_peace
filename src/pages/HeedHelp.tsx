@@ -1,12 +1,12 @@
 import React from "react";
-import { Header } from "../components/header";
-import { Footer } from "../components/footer";
-import { Card } from "../components/Card";
+import { Header } from "../components/headerAndFooter/header";
+import { Footer } from "../components/headerAndFooter/footer";
+import { ButtonStyle, Card } from "../components/Card";
 import secondHelp from "../Img/donate/secondHelp.png";
 import needHelp from "../Img/donate/needHelp.png";
 
 const HeedHelp = () => (
-  <div className="container">
+  <>
     <Header activeItem="needHelp" />
     <div className="container text-center">
       <div className="row">
@@ -15,9 +15,14 @@ const HeedHelp = () => (
             image={needHelp}
             title={"Потрібна допомога?"}
             text={
-              "Заповніть цю форму, і ми зробимо все можливе, щоб допомогти вам! ПЕРШЕ ЗВЕРНЕННЯ!!!!"
+              <>
+                Заповніть цю форму, і ми зробимо все можливе, щоб допомогти вам!
+                Ця форма лише для тих, хто звертається вперше. Якщо ви вже
+                отримували допомогу від нас, скористайтеся, будь ласка, другою
+                формою.
+              </>
             }
-            buttonText={"Заповнити форму"}
+            buttonText={"Перше звернення"}
             buttonLink={"https://forms.gle/TepTjSrgbSpELcv66"}
           />
         </div>
@@ -26,16 +31,20 @@ const HeedHelp = () => (
             image={secondHelp}
             title={"Знову потрібна допомога?"}
             text={
-              "Потребуете ПОВТОРНОi ДОПОМОГИ? Заповніть цю форму, і ми зробимо все можливе, щоб допомогти вам! "
+              <>
+                Потребуете ПОВТОРНОЇ ДОПОМОГИ? Заповніть цю форму, і ми зробимо
+                все можливе, щоб допомогти вам!
+              </>
             }
-            buttonText={"Заповнити форму"}
+            buttonText={"Друге та наступні звернення"}
             buttonLink={"https://forms.gle/TCMFJPBTPqFLbakz9"}
+            buttonStyle={ButtonStyle.Primary}
           />
         </div>
       </div>
     </div>
     <Footer />
-  </div>
+  </>
 );
 
 export { HeedHelp };

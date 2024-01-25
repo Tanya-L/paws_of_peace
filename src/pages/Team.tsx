@@ -1,14 +1,14 @@
 import React from "react";
-import { Header } from "../components/header";
-import { Footer } from "../components/footer";
+import { Header } from "../components/headerAndFooter/header";
+import { Footer } from "../components/headerAndFooter/footer";
 import { TeamSection } from "../components/teamSection";
 
 const Team = () => (
-  <div className="container">
-    <Header activeItem="about" />
+  <>
+    <Header activeItem="team" />
     <TeamSection />
     <Footer />
-  </div>
+  </>
 );
 
 export { Team };

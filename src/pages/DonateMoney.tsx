@@ -1,14 +1,14 @@
 import React from "react";
-import { Header } from "../components/header";
-import { Footer } from "../components/footer";
-import { Card } from "../components/Card";
+import { Header } from "../components/headerAndFooter/header";
+import { Footer } from "../components/headerAndFooter/footer";
+import { ButtonStyle, Card } from "../components/Card";
 import swishNUF from "../Img/donate/swishNUF.png";
 import BMClogo from "../Img/donate/BMClogo.png";
 import BG from "../Img/donate/BG.png";
 import PPlogo from "../Img/donate/PPlogo.png";
 
 const DonateMoney = () => (
-  <div className="container">
+  <>
     <Header activeItem="donateMoney" />
     <div className="container text-center">
       <div className="row">
@@ -17,7 +17,11 @@ const DonateMoney = () => (
             image={swishNUF}
             title={"Donate by Swish"}
             text={
-              "Label your donation with the message `Paws of Peace`. Only for Swedish supporters. Thank you!"
+              <>
+                Swish donations are handled by Nordic Ukraine Forum. Please
+                label your donation with the message <code>Paws of Peace</code>.
+                Thank you!
+              </>
             }
             buttonText={"Swish 123 437 52 83"}
             buttonLink={"https://www.swish.nu/"}
@@ -28,7 +32,11 @@ const DonateMoney = () => (
             image={BG}
             title={"BANKGIRO: 280 82 28"}
             text={
-              "Label your donation with the message `Paws of Peace`. Only for Swedish supporters. Thank you!"
+              <>
+                Bankgiro donations are handled by Nordic Ukraine Forum. Please
+                label your donation with the message <code>Paws of Peace</code>.
+                Thank you!
+              </>
             }
             buttonText={"BANKGIRO: 280 8228 Nordic Ukraine Forum"}
             buttonLink={"https://nuforum.se/support-us/donate/"}
@@ -59,7 +67,7 @@ const DonateMoney = () => (
       </div>
     </div>
     <Footer />
-  </div>
+  </>
 );
 
 export { DonateMoney };

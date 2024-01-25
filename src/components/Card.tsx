@@ -6,7 +6,7 @@ import classNames from "classnames";
 interface CardProps {
   image: string;
   title?: string;
-  text?: string;
+  text?: string | JSX.Element;
   buttonText?: string;
   buttonLink?: string;
   buttonStyle?: ButtonStyle;

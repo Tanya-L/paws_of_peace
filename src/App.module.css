@@ -62,11 +62,19 @@ ul.vertical-list li {
 * Image Styles
 */
 
+/* Для зображень в контенті */
 img.textInline {
     display: inline-block;
     width: 1.5em;
 }
 
+/* Для зображень в футері */
+img.footerInline {
+    display: inline-block;
+    width: 2em;
+}
+
+/* Для кольорових зображень, які мають бути чорно-білими */
 img.black-and-white {
     filter: grayscale(100%);
 }

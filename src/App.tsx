@@ -16,7 +16,7 @@ import { HeedHelp } from "./pages/HeedHelp";
 const App = () => (
   <React.StrictMode>
     <HashRouter>
-      <div>
+      <div className={"container"}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/team" element={<Team />} />

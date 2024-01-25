@@ -1,5 +1,5 @@
 import React from "react";
-import { Header } from "../components/header";
+import { Header } from "../components/headerAndFooter/header";
 import Email from "../Img/contact/mail.png";
 import Facebook from "../Img/contact/fb.png";
 import Instagram from "../Img/contact/insta1.png";
@@ -8,17 +8,15 @@ import Linktree from "../Img/contact/linktree.png";
 import styles from "../App.module.css";
 import classNames from "classnames";
 import { PawsMap } from "../components/main/pawsMap";
+import { Footer } from "../components/headerAndFooter/footer";
 
 const Contact = () => (
-  <div className="container">
+  <>
     <Header activeItem="contact" />
     <h1>Contact Paws of Peace</h1>
     <ul className="vertical-list list-unstyled">
       <li className="ms-3">
-        <a
-          className="text-body-secondary"
-          href="mailto:thepawsofpeace@gmail.com"
-        >
+        <a href="mailto:thepawsofpeace@gmail.com">
           <img
             src={Email}
             className={classNames(styles.textInline, styles.contactIcon)}
@@ -28,10 +26,7 @@ const Contact = () => (
         </a>
       </li>
       <li className="ms-3">
-        <a
-          className="text-body-secondary"
-          href="https://www.facebook.com/pawsofpeace"
-        >
+        <a href="https://www.facebook.com/pawsofpeace">
           <img
             src={Facebook}
             className={classNames(styles.textInline, styles.contactIcon)}
@@ -41,10 +36,7 @@ const Contact = () => (
         </a>
       </li>
       <li className="ms-3">
-        <a
-          className="text-body-secondary"
-          href="https://www.instagram.com/thepawsofpeace/"
-        >
+        <a href="https://www.instagram.com/thepawsofpeace/">
           <img
             className={classNames(
               styles.textInline,
@@ -58,10 +50,7 @@ const Contact = () => (
         </a>
       </li>
       <li className="ms-3">
-        <a
-          className="text-body-secondary"
-          href="https://www.linkedin.com/company/paws-of-peace/"
-        >
+        <a href="https://www.linkedin.com/company/paws-of-peace/">
           <img
             src={LinkedIn}
             className={classNames(styles.textInline, styles.contactIcon)}
@@ -71,7 +60,7 @@ const Contact = () => (
         </a>
       </li>
       <li className="ms-3">
-        <a className="text-body-secondary" href="https://linktr.ee/pawsofpeace">
+        <a href="https://linktr.ee/pawsofpeace">
           <img
             src={Linktree}
             className={classNames(styles.textInline, styles.contactIcon)}
@@ -88,7 +77,8 @@ const Contact = () => (
       18:00, other days negotiable only for cargo handling.
     </p>
     <PawsMap />
-  </div>
+    <Footer />
+  </>
 );
 
 export { Contact };
