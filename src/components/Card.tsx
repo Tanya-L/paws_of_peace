@@ -54,15 +54,19 @@ export const Card: FC<CardProps> = ({
       <h5 className={classNames("card-title", styles.pawsCardTitle)}>
         {title}
       </h5>
+
       <p className={classNames("card-text", styles.pawsCardText)}>{text}</p>
-      {buttonText && buttonLink && (
-        <Link
-          to={buttonLink}
-          className={classNames("btn", buttonStyle, "pin-button")}
-        >
-          {buttonText}
-        </Link>
-      )}
+
+      <div className="w-100 text-center">
+        {buttonText && buttonLink && (
+          <Link
+            to={buttonLink}
+            className={classNames("btn", buttonStyle, "pin-button")}
+          >
+            {buttonText}
+          </Link>
+        )}
+      </div>
     </div>
   </div>
 );

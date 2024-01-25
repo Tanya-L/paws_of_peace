@@ -124,9 +124,7 @@ export const TeamSection = () => {
         ))}
       </div>
 
-      <p></p>
-
-      <div className="row">
+      <div className="row mt-2">
         {board2.map((member) => (
           <div className="col">
             <Card
@@ -140,9 +138,7 @@ export const TeamSection = () => {
         ))}
       </div>
 
-      <p></p>
-
-      <div className="row bg-light main">
+      <div className="row bg-light main mt-2">
         <h3>{translate("Volunteers")}</h3>
         <Card
           image={logo}
@@ -152,9 +148,7 @@ export const TeamSection = () => {
         />
       </div>
 
-      <p></p>
-
-      <div className="row bg-light main">
+      <div className="row bg-light main mt-2">
         <h3>{translate("Support us through becoming a member")}</h3>
         <Card
           image={logo}

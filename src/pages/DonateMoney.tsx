@@ -41,68 +41,67 @@ const DonateMoney = () => {
   return (
     <>
       <Header activeItem="donateMoney" />
-      <div className="container text-center">
-        <div className="row">
-          <div className="col">
-            <Card
-              image={swishNUF}
-              title={translate("Donate by Swish")}
-              text={
-                <>
-                  {translate("swish.text")}: <code>Paws of Peace</code>.{" "}
-                  {translate("Thank you!")}
-                </>
-              }
-              buttonText={"Swish 123 437 52 83"}
-              buttonLink={"https://www.swish.nu/"}
-            />
-          </div>
-          <div className="col">
-            <Card
-              image={BG}
-              title={translate("Donate by Bankgiro")}
-              text={
-                <>
-                  {translate("bankgiro.text")}: <code>Paws of Peace</code>.{" "}
-                  {translate("Thank you!")}
-                </>
-              }
-              buttonText={"BANKGIRO: 280 8228 Nordic Ukraine Forum"}
-              buttonLink={"https://nuforum.se/support-us/donate/"}
-            />
-          </div>
+      <div className="row">
+        <div className="col">
+          <Card
+            image={swishNUF}
+            title={translate("Donate by Swish")}
+            text={
+              <>
+                {translate("swish.text")}: <code>Paws of Peace</code>.{" "}
+                {translate("Thank you!")}
+              </>
+            }
+            buttonText={"Swish 123 437 52 83"}
+            buttonLink={"https://www.swish.nu/"}
+          />
         </div>
-        <div className="row">
-          <div className="col">
-            <Card
-              image={PPlogo}
-              title={translate("Donate by PayPal")}
-              text={
-                <>
-                  {translate("For international supporters.")}{" "}
-                  {translate("Thank you!")}
-                </>
-              }
-              buttonText={"PayPal"}
-              buttonLink={
-                "https://www.paypal.com/donate/?hosted_button_id=CESU98W7BR43S"
-              }
-            />
-          </div>
-          <div className="col">
-            <Card
-              image={BMClogo}
-              title={translate("Donate in our ByMeACoffee fundraiser")}
-              text={
-                <>
-                  {translate("For international supporters.")}{" "}
-                  {translate("Thank you!")}
-                </>
-              }
-              buttonText={"ByMeACoffee"}
-              buttonLink={"https://www.buymeacoffee.com/TanyaL"}
-            />
-          </div>
+        <div className="col">
+          <Card
+            image={BG}
+            title={translate("Donate by Bankgiro")}
+            text={
+              <>
+                {translate("bankgiro.text")}: <code>Paws of Peace</code>.{" "}
+                {translate("Thank you!")}
+              </>
+            }
+            buttonText={"BANKGIRO: 280 8228 Nordic Ukraine Forum"}
+            buttonLink={"https://nuforum.se/support-us/donate/"}
+          />
+        </div>
+      </div>
+
+      <div className="row mt-2">
+        <div className="col">
+          <Card
+            image={PPlogo}
+            title={translate("Donate by PayPal")}
+            text={
+              <>
+                {translate("For international supporters.")}{" "}
+                {translate("Thank you!")}
+              </>
+            }
+            buttonText={"PayPal"}
+            buttonLink={
+              "https://www.paypal.com/donate/?hosted_button_id=CESU98W7BR43S"
+            }
+          />
+        </div>
+        <div className="col">
+          <Card
+            image={BMClogo}
+            title={translate("Donate in our ByMeACoffee fundraiser")}
+            text={
+              <>
+                {translate("For international supporters.")}{" "}
+                {translate("Thank you!")}
+              </>
+            }
+            buttonText={"ByMeACoffee"}
+            buttonLink={"https://www.buymeacoffee.com/TanyaL"}
+          />
         </div>
       </div>
       <Paws100Percent />

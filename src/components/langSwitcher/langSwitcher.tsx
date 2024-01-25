@@ -11,6 +11,11 @@ export enum PawsLanguage {
   Eng = "Eng",
 }
 
+const getBrowserLanguages = () => {
+  const languages = navigator.languages || [];
+  return languages.map((lang) => lang.split("-")[0]);
+};
+
 interface LangSwitcherSetProps {
   lang: PawsLanguage;
 }
@@ -25,8 +30,15 @@ export type PawsLangStrings = {
 };
 
 export const useTranslate = (strings: PawsLangStrings) => {
+  const browserLanguages = getBrowserLanguages();
+  const guessedLanguage =
+    browserLanguages.includes("uk") || browserLanguages.includes("ru")
+      ? PawsLanguage.Ukr
+      : PawsLanguage.Eng;
+  console.log(browserLanguages, guessedLanguage);
+
   const [cookies] = useCookies(["lang"]);
-  const lang = (cookies.lang as PawsLanguage) || PawsLanguage.Eng;
+  const lang = (cookies.lang as PawsLanguage) || guessedLanguage;
 
   const translate = (key: string) => {
     const candidate = strings[lang][key];
@@ -53,13 +65,6 @@ export const LangSwitcherSet: FC<LangSwitcherSetProps> = ({ lang }) => {
 export const LangSwitcher = () => {
   const [cookies] = useCookies(["lang"]);
   const location = useLocation();
-
-  // const selectLang = (lang: PawsLanguage) => {
-  //   if (cookies.lang !== lang) {
-  //     setCookie("lang", lang, { path: "/" });
-  //   }
-  //   return undefined;
-  // };
 
   return (
     <>
