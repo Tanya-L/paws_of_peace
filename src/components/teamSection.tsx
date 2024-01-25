@@ -1,123 +1,179 @@
 import React from "react";
-import { Card } from "./Card";
+import { ButtonStyle, Card } from "./Card";
 import logo2 from "../Img/logo2.png";
 import logo from "../Img/logo.png";
 import Tanya from "../Img/teamPhoto/Tanya.png";
 import TanyaK from "../Img/teamPhoto/TanyaK.png";
-import Uliana from "../Img/teamPhoto/Uliana.png";
 import Karina from "../Img/teamPhoto/Karina.png";
-import Julia from "../Img/teamPhoto/Julia.png";
+import {
+  PawsLangStrings,
+  PawsLanguage,
+  useTranslate,
+} from "./langSwitcher/langSwitcher";
+
+const strings: PawsLangStrings = {
+  [PawsLanguage.Ukr]: {
+    "team.title": "Правління Paws of Peace",
+    Contact: "Зв'язатися",
+    "Tanya Lytovchenko": "Тетяна Литовченко",
+    Chairman: "Голова правління",
+    "Tanya Kozoriz": "Тетяна Козоріз",
+    "Vice-chairman": "Заступник голови правління",
+    "Karina SH": "Каріна Широких",
+    Cashier: "Касир",
+    "Dmytro Lytovchenko": "Дмитро Литовченко",
+    "Board member": "Член правління",
+    "Rikku Bölske": "Рікку Бельске",
+    "Ksenia Kalmykova": "Ксенія Калмикова",
+    Volunteers: "Волонтери",
+    "Support us through becoming a member": "Підтримайте нас ставши учасником",
+    "text.board":
+      "Правління було обране на 2023 рік і може бути переобране або змінене на початку 2024 року. " +
+      "Всі учасники (які платять членський внесок) можуть приєднатися до щорічного засідання, " +
+      "голосувати, а також бути обраними в правління.",
+    "text.volunteer":
+      "Волонтерська робота в Paws of Peace — це безоплатна допомога, зазвичай це пересування " +
+      "та пакування коробок на адресі, де знаходиться Paws of Peace. Волонтери потрібні кожну неділю з 14 до 18. " +
+      "Хочете приєднатися до команди волонтерів?",
+    "Contact us": "Зв'яжіться з нами",
+    "text.members":
+      "Учасники Paws of Peace — це люди, які підтримують нашу місію та діяльність. " +
+      "Членський внесок: 250 кр/рік для дорослих або 100 кр/рік для біженців та студентів, " +
+      "які можуть не мати стабільного доходу. Учасники можуть брати участь у щорічних зборах та " +
+      "голосувати за членів правління на наступний рік.",
+  },
+  [PawsLanguage.Eng]: {
+    "team.title": "Paws of Peace Board",
+    "Karina SH": "Karina Shyrokykh",
+    "text.board":
+      "The current board is elected for 2023 and can be re-elected or changed early in 2024. " +
+      "All paying members can join the annual meeting, cast their votes and also can be elected as board members.",
+    "text.volunteer":
+      "Volunteer work is unpaid work at the Paws of Peace location, usually involves " +
+      "helping moving and packing the donations into boxes. We need volunteers available on Sundays " +
+      "from 14 to 18. Want to join the volunteer team?",
+    "text.members":
+      "Members of Paws of Peace are people who support our mission and activities. " +
+      "There is a membership fee: 250 kr/year for adults or 100 kr/year for refugees and students, " +
+      "who might not have a stable income. Members can join annual meetings and vote for the board members.",
+  },
+};
 
 export const TeamSection = () => {
-  return (
-    <div className="container">
-      <div>
-        <div className="container text-center">
-          <h1>Active Team Paws of Peace</h1>
-          <div className="container text-center">
-            <div className="row">
-              <div className="col">
-                <Card
-                  image={Tanya}
-                  title={"Tanya Lytovchenko"}
-                  text={"Co-Founder Paws of Peace"}
-                  buttonText={"Contact Tanya"}
-                  buttonLink={"https://www.linkedin.com/in/tanyalytovchenko/"}
-                />
-              </div>
-              <div className="col">
-                <Card
-                  image={Karina}
-                  title={"Karina SH"}
-                  text={"Co-Founder Paws of Peace"}
-                  buttonText={"Contact Karina"}
-                  buttonLink={"https://www.linkedin.com/in/karina-shyrokykh/"}
-                />
-              </div>
-            </div>
+  const { translate } = useTranslate(strings);
 
-            <div className="row">
-              <div className="col">
-                <Card
-                  image={Uliana}
-                  title={"Uliana Kostiv"}
-                  text={"Volunteer"}
-                  buttonText={"Contact Uliana"}
-                  buttonLink={
-                    "https://www.linkedin.com/in/uliana-kostiv-%F0%9F%87%BA%F0%9F%87%A6-681b14148/?trk=public_profile_browsemap&originalSubdomain=se"
-                  }
-                />
-              </div>
-              <div className="col">
-                <Card
-                  image={TanyaK}
-                  title={"Tanya Kozorez"}
-                  text={"Volunteer"}
-                  buttonText={"Contact Tanya Kozorez"}
-                  buttonLink={
-                    "https://www.linkedin.com/in/tetiana-kozoriz-support/"
-                  }
-                />
-              </div>
-              <div className="col">
-                <Card
-                  image={Julia}
-                  title={"Julia A"}
-                  text={"Volunteer"}
-                  buttonText={"Contact Julia"}
-                  buttonLink={"https://www.linkedin.com/in/julia-ah/"}
-                />
-              </div>
-            </div>
-            <div className="container text-center ">
-              <div className="row bg-light main">
-                <h1>Becoming a volunteer in Paws of Peace</h1>
-                <div className="col">
-                  <Card
-                    image={logo}
-                    title={"Do you want to join?"}
-                    buttonText={"Contact us"}
-                    buttonLink={"https://forms.gle/19He16iWwyUtJ8Dm9"}
-                  />
-                </div>
-              </div>
-              <h1>Supporters of Paws of Peace</h1>
-              <div className="container text-center">
-                <div className="row gray">
-                  <div className="col">
-                    <Card
-                      image={logo2}
-                      title={"Zane Neikena"}
-                      text={"Co-Founder Paws of Peace, supporter"}
-                    />
-                  </div>
-                  <div className="col">
-                    <Card
-                      image={logo2}
-                      title={"Dmytro Lytovchenko"}
-                      text={"Supporter"}
-                    />
-                  </div>
-                  <div className="col">
-                    <Card
-                      image={logo2}
-                      title={"Nikolay Kotov"}
-                      text={"Supporter"}
-                    />
-                  </div>
-                  <div className="col">
-                    <Card
-                      image={logo2}
-                      title={"Max Giryk"}
-                      text={"Supporter"}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+  const board = [
+    {
+      image: Tanya,
+      name: translate("Tanya Lytovchenko"),
+      position: translate("Chairman"),
+      contact: "https://www.linkedin.com/in/tanyalytovchenko/",
+    },
+    {
+      image: TanyaK,
+      name: translate("Tanya Kozoriz"),
+      position: translate("Vice-chairman"),
+      contact: "https://www.linkedin.com/in/tetiana-kozoriz-support/",
+    },
+    {
+      image: Karina,
+      name: translate("Karina SH"),
+      position: translate("Cashier"),
+      contact: "https://www.linkedin.com/in/karina-shyrokykh/",
+    },
+  ];
+  const board2 = [
+    {
+      image: undefined,
+      name: translate("Dmytro Lytovchenko"),
+      position: translate("Board member"),
+      contact: undefined,
+    },
+    {
+      image: undefined,
+      name: translate("Rikku Bölske"),
+      position: translate("Board member"),
+      contact: undefined,
+    },
+    {
+      image: undefined,
+      name: translate("Ksenia Kalmykova"),
+      position: translate("Board member"),
+      contact: undefined,
+    },
+  ];
+
+  return (
+    <>
+      <h3>{translate("team.title")}</h3>
+
+      <p>{translate("text.board")}</p>
+
+      <div className="row">
+        {board.map((member) => (
+          <div className="col">
+            <Card
+              image={member.image}
+              title={member.name}
+              text={member.position}
+              buttonText={translate("Contact")}
+              buttonLink={member.contact}
+              buttonStyle={ButtonStyle.Link}
+            />
           </div>
-        </div>
+        ))}
       </div>
-    </div>
+
+      <p></p>
+
+      <div className="row">
+        {board2.map((member) => (
+          <div className="col">
+            <Card
+              image={member.image}
+              title={member.name}
+              text={member.position}
+              buttonText={translate("Contact")}
+              buttonLink={member.contact}
+            />
+          </div>
+        ))}
+      </div>
+
+      <p></p>
+
+      <div className="row bg-light main">
+        <h3>{translate("Volunteers")}</h3>
+        <Card
+          image={logo}
+          title={translate("text.volunteer")}
+          buttonText={translate("Contact us")}
+          buttonLink={"https://forms.gle/19He16iWwyUtJ8Dm9"}
+        />
+      </div>
+
+      <p></p>
+
+      <div className="row bg-light main">
+        <h3>{translate("Support us through becoming a member")}</h3>
+        <Card
+          image={logo}
+          title={translate("text.members")}
+          buttonText={translate("Contact us")}
+          //buttonLink={"#"}
+        />
+      </div>
+
+      {/*<div className="container text-center">*/}
+      {/*  <div className="row gray">*/}
+      {/*    <div className="col">*/}
+      {/*      <Card image={logo2} title={"Nikolay Kotov"} text={"Supporter"} />*/}
+      {/*    </div>*/}
+      {/*    <div className="col">*/}
+      {/*      <Card image={logo2} title={"Max Giryk"} text={"Supporter"} />*/}
+      {/*    </div>*/}
+      {/*  </div>*/}
+      {/*</div>*/}
+    </>
   );
 };

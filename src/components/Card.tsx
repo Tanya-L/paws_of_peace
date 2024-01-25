@@ -1,10 +1,11 @@
 import React, { FC } from "react";
-import "./card.css";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
+import logo2 from "../Img/logo2.png";
+import styles from "./card.module.css";
 
 interface CardProps {
-  image: string;
+  image?: string;
   title?: string;
   text?: string | JSX.Element;
   buttonText?: string;
@@ -30,11 +31,30 @@ export const Card: FC<CardProps> = ({
   buttonLink,
   buttonStyle = ButtonStyle.Success,
 }) => (
-  <div className="card" style={{ width: "100%" }}>
-    <img src={image} className="card-img-top" alt="..." />
+  <div className={classNames("card", styles.pawsCard)}>
+    {image && (
+      <img
+        src={image}
+        className={classNames("card-img-top", styles.pawsCardImg)}
+        alt="..."
+      />
+    )}
+    {!image && (
+      <img
+        src={logo2}
+        className={classNames(
+          "card-img-top",
+          styles.pawsCardImg,
+          styles.desaturated
+        )}
+        alt="..."
+      />
+    )}
     <div className="card-body">
-      <h5 className="card-title">{title}</h5>
-      <p className="card-text">{text}</p>
+      <h5 className={classNames("card-title", styles.pawsCardTitle)}>
+        {title}
+      </h5>
+      <p className={classNames("card-text", styles.pawsCardText)}>{text}</p>
       {buttonText && buttonLink && (
         <Link
           to={buttonLink}

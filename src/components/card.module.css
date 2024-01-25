@@ -1,16 +1,19 @@
 /* Card style */
-.card {
+.pawsCard {
+    width: 100%;
     min-height: 100%;
-    padding: 16pt;
+    padding: 2em 2em 0 2em;
 }
 
-.card-img-top {
+img.pawsCardImg {
     width: 120pt;
     height: 120pt;
     object-fit: contain;
     margin-left: auto;
     margin-right: auto;
 }
+
+.pawsCardTitle {}
 
 .pin-button {
     position: absolute; /* set the position of the button */
@@ -20,6 +23,10 @@
     width: 90%; /* set the width of the button to the width of the container */
 }
 
-.card-text {
+.pawsCardText {
     margin-bottom: 24pt;
+}
+
+img.desaturated {
+    opacity: 0.25;
 }

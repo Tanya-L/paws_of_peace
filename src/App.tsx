@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route, BrowserRouter, HashRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import "./App.css";
 import "./App.module.css";
 
 import { HomePage } from "./pages/Home";
