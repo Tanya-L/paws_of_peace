@@ -1,11 +1,13 @@
 import React from "react";
-import cat3 from "../Img/cat3.png";
-import dog from "../Img/dog.png";
-import styles from "../App.module.css";
-import Facebook from "../Img/contact/fb.png";
-import Instagram from "../Img/contact/insta1.png";
+import cat3 from "../../Img/cat3.png";
+import dog from "../../Img/dog.png";
+import styles from "../../App.module.css";
+import Facebook from "../../Img/contact/fb.png";
+import Instagram from "../../Img/contact/insta1.png";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
+import { ButtonStyle } from "../Card";
+import { PawsMapImage } from "./pawsMap";
 
 export const MainSection = () => (
   <div className="container text-center bg-light main">
@@ -41,10 +43,15 @@ export const MainSection = () => (
 
           <h3>How can you help?</h3>
           <div className="text-start">
-            You can donate pet food and supplies by sending them to our address
-            in <b>Stockholm, Sveavägen 162B, Sundays 14-18.</b>
+            <Link to="/contact">
+              <PawsMapImage floatSmall={true} />
+            </Link>
+            You can <Link to="/donateFood"> donate pet food and supplies </Link>
+            by sending them to our address in{" "}
+            <b>Stockholm, Sveavägen 162B, Sundays 14-18.</b>
             <p>
-              You can donate money by sending a Swish payment to our
+              You can <Link to="/donateMoney">donate money</Link> by sending a
+              Swish payment to our
               <b> Swish number 123 437 52 83.</b> You can also donate money by
               sending a bank transfer to our bank account.
             </p>
@@ -82,10 +89,10 @@ export const MainSection = () => (
       </div>
       <div className="col-4">
         <div className="p-4">
-          <img src={cat3} width="100%" alt="Cat image" />
+          <img src={cat3} width="100%" alt="Cat" />
         </div>
         <div className="p-4">
-          <img src={dog} width="100%" alt="Dog image" />
+          <img src={dog} width="100%" alt="Dog" />
         </div>
       </div>
     </div>

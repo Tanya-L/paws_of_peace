@@ -70,3 +70,7 @@ img.textInline {
 img.black-and-white {
     filter: grayscale(100%);
 }
+
+img.contactIcon {
+    margin-right: 0.5em;
+}

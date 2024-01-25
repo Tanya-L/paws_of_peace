@@ -1,11 +1,11 @@
 import React from "react";
-import { ButtonStyle, Card } from "./Card";
-import gerb2 from "../Img/partners/gerb.png";
-import hundstallet from "../Img/partners/hundstallet.png";
-import kattstallet from "../Img/partners/kattstallet.png";
-import nuf from "../Img/partners/nuf.png";
-import hub from "../Img/partners/hub.png";
-import PoPquestion from "../Img/PoPquestion.png";
+import { ButtonStyle, Card } from "../Card";
+import gerb2 from "../../Img/partners/gerb.png";
+import hundstallet from "../../Img/partners/hundstallet.png";
+import kattstallet from "../../Img/partners/kattstallet.png";
+import nuf from "../../Img/partners/nuf.png";
+import hub from "../../Img/partners/hub.png";
+import PoPquestion from "../../Img/PoPquestion.png";
 
 export const PartnersSection = () => (
   <div>
