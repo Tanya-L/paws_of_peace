@@ -10,8 +10,10 @@ const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {
     "paws.address":
       "Ми знаходимося у м. Стокгольм, Швеція, вул. Sveavägen 162B.",
+    "paws.address.short": "Стокгольм, Швеція, Sveavägen 162B",
     "paws.hours":
       "Ми відкриті кожної неділі, з 14:00 до 18:00, інші дні лише за домовленістю для відвантаження відправлень.",
+    "paws.hours.short": "кожної неділі, 14:00-18:00",
     "paws.contactUs":
       "Якщо у вас є питання, будь ласка, обов'язково надішліть нам повідомлення.",
     "paws.100%":
@@ -19,8 +21,10 @@ const strings: PawsLangStrings = {
   },
   [PawsLanguage.Eng]: {
     "paws.address": "We are located in Stockholm on Sveavägen 162B.",
+    "paws.address.short": "Stockholm, Sveavägen 162B",
     "paws.hours":
       "We are open on Sundays, from 14:00 to 18:00, other days negotiable only for cargo handling.",
+    "paws.hours.short": "Sundays, 14:00-18:00",
     "paws.contactUs":
       "If you have any questions, please don't hesitate to send us a message.",
     "paws.100%":
@@ -36,6 +40,16 @@ export const PawsAddress = () => {
 export const PawsOpeningHours = () => {
   const { translate } = useTranslate(strings);
   return <>{translate("paws.hours")}</>;
+};
+
+export const PawsAddressShort = () => {
+  const { translate } = useTranslate(strings);
+  return <>{translate("paws.address.short")}</>;
+};
+
+export const PawsOpeningHoursShort = () => {
+  const { translate } = useTranslate(strings);
+  return <>{translate("paws.hours.short")}</>;
 };
 
 export const Paws100Percent = () => {
