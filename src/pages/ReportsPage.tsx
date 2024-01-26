@@ -15,7 +15,13 @@ import {
   PawsLanguage,
   useTranslate,
 } from "../components/langSwitcher/langSwitcher";
-import { PawsIfYouHaveQuestions } from "../components/constants";
+import {
+  PawsFacebook,
+  PawsIfYouHaveQuestions,
+  PawsInstagram,
+} from "../components/prefabs";
+import { pawsFacebook, pawsInstagram } from "../site-const";
+import { Link } from "react-router-dom";
 
 const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {
@@ -41,28 +47,7 @@ const ReportsPage = () => {
       <div className="text-start">
         <div className="text-start">
           <p>
-            {translate("text.reports")}: Facebook
-            <a
-              className="text-body-secondary p-1"
-              href="https://www.facebook.com/pawsofpeace"
-            >
-              <img
-                src={Facebook}
-                className={styles.textInline}
-                alt="Facebook"
-              />
-            </a>
-            Instagram
-            <a
-              className="text-body-secondary p-1"
-              href="https://www.instagram.com/thepawsofpeace/"
-            >
-              <img
-                src={Instagram}
-                className={classNames(styles.textInline, "black-and-white")}
-                alt="Instagram"
-              />
-            </a>
+            {translate("text.reports")}: <PawsFacebook />, <PawsInstagram />
           </p>
           <p>
             <PawsIfYouHaveQuestions />

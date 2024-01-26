@@ -11,7 +11,7 @@ import {
   PawsLanguage,
   useTranslate,
 } from "../components/langSwitcher/langSwitcher";
-import { Paws100Percent } from "../components/constants";
+import { Paws100Percent } from "../components/prefabs";
 
 const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {

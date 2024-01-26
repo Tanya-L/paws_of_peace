@@ -12,7 +12,12 @@ import {
   PawsLanguage,
   useTranslate,
 } from "../langSwitcher/langSwitcher";
-import { PawsAddressShort, PawsOpeningHoursShort } from "../constants";
+import {
+  PawsAddressShort,
+  PawsFacebook,
+  PawsInstagram,
+  PawsOpeningHoursShort,
+} from "../prefabs";
 import { PawsUrl } from "../../site-const";
 
 const strings: PawsLangStrings = {
@@ -109,28 +114,7 @@ export const MainSection = () => {
 
             <h3>{translate("Our activity reports")}</h3>
             <div className="text-start">
-              {translate("text.reports")}: Facebook
-              <a
-                className="text-body-secondary p-1"
-                href="https://www.facebook.com/pawsofpeace"
-              >
-                <img
-                  src={Facebook}
-                  className={styles.textInline}
-                  alt="Facebook"
-                />
-              </a>
-              Instagram
-              <a
-                className="text-body-secondary p-1"
-                href="https://www.instagram.com/thepawsofpeace/"
-              >
-                <img
-                  src={Instagram}
-                  className={classNames("black-and-white", styles.textInline)}
-                  alt="Instagram"
-                />
-              </a>
+              {translate("text.reports")}: <PawsFacebook />, <PawsInstagram />
               <p>
                 <Link to={PawsUrl.Reports}>{translate("See Reports")}</Link>
               </p>

@@ -9,6 +9,10 @@ import {
   PawsLanguage,
   useTranslate,
 } from "../components/langSwitcher/langSwitcher";
+import {
+  pawsRequestHelpAgainFormUrl,
+  pawsRequestHelpFormUrl,
+} from "../site-const";
 
 const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {
@@ -43,7 +47,7 @@ const HelpRequestPage = () => {
               </>
             }
             buttonText={"Перше звернення"}
-            buttonLink={"https://forms.gle/TepTjSrgbSpELcv66"}
+            buttonLink={pawsRequestHelpFormUrl}
           />
         </div>
         <div className="col">
@@ -57,7 +61,7 @@ const HelpRequestPage = () => {
               </>
             }
             buttonText={"Друге та наступні звернення"}
-            buttonLink={"https://forms.gle/TCMFJPBTPqFLbakz9"}
+            buttonLink={pawsRequestHelpAgainFormUrl}
             buttonStyle={ButtonStyle.Primary}
           />
         </div>

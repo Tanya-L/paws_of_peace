@@ -12,7 +12,7 @@ import {
   PawsAddress,
   PawsIfYouHaveQuestions,
   PawsOpeningHours,
-} from "../components/constants";
+} from "../components/prefabs";
 
 const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {

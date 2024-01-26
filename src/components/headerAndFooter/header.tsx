@@ -24,7 +24,7 @@ const strings: PawsLangStrings = {
     Reports: "Звіти",
     Contact: "Контакти",
   },
-  [PawsLanguage.Eng]: {},
+  [PawsLanguage.Eng]: { FAQs: "FAQ (in Ukrainian)" },
 };
 
 const Logo = () => {

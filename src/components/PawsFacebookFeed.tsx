@@ -1,4 +1,6 @@
 import React from "react";
+import { pawsFacebook } from "../site-const";
+import { Link } from "react-router-dom";
 
 export const PawsFacebookScript = () => {
   return (
@@ -21,7 +23,7 @@ export const PawsFacebookFeed = () => {
   return (
     <div
       className="fb-page"
-      data-href="https://www.facebook.com/pawsofpeace"
+      data-href={pawsFacebook}
       data-tabs="timeline"
       data-width=""
       data-height=""
@@ -30,11 +32,8 @@ export const PawsFacebookFeed = () => {
       data-hide-cover="false"
       data-show-facepile="true"
     >
-      <blockquote
-        cite="https://www.facebook.com/pawsofpeace"
-        className="fb-xfbml-parse-ignore"
-      >
-        <a href="https://www.facebook.com/pawsofpeace">Facebook</a>
+      <blockquote cite={pawsFacebook} className="fb-xfbml-parse-ignore">
+        <Link to={pawsFacebook}>Facebook</Link>
       </blockquote>
     </div>
   );

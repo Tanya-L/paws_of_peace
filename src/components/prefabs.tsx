@@ -5,7 +5,17 @@ import {
   useTranslate,
 } from "./langSwitcher/langSwitcher";
 import { Link } from "react-router-dom";
-import { PawsUrl } from "../site-const";
+import {
+  pawsFacebook,
+  pawsInstagram,
+  pawsRequestHelpAgainFormUrl,
+  pawsRequestHelpFormUrl,
+  PawsUrl,
+} from "../site-const";
+import Facebook from "../Img/contact/fb.png";
+import styles from "../App.module.css";
+import Instagram from "../Img/contact/insta1.png";
+import classNames from "classnames";
 
 const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {
@@ -19,6 +29,8 @@ const strings: PawsLangStrings = {
       "Якщо у вас є питання, будь ласка, обов'язково надішліть нам повідомлення.",
     "paws.100%":
       "100% вашої пожертви буде використано на допомогу тваринам та притулкам для тварин в регіонах України, які постраждали від війни.",
+    "link.requestHelp": "Форма допомоги (перше звернення)",
+    "link.requestHelpAgain": "Форма допомоги (друге та наступні звернення)",
   },
   [PawsLanguage.Eng]: {
     "paws.address": "We are located in Stockholm on Sveavägen 162B.",
@@ -30,6 +42,9 @@ const strings: PawsLangStrings = {
       "If you have any questions, please don't hesitate to send us a message.",
     "paws.100%":
       "100% of your donation goes towards helping animals and animal shelters in war-affected zones of Ukraine.",
+    "link.requestHelp": "Request Help form (first request)",
+    "link.requestHelpAgain":
+      "Request Help form (second and following requests)",
   },
 };
 
@@ -70,3 +85,40 @@ export const PawsIfYouHaveQuestions = () => {
     </>
   );
 };
+
+export const RequestHelpLink = () => {
+  const { translate } = useTranslate(strings);
+  return (
+    <Link to={pawsRequestHelpFormUrl}>{translate("link.requestHelp")}</Link>
+  );
+};
+export const RequestHelpAgainLink = () => {
+  const { translate } = useTranslate(strings);
+  return (
+    <Link to={pawsRequestHelpAgainFormUrl}>
+      {translate("link.requestHelpAgain")}
+    </Link>
+  );
+};
+
+export const PawsFacebook = () => (
+  <>
+    Facebook{" "}
+    <Link className="text-body-secondary p-1" to={pawsFacebook}>
+      <img src={Facebook} className={styles.textInline} alt="Facebook" />
+    </Link>
+  </>
+);
+
+export const PawsInstagram = () => (
+  <>
+    Instagram
+    <Link className="text-body-secondary p-1" to={pawsInstagram}>
+      <img
+        src={Instagram}
+        className={classNames("black-and-white", styles.textInline)}
+        alt="Instagram"
+      />
+    </Link>
+  </>
+);

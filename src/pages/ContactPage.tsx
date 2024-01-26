@@ -14,7 +14,9 @@ import {
   PawsLanguage,
   useTranslate,
 } from "../components/langSwitcher/langSwitcher";
-import { PawsAddress, PawsOpeningHours } from "../components/constants";
+import { PawsAddress, PawsOpeningHours } from "../components/prefabs";
+import { pawsInstagram, pawsLinkedin, pawsLinktree } from "../site-const";
+import { Link } from "react-router-dom";
 
 const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {
@@ -53,7 +55,7 @@ const ContactPage = () => {
           </a>
         </li>
         <li className="ms-3">
-          <a href="https://www.instagram.com/thepawsofpeace/">
+          <a href={pawsInstagram}>
             <img
               className={classNames(
                 styles.textInline,
@@ -67,24 +69,24 @@ const ContactPage = () => {
           </a>
         </li>
         <li className="ms-3">
-          <a href="https://www.linkedin.com/company/paws-of-peace/">
+          <Link to={pawsLinkedin}>
             <img
               src={LinkedIn}
               className={classNames(styles.textInline, styles.contactIcon)}
               alt="Linkedin"
             />
             paws-of-peace
-          </a>
+          </Link>
         </li>
         <li className="ms-3">
-          <a href="https://linktr.ee/pawsofpeace">
+          <Link to={pawsLinktree}>
             <img
               src={Linktree}
               className={classNames(styles.textInline, styles.contactIcon)}
               alt="Linktree"
             />
             pawsofpeace
-          </a>
+          </Link>
         </li>
       </ul>
 

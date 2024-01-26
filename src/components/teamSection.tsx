@@ -10,6 +10,7 @@ import {
   PawsLanguage,
   useTranslate,
 } from "./langSwitcher/langSwitcher";
+import { pawsVolunteerFormUrl } from "../site-const";
 
 const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {
@@ -144,7 +145,7 @@ export const TeamSection = () => {
           image={logo}
           title={translate("text.volunteer")}
           buttonText={translate("Contact us")}
-          buttonLink={"https://forms.gle/19He16iWwyUtJ8Dm9"}
+          buttonLink={pawsVolunteerFormUrl}
         />
       </div>
 

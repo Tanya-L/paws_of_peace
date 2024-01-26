@@ -7,6 +7,7 @@
 img.textInline {
     display: inline-block;
     width: 1.5em;
+    margin-bottom: 0.25em;
 }
 
 /* Для зображень в футері */

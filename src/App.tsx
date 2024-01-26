@@ -11,7 +11,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import "./App.module.css";
 
-import { HomePage } from "./pages/Home";
+import { HomePage } from "./pages/HomePage";
 import { TeamPage } from "./pages/TeamPage";
 import { ContactPage } from "./pages/ContactPage";
 import { DonateFoodPage } from "./pages/DonateFoodPage";
@@ -24,7 +24,7 @@ import {
   LangSwitcherPage,
   PawsLanguage,
 } from "./components/langSwitcher/langSwitcher";
-import ErrorPage from "./pages/error";
+import ErrorPage from "./pages/ErrorPage";
 
 import { PawsUrl } from "./site-const";
 

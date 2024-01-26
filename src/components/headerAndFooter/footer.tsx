@@ -10,6 +10,8 @@ import {
   PawsLanguage,
   useTranslate,
 } from "../langSwitcher/langSwitcher";
+import { pawsFacebook, pawsInstagram, pawsLinkedin } from "../../site-const";
+import { Link } from "react-router-dom";
 
 const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {
@@ -43,41 +45,32 @@ export const Footer = () => {
           </a>
         </li>
         <li className="ms-3">
-          <a
-            className="text-body-secondary"
-            href="https://www.facebook.com/pawsofpeace"
-          >
+          <Link className="text-body-secondary" to={pawsFacebook}>
             <img
               src={Facebook}
               className={styles.footerInline}
               alt="Facebook"
             />
-          </a>
+          </Link>
         </li>
         <li className="ms-3">
-          <a
-            className="text-body-secondary"
-            href="https://www.instagram.com/thepawsofpeace/"
-          >
+          <Link className="text-body-secondary" to={pawsInstagram}>
             <img
               src={Instagram}
               className={classNames("black-and-white", styles.footerInline)}
               alt="Instagram"
             />
-          </a>
+          </Link>
         </li>
 
         <li className="ms-3">
-          <a
-            className="text-body-secondary"
-            href="https://www.linkedin.com/company/paws-of-peace/"
-          >
+          <Link className="text-body-secondary" to={pawsLinkedin}>
             <img
               src={LinkedIn}
               className={styles.footerInline}
               alt="Linkedin"
             />
-          </a>
+          </Link>
         </li>
       </ul>
     </footer>
