@@ -37,7 +37,7 @@ const strings: PawsLangStrings = {
   },
 };
 
-const DonateFood = () => {
+const DonateFoodPage = () => {
   const { translate } = useTranslate(strings);
 
   return (
@@ -70,4 +70,4 @@ const DonateFood = () => {
   );
 };
 
-export { DonateFood };
+export { DonateFoodPage };

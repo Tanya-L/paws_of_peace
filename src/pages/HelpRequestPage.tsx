@@ -20,7 +20,7 @@ const strings: PawsLangStrings = {
   },
 };
 
-const NeedHelp = () => {
+const HelpRequestPage = () => {
   const { translate } = useTranslate(strings);
 
   return (
@@ -67,4 +67,4 @@ const NeedHelp = () => {
   );
 };
 
-export { NeedHelp };
+export { HelpRequestPage };

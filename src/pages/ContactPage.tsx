@@ -24,7 +24,7 @@ const strings: PawsLangStrings = {
   [PawsLanguage.Eng]: {},
 };
 
-const Contact = () => {
+const ContactPage = () => {
   const { translate } = useTranslate(strings);
 
   return (
@@ -101,4 +101,4 @@ const Contact = () => {
   );
 };
 
-export { Contact };
+export { ContactPage };

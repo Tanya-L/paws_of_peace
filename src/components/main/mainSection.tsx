@@ -13,6 +13,7 @@ import {
   useTranslate,
 } from "../langSwitcher/langSwitcher";
 import { PawsAddressShort, PawsOpeningHoursShort } from "../constants";
+import { PawsUrl } from "../../site-const";
 
 const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {
@@ -96,7 +97,7 @@ export const MainSection = () => {
 
             <h3>{translate("How can you help?")}</h3>
             <div className="text-start">
-              <Link to="/contact">
+              <Link to={PawsUrl.Contact}>
                 <PawsMapImage floatSmall={true} />
               </Link>
               {translate("text.donateFood")}{" "}
@@ -131,7 +132,7 @@ export const MainSection = () => {
                 />
               </a>
               <p>
-                <Link to="/reports">{translate("See Reports")}</Link>
+                <Link to={PawsUrl.Reports}>{translate("See Reports")}</Link>
               </p>
             </div>
           </div>

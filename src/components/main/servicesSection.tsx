@@ -10,6 +10,8 @@ import {
   useTranslate,
 } from "../langSwitcher/langSwitcher";
 
+import { PawsUrl } from "../../site-const";
+
 const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {
     "Need help?": "Потрібна допомога?",
@@ -50,7 +52,7 @@ export const ServicesSection = () => {
             title={translate("Need help?")}
             text={translate("text.needHelp")}
             buttonText={translate("button.needHelp")}
-            buttonLink={"/needHelp"}
+            buttonLink={PawsUrl.RequestHelp}
           />
         </div>
         <div className="col">
@@ -59,7 +61,7 @@ export const ServicesSection = () => {
             title={translate("Help Ukrainian animal shelters now!")}
             text={translate("text.donateFood")}
             buttonText={translate("button.donateFood")}
-            buttonLink={"/donateFood"}
+            buttonLink={PawsUrl.DonateSupplies}
           />
         </div>
         <div className="col">
@@ -68,7 +70,7 @@ export const ServicesSection = () => {
             title={translate("Donate, Save Lives!")}
             text={translate("text.donateMoney")}
             buttonText={translate("button.donateMoney")}
-            buttonLink={"/donateMoney"}
+            buttonLink={PawsUrl.DonateMoney}
           />
         </div>
       </div>

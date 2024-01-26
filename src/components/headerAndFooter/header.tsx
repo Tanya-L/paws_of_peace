@@ -11,6 +11,8 @@ import {
   useTranslate,
 } from "../langSwitcher/langSwitcher";
 
+import { PawsUrl } from "../../site-const";
+
 const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {
     Home: "Головна",
@@ -28,7 +30,7 @@ const strings: PawsLangStrings = {
 const Logo = () => {
   return (
     <Link
-      to="/"
+      to={PawsUrl.Root}
       className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
     >
       <img src={logo} width={48} alt="Paws of Peace" />
@@ -57,42 +59,46 @@ export const Header: FC<HeaderProps> = ({ activeItem }) => {
 
       <ul className="nav nav-pills">
         <li className="nav-item">
-          <Link to="/" className={isActive("home")} aria-current="page">
+          <Link
+            to={PawsUrl.Root}
+            className={isActive("home")}
+            aria-current="page"
+          >
             {translate("Home")}
           </Link>
         </li>
         <li className="nav-item">
-          <Link to="/needHelp" className={isActive("needHelp")}>
+          <Link to={PawsUrl.RequestHelp} className={isActive("needHelp")}>
             {translate("Need help?")}
           </Link>
         </li>
         <li className="nav-item">
-          <Link to="/donateMoney" className={isActive("donateMoney")}>
+          <Link to={PawsUrl.DonateMoney} className={isActive("donateMoney")}>
             {translate("Donate Money")}
           </Link>
         </li>
         <li className="nav-item">
-          <Link to="/donateFood" className={isActive("donateFood")}>
+          <Link to={PawsUrl.DonateSupplies} className={isActive("donateFood")}>
             {translate("Donate Supplies")}
           </Link>
         </li>
         <li className="nav-item">
-          <Link to="/faq" className={isActive("faq")}>
+          <Link to={PawsUrl.Faq} className={isActive("faq")}>
             {translate("FAQs")}
           </Link>
         </li>
         <li className="nav-item">
-          <Link to="/team" className={isActive("team")}>
+          <Link to={PawsUrl.Team} className={isActive("team")}>
             {translate("Team")}
           </Link>
         </li>
         <li className="nav-item">
-          <Link to="/reports" className={isActive("reports")}>
+          <Link to={PawsUrl.Reports} className={isActive("reports")}>
             {translate("Reports")}
           </Link>
         </li>
         <li className="nav-item">
-          <Link to="/contact" className={isActive("contact")}>
+          <Link to={PawsUrl.Contact} className={isActive("contact")}>
             {translate("Contact")}
           </Link>
         </li>

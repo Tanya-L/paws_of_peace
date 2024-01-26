@@ -12,6 +12,8 @@ import {
   useTranslate,
 } from "../langSwitcher/langSwitcher";
 
+import { PawsUrl } from "../../site-const";
+
 const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {
     "Embassy of Ukraine in The Kingdom of Sweden":
@@ -85,7 +87,7 @@ export const PartnersSection = () => {
               buttonText={translate(
                 "Do you want to become our partner? Contact us!"
               )}
-              buttonLink={"/contact"}
+              buttonLink={PawsUrl.Contact}
               buttonStyle={ButtonStyle.Primary}
             />
           </div>

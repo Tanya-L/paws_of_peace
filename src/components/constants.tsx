@@ -5,6 +5,7 @@ import {
   useTranslate,
 } from "./langSwitcher/langSwitcher";
 import { Link } from "react-router-dom";
+import { PawsUrl } from "../site-const";
 
 const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {
@@ -65,7 +66,7 @@ export const PawsIfYouHaveQuestions = () => {
   const { translate } = useTranslate(strings);
   return (
     <>
-      ❓ <Link to="/contact">{translate("paws.contactUs")}</Link>
+      ❓ <Link to={PawsUrl.Contact}>{translate("paws.contactUs")}</Link>
     </>
   );
 };

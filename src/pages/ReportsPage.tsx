@@ -28,7 +28,7 @@ const strings: PawsLangStrings = {
   },
 };
 
-const Reports = () => {
+const ReportsPage = () => {
   const { translate } = useTranslate(strings);
 
   return (
@@ -78,4 +78,4 @@ const Reports = () => {
   );
 };
 
-export { Reports };
+export { ReportsPage };

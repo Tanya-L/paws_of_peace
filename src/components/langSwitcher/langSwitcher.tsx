@@ -6,6 +6,8 @@ import { useCookies } from "react-cookie";
 import classNames from "classnames";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
+import { PawsUrl } from "../../site-const";
+
 export enum PawsLanguage {
   Ukr = "Ukr",
   Eng = "Eng",
@@ -48,7 +50,7 @@ export const useTranslate = (strings: PawsLangStrings) => {
   return { lang, translate };
 };
 
-export const LangSwitcherSet: FC<LangSwitcherSetProps> = ({ lang }) => {
+export const LangSwitcherPage: FC<LangSwitcherSetProps> = ({ lang }) => {
   const [cookies, setCookie] = useCookies(["lang"]);
   const query = useQuery();
 
@@ -57,7 +59,7 @@ export const LangSwitcherSet: FC<LangSwitcherSetProps> = ({ lang }) => {
     if (cookies.lang !== lang) {
       setCookie("lang", lang, { path: "/" });
     }
-    return navigate(query.get("referrer") || "/");
+    return navigate(query.get("referrer") || PawsUrl.Root);
   }, []);
   return <></>;
 };
@@ -68,7 +70,7 @@ export const LangSwitcher = () => {
 
   return (
     <>
-      <Link to={`/ukrainian?referrer=${location.pathname}`}>
+      <Link to={`${PawsUrl.Ukrainian}?referrer=${location.pathname}`}>
         <img
           src={langUkr}
           alt="Українська"
@@ -78,7 +80,7 @@ export const LangSwitcher = () => {
           })}
         />
       </Link>
-      <Link to={`/english?referrer=${location.pathname}`}>
+      <Link to={`${PawsUrl.English}?referrer=${location.pathname}`}>
         <img
           src={langEng}
           alt="English"
