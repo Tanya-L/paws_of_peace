@@ -1,7 +1,7 @@
 import React from "react";
 import { Header } from "../components/headerAndFooter/header";
 import { Footer } from "../components/headerAndFooter/footer";
-import { PawsMap } from "../components/main/pawsMap";
+import { Map } from "../components/main/Map";
 import {
   PawsLangStrings,
   PawsLanguage,
@@ -42,7 +42,7 @@ const DonateFoodPage = () => {
 
   return (
     <>
-      <Header activeItem="donateFood" />
+      <Header currentPageId="donateFood" />
       <div>
         <div className="container text-center">
           <h1>{translate("donate.title")}</h1>
@@ -60,7 +60,7 @@ const DonateFoodPage = () => {
               <PawsOpeningHours />
             </p>
             <PawsIfYouHaveQuestions />
-            <PawsMap />
+            <Map />
             <Paws100Percent />
           </div>
         </div>

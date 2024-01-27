@@ -7,7 +7,7 @@ import {
   RequestHelpLink,
 } from "./prefabs";
 
-export const FaqUkrSection = () => (
+export const FaqPageBody = () => (
   <>
     <h1>Найчастiше задаванi питання</h1>
     <div className="row text-start">

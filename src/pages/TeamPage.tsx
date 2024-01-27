@@ -1,12 +1,12 @@
 import React from "react";
 import { Header } from "../components/headerAndFooter/header";
 import { Footer } from "../components/headerAndFooter/footer";
-import { TeamSection } from "../components/teamSection";
+import { TeamPageBody } from "../components/TeamPageBody";
 
 const TeamPage = () => (
   <>
-    <Header activeItem="team" />
-    <TeamSection />
+    <Header currentPageId="team" />
+    <TeamPageBody />
     <Footer />
   </>
 );

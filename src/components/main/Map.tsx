@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import map from "../../Img/map.png";
 import styles from "./Main.module.css";
 
-export const PawsMap = () => (
+export const Map = () => (
   <>
     <iframe
       className="mt-1"
@@ -30,11 +30,11 @@ export const PawsMap = () => (
   </>
 );
 
-interface PawsMapImageProps {
+interface MapImageProps {
   floatSmall: boolean;
 }
 
-export const PawsMapImage: FC<PawsMapImageProps> = ({ floatSmall }) => {
+export const MapImage: FC<MapImageProps> = ({ floatSmall }) => {
   if (floatSmall) {
     return (
       <img

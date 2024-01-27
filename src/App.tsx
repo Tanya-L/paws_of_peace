@@ -27,6 +27,7 @@ import {
 import ErrorPage from "./pages/ErrorPage";
 
 import { PawsUrl } from "./site-const";
+import { OrganisationPage } from "./pages/OrganisationPage";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -42,6 +43,7 @@ const App = () => {
     { path: PawsUrl.DonateMoney, element: <DonateMoneyPage /> },
     { path: PawsUrl.DonateSupplies, element: <DonateFoodPage /> },
     { path: PawsUrl.Reports, element: <ReportsPage /> },
+    { path: PawsUrl.Organisation, element: <OrganisationPage /> },
     {
       path: PawsUrl.Ukrainian,
       element: <LangSwitcherPage lang={PawsLanguage.Ukr} />,

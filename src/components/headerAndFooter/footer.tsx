@@ -10,17 +10,20 @@ import {
   PawsLanguage,
   useTranslate,
 } from "../langSwitcher/langSwitcher";
-import { pawsFacebook, pawsInstagram, pawsLinkedin } from "../../site-const";
+import {
+  orgNr,
+  pawsFacebook,
+  pawsInstagram,
+  pawsLinkedin,
+} from "../../site-const";
 import { Link } from "react-router-dom";
 
 const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {
-    "text.copy":
-      "© 2024 Paws of Peace. Зарєстрований номер в Швеції 802545-0886",
+    "text.copy": `© 2024 Paws of Peace. Зарєстрований номер в Швеції ${orgNr}`,
   },
   [PawsLanguage.Eng]: {
-    "text.copy":
-      "© 2024 Paws of Peace. Registered org nr in Sweden 802545-0886",
+    "text.copy": `© 2024 Paws of Peace. Registered org nr in Sweden ${orgNr}`,
   },
 };
 

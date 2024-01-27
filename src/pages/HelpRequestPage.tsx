@@ -29,7 +29,7 @@ const HelpRequestPage = () => {
 
   return (
     <>
-      <Header activeItem="needHelp" />
+      <Header currentPageId="needHelp" />
 
       <p>{translate("eng.Disclaimer")}</p>
 

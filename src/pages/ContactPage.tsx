@@ -7,7 +7,7 @@ import LinkedIn from "../Img/contact/linkedin.png";
 import Linktree from "../Img/contact/linktree.png";
 import styles from "../App.module.css";
 import classNames from "classnames";
-import { PawsMap } from "../components/main/pawsMap";
+import { Map } from "../components/main/Map";
 import { Footer } from "../components/headerAndFooter/footer";
 import {
   PawsLangStrings,
@@ -31,7 +31,7 @@ const ContactPage = () => {
 
   return (
     <>
-      <Header activeItem="contact" />
+      <Header currentPageId="contact" />
       <h1>{translate("Contact Paws of Peace")}</h1>
       <ul className="vertical-list list-unstyled">
         <li className="ms-3">
@@ -97,7 +97,7 @@ const ContactPage = () => {
       <p>
         <PawsOpeningHours />
       </p>
-      <PawsMap />
+      <Map />
       <Footer />
     </>
   );

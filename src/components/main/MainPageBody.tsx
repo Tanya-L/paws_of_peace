@@ -6,7 +6,7 @@ import Facebook from "../../Img/contact/fb.png";
 import Instagram from "../../Img/contact/insta1.png";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
-import { PawsMapImage } from "./pawsMap";
+import { MapImage } from "./Map";
 import {
   PawsLangStrings,
   PawsLanguage,
@@ -85,7 +85,7 @@ const strings: PawsLangStrings = {
   },
 };
 
-export const MainSection = () => {
+export const MainPageBody = () => {
   const { translate } = useTranslate(strings);
 
   return (
@@ -103,7 +103,7 @@ export const MainSection = () => {
             <h3>{translate("How can you help?")}</h3>
             <div className="text-start">
               <Link to={PawsUrl.Contact}>
-                <PawsMapImage floatSmall={true} />
+                <MapImage floatSmall={true} />
               </Link>
               {translate("text.donateFood")}{" "}
               <b>

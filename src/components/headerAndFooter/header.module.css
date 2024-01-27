@@ -1,13 +1,27 @@
 /* Link style */
-a.nav-link {
+a.pawsNavLink {
     color: black;
+    margin: 8px;
+    border-radius: 0.5em;
+    padding: 0.1em 0.25em 0.1em 0.25em;
+    text-decoration: none;
 }
 
-a.active {
-    background-color: green !important;
+a.pawsNavLink:hover {
+    background: #fafad2;
+}
+
+a.pawsCurrentPage {
+    background-color: #3F8A33 !important;
     color: white;
 }
 
-a.active:hover {
+a.pawsCurrentPage:hover {
     color: white;
+}
+
+img.logo {
+    width: 7em;
+    height: 7em;
+    margin-top: -1em; /* Compensate outer padding */
 }

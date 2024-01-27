@@ -60,7 +60,7 @@ const strings: PawsLangStrings = {
   },
 };
 
-export const TeamSection = () => {
+export const TeamPageBody = () => {
   const { translate } = useTranslate(strings);
 
   const board = [

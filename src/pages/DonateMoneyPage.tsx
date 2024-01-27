@@ -40,7 +40,7 @@ const DonateMoneyPage = () => {
 
   return (
     <>
-      <Header activeItem="donateMoney" />
+      <Header currentPageId="donateMoney" />
       <div className="row">
         <div className="col">
           <Card

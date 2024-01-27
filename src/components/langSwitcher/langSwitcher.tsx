@@ -37,7 +37,6 @@ export const useTranslate = (strings: PawsLangStrings) => {
     browserLanguages.includes("uk") || browserLanguages.includes("ru")
       ? PawsLanguage.Ukr
       : PawsLanguage.Eng;
-  console.log(browserLanguages, guessedLanguage);
 
   const [cookies] = useCookies(["lang"]);
   const lang = (cookies.lang as PawsLanguage) || guessedLanguage;

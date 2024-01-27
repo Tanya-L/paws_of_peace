@@ -40,7 +40,7 @@ const strings: PawsLangStrings = {
   },
 };
 
-export const ServicesSection = () => {
+export const MainPageServicesSection = () => {
   const { translate } = useTranslate(strings);
 
   return (

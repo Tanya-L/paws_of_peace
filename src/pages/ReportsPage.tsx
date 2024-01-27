@@ -1,15 +1,8 @@
 import React from "react";
 import { Header } from "../components/headerAndFooter/header";
 import { Footer } from "../components/headerAndFooter/footer";
-import Facebook from "../Img/contact/fb.png";
-import Instagram from "../Img/contact/insta1.png";
 // import Construction from "../Img/Under-Construction.png";
-import styles from "../App.module.css";
-import classNames from "classnames";
-import {
-  PawsFacebookFeed,
-  PawsFacebookScript,
-} from "../components/PawsFacebookFeed";
+import { PawsFacebookScript } from "../components/PawsFacebookFeed";
 import {
   PawsLangStrings,
   PawsLanguage,
@@ -20,8 +13,6 @@ import {
   PawsIfYouHaveQuestions,
   PawsInstagram,
 } from "../components/prefabs";
-import { pawsFacebook, pawsInstagram } from "../site-const";
-import { Link } from "react-router-dom";
 
 const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {
@@ -41,7 +32,7 @@ const ReportsPage = () => {
     <>
       <PawsFacebookScript />
 
-      <Header activeItem="reports" />
+      <Header currentPageId="reports" />
 
       <h1>{translate("Activity reports")}</h1>
       <div className="text-start">

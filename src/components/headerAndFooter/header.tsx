@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 import styles from "./header.module.css";
 import logo from "../../Img/logo.png";
-import classNames from "classnames";
 import {
   LangSwitcher,
   PawsLangStrings,
@@ -12,6 +11,7 @@ import {
 } from "../langSwitcher/langSwitcher";
 
 import { PawsUrl } from "../../site-const";
+import { MenuBar, MenuItemDefinition } from "./menu";
 
 const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {
@@ -23,9 +23,38 @@ const strings: PawsLangStrings = {
     Team: "Команда",
     Reports: "Звіти",
     Contact: "Контакти",
+    Organisation: "Організація",
   },
   [PawsLanguage.Eng]: { FAQs: "FAQ (in Ukrainian)" },
 };
+
+const menuItems: MenuItemDefinition[] = [
+  { to: PawsUrl.Root, highlightId: "home", text: "Home" },
+  { to: PawsUrl.RequestHelp, highlightId: "needHelp", text: "Need help?" },
+  {
+    to: PawsUrl.DonateMoney,
+    highlightId: "donateMoney",
+    text: "Donate Money",
+    nested: [
+      {
+        to: PawsUrl.DonateSupplies,
+        highlightId: "donateFood",
+        text: "Donate Supplies",
+      },
+    ],
+  },
+  { to: PawsUrl.Faq, highlightId: "faq", text: "FAQs" },
+  {
+    to: PawsUrl.Organisation,
+    highlightId: "organisation",
+    text: "Organisation",
+    nested: [
+      { to: PawsUrl.Team, highlightId: "team", text: "Team" },
+      { to: PawsUrl.Reports, highlightId: "reports", text: "Reports" },
+      { to: PawsUrl.Contact, highlightId: "contact", text: "Contact" },
+    ],
+  },
+];
 
 const Logo = () => {
   return (
@@ -33,75 +62,35 @@ const Logo = () => {
       to={PawsUrl.Root}
       className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
     >
-      <img src={logo} width={48} alt="Paws of Peace" />
+      <img src={logo} className={styles.logo} alt="Paws of Peace" />
     </Link>
   );
 };
 
 interface HeaderProps {
-  activeItem: string;
+  currentPageId: string;
 }
 
-export const Header: FC<HeaderProps> = ({ activeItem }) => {
+export const Header: FC<HeaderProps> = ({ currentPageId }) => {
   const { translate } = useTranslate(strings);
 
-  const isActive = (item: string): string => {
-    if (activeItem === item) {
-      return classNames("btn", "btn-link", styles.navLink, styles.active);
-    } else {
-      return classNames("btn", "btn-link", styles.navLink);
-    }
+  const getMenuitemCssClasses = (menuitemPageId: string): string[] => {
+    return currentPageId === menuitemPageId
+      ? [styles.pawsNavLink, styles.pawsCurrentPage]
+      : [styles.pawsNavLink];
   };
 
   return (
-    <header className="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <header className="d-flex flex-wrap justify-content-center py-2 mb-4 border-bottom">
       <Logo />
 
       <ul className="nav nav-pills">
-        <li className="nav-item">
-          <Link
-            to={PawsUrl.Root}
-            className={isActive("home")}
-            aria-current="page"
-          >
-            {translate("Home")}
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to={PawsUrl.RequestHelp} className={isActive("needHelp")}>
-            {translate("Need help?")}
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to={PawsUrl.DonateMoney} className={isActive("donateMoney")}>
-            {translate("Donate Money")}
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to={PawsUrl.DonateSupplies} className={isActive("donateFood")}>
-            {translate("Donate Supplies")}
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to={PawsUrl.Faq} className={isActive("faq")}>
-            {translate("FAQs")}
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to={PawsUrl.Team} className={isActive("team")}>
-            {translate("Team")}
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to={PawsUrl.Reports} className={isActive("reports")}>
-            {translate("Reports")}
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to={PawsUrl.Contact} className={isActive("contact")}>
-            {translate("Contact")}
-          </Link>
-        </li>
+        <MenuBar
+          items={menuItems}
+          getMenuitemCssClasses={getMenuitemCssClasses}
+          translate={translate}
+        />
+
         <li className="nav-item">
           <LangSwitcher />
         </li>

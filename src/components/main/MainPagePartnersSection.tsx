@@ -28,7 +28,7 @@ const strings: PawsLangStrings = {
   [PawsLanguage.Eng]: {},
 };
 
-export const PartnersSection = () => {
+export const MainPagePartnersSection = () => {
   const { translate } = useTranslate(strings);
 
   return (
