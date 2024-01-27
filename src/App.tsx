@@ -1,5 +1,5 @@
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./App.css";
@@ -25,7 +25,7 @@ import { OrganisationPage } from "./pages/OrganisationPage";
 import { Container } from "react-bootstrap";
 
 const App = () => {
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: PawsUrl.Root,
       element: <HomePage />,
