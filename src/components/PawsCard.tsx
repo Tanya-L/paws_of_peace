@@ -1,10 +1,10 @@
 import React, { FC } from "react";
-import { Link } from "react-router-dom";
 import classNames from "classnames";
 import logo2 from "../Img/logo2.png";
 import styles from "./card.module.css";
+import { Card } from "react-bootstrap";
 
-interface CardProps {
+interface PawsCardProps {
   image?: string;
   title?: string;
   text?: string | JSX.Element;
@@ -23,7 +23,7 @@ export enum ButtonStyle {
   Link = "btn-link",
 }
 
-export const Card: FC<CardProps> = ({
+export const PawsCard: FC<PawsCardProps> = ({
   image,
   title,
   text,
@@ -31,16 +31,16 @@ export const Card: FC<CardProps> = ({
   buttonLink,
   buttonStyle = ButtonStyle.Success,
 }) => (
-  <div className={classNames("card", styles.pawsCard)}>
+  <Card className={classNames("card", styles.pawsCard)}>
     {image && (
-      <img
+      <Card.Img
         src={image}
         className={classNames("card-img-top", styles.pawsCardImg)}
         alt="..."
       />
     )}
     {!image && (
-      <img
+      <Card.Img
         src={logo2}
         className={classNames(
           "card-img-top",
@@ -50,23 +50,23 @@ export const Card: FC<CardProps> = ({
         alt="..."
       />
     )}
-    <div className="card-body">
-      <h5 className={classNames("card-title", styles.pawsCardTitle)}>
+    <Card.Body>
+      <Card.Title className={classNames(styles.pawsCardTitle)}>
         {title}
-      </h5>
+      </Card.Title>
 
-      <p className={classNames("card-text", styles.pawsCardText)}>{text}</p>
+      <Card.Text className={classNames(styles.pawsCardText)}>{text}</Card.Text>
+    </Card.Body>
 
-      <div className="w-100 text-center">
-        {buttonText && buttonLink && (
-          <Link
-            to={buttonLink}
-            className={classNames("btn", buttonStyle, "pin-button")}
-          >
-            {buttonText}
-          </Link>
-        )}
-      </div>
-    </div>
-  </div>
+    {buttonText && buttonLink && (
+      <Card.Body>
+        <Card.Link
+          href={buttonLink}
+          className={classNames("btn", buttonStyle, "pin-button")}
+        >
+          {buttonText}
+        </Card.Link>
+      </Card.Body>
+    )}
+  </Card>
 );

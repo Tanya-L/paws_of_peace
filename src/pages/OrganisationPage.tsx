@@ -35,25 +35,22 @@ const OrganisationPage = () => {
       <Header currentPageId="organisation" />
 
       <h1>{translate("Organisation Information")}</h1>
-      <div className="text-start">
-        <div className="text-start">
-          <p>{translate("text.orgReg")}</p>
-          <p>
-            {translate("text.theBoard")}:{" "}
-            <Link to={PawsUrl.Team}>{translate("see.team")}</Link>
-          </p>
-          <p>
-            <Link target="_blank" to={stadgarSweUrl}>
-              {translate("text.stadgarSwe")}
-            </Link>
-          </p>
-          <p>
-            <Link target="_blank" to={stadgarUkrUrl}>
-              {translate("text.stadgarUkr")}
-            </Link>
-          </p>
-        </div>
-      </div>
+
+      <p>{translate("text.orgReg")}</p>
+      <p>
+        {translate("text.theBoard")}:{" "}
+        <Link to={PawsUrl.Team}>{translate("see.team")}</Link>
+      </p>
+      <p>
+        <Link target="_blank" to={stadgarSweUrl}>
+          {translate("text.stadgarSwe")}
+        </Link>
+      </p>
+      <p>
+        <Link target="_blank" to={stadgarUkrUrl}>
+          {translate("text.stadgarUkr")}
+        </Link>
+      </p>
 
       <Footer />
     </>

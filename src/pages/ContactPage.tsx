@@ -32,7 +32,9 @@ const ContactPage = () => {
   return (
     <>
       <Header currentPageId="contact" />
+
       <h1>{translate("Contact Paws of Peace")}</h1>
+
       <ul className="vertical-list list-unstyled">
         <li className="ms-3">
           <a href="mailto:thepawsofpeace@gmail.com">
@@ -91,13 +93,16 @@ const ContactPage = () => {
       </ul>
 
       <h3>{translate("Find Us Here")}</h3>
+
       <p>
         <PawsAddress />
       </p>
       <p>
         <PawsOpeningHours />
       </p>
+
       <Map />
+
       <Footer />
     </>
   );

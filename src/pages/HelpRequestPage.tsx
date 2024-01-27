@@ -1,7 +1,7 @@
 import React from "react";
 import { Header } from "../components/headerAndFooter/header";
 import { Footer } from "../components/headerAndFooter/footer";
-import { ButtonStyle, Card } from "../components/Card";
+import { ButtonStyle, PawsCard } from "../components/PawsCard";
 import secondHelp from "../Img/donate/secondHelp.png";
 import needHelp from "../Img/donate/needHelp.png";
 import {
@@ -13,6 +13,7 @@ import {
   pawsRequestHelpAgainFormUrl,
   pawsRequestHelpFormUrl,
 } from "../site-const";
+import { Col, Row } from "react-bootstrap";
 
 const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {
@@ -33,39 +34,44 @@ const HelpRequestPage = () => {
 
       <p>{translate("eng.Disclaimer")}</p>
 
-      <div className="row">
-        <div className="col">
-          <Card
+      <Row>
+        <Col>
+          <PawsCard
             image={needHelp}
             title={"Потрібна допомога?"}
             text={
               <>
-                Заповніть цю форму, і ми зробимо все можливе, щоб допомогти вам!
-                Ця форма лише для тих, хто звертається вперше. Якщо ви вже
-                отримували допомогу від нас, скористайтеся, будь ласка, другою
-                формою.
+                Заповніть цю форму, і ми зробимо все можливе, щоб допомогти вам!{" "}
+                <span className="text-danger">
+                  Ця форма лише для тих, хто звертається вперше.
+                </span>{" "}
+                Якщо ви вже отримували допомогу від нас, скористайтеся, будь
+                ласка, другою формою.
               </>
             }
             buttonText={"Перше звернення"}
             buttonLink={pawsRequestHelpFormUrl}
           />
-        </div>
-        <div className="col">
-          <Card
+        </Col>
+
+        <Col>
+          <PawsCard
             image={secondHelp}
             title={"Знову потрібна допомога?"}
             text={
               <>
-                Потребуете ПОВТОРНОЇ ДОПОМОГИ? Заповніть цю форму, і ми зробимо
-                все можливе, щоб допомогти вам!
+                Потребуете{" "}
+                <span className="text-danger">ПОВТОРНОЇ ДОПОМОГИ?</span>{" "}
+                Заповніть цю форму, і ми зробимо все можливе, щоб допомогти вам!
               </>
             }
             buttonText={"Друге та наступні звернення"}
             buttonLink={pawsRequestHelpAgainFormUrl}
-            buttonStyle={ButtonStyle.Primary}
+            buttonStyle={ButtonStyle.Success}
           />
-        </div>
-      </div>
+        </Col>
+      </Row>
+
       <Footer />
     </>
   );

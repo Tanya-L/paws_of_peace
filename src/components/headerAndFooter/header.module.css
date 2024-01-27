@@ -1,18 +1,18 @@
 /* Link style */
 a.pawsNavLink {
     color: black;
-    margin: 8px;
-    border-radius: 0.5em;
-    padding: 0.1em 0.25em 0.1em 0.25em;
-    text-decoration: none;
+    margin-right: 1em;
+    /*border-radius: 0.25em;*/
+    /*padding: 0.1em 0.25em 0.1em 0.25em;*/
+    /*text-decoration: none;*/
 }
 
 a.pawsNavLink:hover {
-    background: #fafad2;
+    background: #ccffcc;
 }
 
 a.pawsCurrentPage {
-    background-color: #3F8A33 !important;
+    background-color: #3f8a33 !important;
     color: white;
 }
 

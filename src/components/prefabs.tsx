@@ -68,7 +68,7 @@ export const PawsOpeningHoursShort = () => {
   return <>{translate("paws.hours.short")}</>;
 };
 
-export const Paws100Percent = () => {
+export const Paws100PercentDisclaimer = () => {
   const { translate } = useTranslate(strings);
   return (
     <>
@@ -80,9 +80,9 @@ export const Paws100Percent = () => {
 export const PawsIfYouHaveQuestions = () => {
   const { translate } = useTranslate(strings);
   return (
-    <>
+    <div className="mt-4 mb-4">
       ❓ <Link to={PawsUrl.Contact}>{translate("paws.contactUs")}</Link>
-    </>
+    </div>
   );
 };
 

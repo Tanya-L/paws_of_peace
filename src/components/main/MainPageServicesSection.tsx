@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "../Card";
+import { PawsCard } from "../PawsCard";
 import needHelp from "../../Img/donate/needHelp.png";
 import dogfood from "../../Img/donate/dogfood.png";
 import swishNUF from "../../Img/donate/swishNUF.png";
@@ -11,6 +11,7 @@ import {
 } from "../langSwitcher/langSwitcher";
 
 import { PawsUrl } from "../../site-const";
+import { Col, Container, Row } from "react-bootstrap";
 
 const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {
@@ -44,36 +45,36 @@ export const MainPageServicesSection = () => {
   const { translate } = useTranslate(strings);
 
   return (
-    <div className="container text-center">
-      <div className="row">
-        <div className="col">
-          <Card
+    <Container>
+      <Row>
+        <Col>
+          <PawsCard
             image={needHelp}
             title={translate("Need help?")}
             text={translate("text.needHelp")}
             buttonText={translate("button.needHelp")}
             buttonLink={PawsUrl.RequestHelp}
           />
-        </div>
-        <div className="col">
-          <Card
+        </Col>
+        <Col>
+          <PawsCard
             image={dogfood}
             title={translate("Help Ukrainian animal shelters now!")}
             text={translate("text.donateFood")}
             buttonText={translate("button.donateFood")}
             buttonLink={PawsUrl.DonateSupplies}
           />
-        </div>
-        <div className="col">
-          <Card
+        </Col>
+        <Col>
+          <PawsCard
             image={swishNUF}
             title={translate("Donate, Save Lives!")}
             text={translate("text.donateMoney")}
             buttonText={translate("button.donateMoney")}
             buttonLink={PawsUrl.DonateMoney}
           />
-        </div>
-      </div>
-    </div>
+        </Col>
+      </Row>
+    </Container>
   );
 };

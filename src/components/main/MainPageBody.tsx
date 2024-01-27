@@ -19,6 +19,7 @@ import {
   PawsOpeningHoursShort,
 } from "../prefabs";
 import { PawsUrl } from "../../site-const";
+import { Col, Container, Row } from "react-bootstrap";
 
 const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {
@@ -89,47 +90,44 @@ export const MainPageBody = () => {
   const { translate } = useTranslate(strings);
 
   return (
-    <div className="container text-center bg-light main">
-      <div className="row">
-        <div className="col-8">
-          <div>
-            <h1>{translate("We help animals in Ukraine")}</h1>
-            <h3>{translate("Our mission")}</h3>
-            <div className="text-start">{translate("text.mission")}</div>
+    <Container>
+      <Row>
+        <Col className="col-8">
+          <h1>{translate("We help animals in Ukraine")}</h1>
 
-            <h3>{translate("About Paws of Peace")}</h3>
-            <div className="text-start">{translate("text.about")}</div>
+          <h3>{translate("Our mission")}</h3>
+          <p>{translate("text.mission")}</p>
 
-            <h3>{translate("How can you help?")}</h3>
-            <div className="text-start">
-              <Link to={PawsUrl.Contact}>
-                <MapImage floatSmall={true} />
-              </Link>
-              {translate("text.donateFood")}{" "}
-              <b>
-                <PawsAddressShort />, <PawsOpeningHoursShort />.
-              </b>
-              <p>{translate("text.donateMoney")}</p>
-            </div>
+          <h3>{translate("About Paws of Peace")}</h3>
+          <p>{translate("text.about")}</p>
 
-            <h3>{translate("Our activity reports")}</h3>
-            <div className="text-start">
-              {translate("text.reports")}: <PawsFacebook />, <PawsInstagram />
-              <p>
-                <Link to={PawsUrl.Reports}>{translate("See Reports")}</Link>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="col-4">
+          <h3>{translate("How can you help?")}</h3>
+          <p>
+            <Link to={PawsUrl.Contact}>
+              <MapImage floatSmall={true} />
+            </Link>
+            {translate("text.donateFood")}{" "}
+            <b>
+              <PawsAddressShort />, <PawsOpeningHoursShort />.
+            </b>
+            <p>{translate("text.donateMoney")}</p>
+          </p>
+
+          <h3>{translate("Our activity reports")}</h3>
+          <p>
+            {translate("text.reports")}: <PawsFacebook />, <PawsInstagram />.{" "}
+            <Link to={PawsUrl.Reports}>{translate("See Reports")}</Link>
+          </p>
+        </Col>
+        <Col className="col-4">
           <div className="p-4">
             <img src={cat3} width="100%" alt="Cat" />
           </div>
           <div className="p-4">
             <img src={dog} width="100%" alt="Dog" />
           </div>
-        </div>
-      </div>
-    </div>
+        </Col>
+      </Row>
+    </Container>
   );
 };

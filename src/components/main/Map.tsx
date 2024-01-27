@@ -40,7 +40,7 @@ export const MapImage: FC<MapImageProps> = ({ floatSmall }) => {
       <img
         src={map}
         alt="Paws of Peace location"
-        width="40%"
+        width="30%"
         className={styles.floatRight}
       />
     );

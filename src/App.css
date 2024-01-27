@@ -1,3 +1,7 @@
+html {
+    overflow-y: scroll;
+}
+
 .App {
     text-align: center;
 }
@@ -36,10 +40,6 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-}
-
-.main {
-    padding: 24pt;
 }
 
 ul.vertical-list {

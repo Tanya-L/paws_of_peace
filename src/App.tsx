@@ -1,15 +1,9 @@
 import React from "react";
-import {
-  createBrowserRouter,
-  HashRouter,
-  Route,
-  RouterProvider,
-  Routes,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./App.css";
-import "./App.module.css";
+import styles from "./App.module.css";
 
 import { HomePage } from "./pages/HomePage";
 import { TeamPage } from "./pages/TeamPage";
@@ -28,6 +22,7 @@ import ErrorPage from "./pages/ErrorPage";
 
 import { PawsUrl } from "./site-const";
 import { OrganisationPage } from "./pages/OrganisationPage";
+import { Container } from "react-bootstrap";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -57,9 +52,9 @@ const App = () => {
   return (
     <React.StrictMode>
       <CookiesProvider>
-        <div className="container">
+        <Container as="main" className={styles.pawsMain} fluid>
           <RouterProvider router={router} />
-        </div>
+        </Container>
       </CookiesProvider>
     </React.StrictMode>
   );

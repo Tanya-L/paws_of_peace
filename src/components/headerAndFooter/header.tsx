@@ -76,8 +76,14 @@ export const Header: FC<HeaderProps> = ({ currentPageId }) => {
 
   const getMenuitemCssClasses = (menuitemPageId: string): string[] => {
     return currentPageId === menuitemPageId
-      ? [styles.pawsNavLink, styles.pawsCurrentPage]
-      : [styles.pawsNavLink];
+      ? [
+          styles.pawsNavLink,
+          styles.pawsCurrentPage,
+          "btn",
+          "btn-default",
+          "btn-sm",
+        ]
+      : [styles.pawsNavLink, "btn", "btn-default", "btn-sm"];
   };
 
   return (

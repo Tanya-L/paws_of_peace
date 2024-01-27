@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonStyle, Card } from "../Card";
+import { ButtonStyle, PawsCard } from "../PawsCard";
 import gerb2 from "../../Img/partners/gerb.png";
 import hundstallet from "../../Img/partners/hundstallet.png";
 import kattstallet from "../../Img/partners/kattstallet.png";
@@ -13,6 +13,7 @@ import {
 } from "../langSwitcher/langSwitcher";
 
 import { PawsUrl } from "../../site-const";
+import { Col, Container, Row } from "react-bootstrap";
 
 const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {
@@ -24,8 +25,14 @@ const strings: PawsLangStrings = {
     Kattstallet: "Притулок для котів Kattstallet",
     "Do you want to become our partner? Contact us!":
       "Хочете стати нашим партнером? Зв'яжіться з нами!",
+    "text.popPartnerJoin":
+      "Ваша організація хоче співпрацювати з нами? Давайте станемо партнерами.",
+    "Contact us!": "Зв'яжіться з нами!",
   },
-  [PawsLanguage.Eng]: {},
+  [PawsLanguage.Eng]: {
+    "text.popPartnerJoin":
+      "Does your organisation want to work together? Let's become partners.",
+  },
 };
 
 export const MainPagePartnersSection = () => {
@@ -33,11 +40,11 @@ export const MainPagePartnersSection = () => {
 
   return (
     <div>
-      <div className="container text-center ">
+      <Container className="text-center ">
         <h1>Our Partners</h1>
-        <div className="row">
-          <div className="col" style={{ width: "75%" }}>
-            <Card
+        <Row>
+          <Col className="w-75">
+            <PawsCard
               image={gerb2}
               buttonText={translate(
                 "Embassy of Ukraine in The Kingdom of Sweden"
@@ -45,54 +52,55 @@ export const MainPagePartnersSection = () => {
               buttonLink={"https://sweden.mfa.gov.ua/en"}
               buttonStyle={ButtonStyle.Link}
             />
-          </div>
-          <div className="col">
-            <Card
+          </Col>
+          <Col>
+            <PawsCard
               image={nuf}
               buttonText={translate("Nordic Ukraine Forum")}
               buttonLink={"https://nuforum.se/"}
               buttonStyle={ButtonStyle.Link}
             />
-          </div>
-          <div className="col">
-            <Card
+          </Col>
+          <Col>
+            <PawsCard
               image={hub}
               buttonText={translate("Ukrainian Volunteer Hub - Stockholm")}
               buttonLink={"https://www.facebook.com/uavhub.stockholm/"}
               buttonStyle={ButtonStyle.Link}
             />
-          </div>
-        </div>
+          </Col>
+        </Row>
 
-        <div className="row mt-2">
-          <div className="col">
-            <Card
+        <Row className="mt-2">
+          <Col>
+            <PawsCard
               image={hundstallet}
               buttonText={translate("Hundstallet")}
               buttonLink={"https://hundstallet.se/"}
               buttonStyle={ButtonStyle.Link}
             />
-          </div>
-          <div className="col">
-            <Card
+          </Col>
+
+          <Col>
+            <PawsCard
               image={kattstallet}
               buttonText={translate("Kattstallet")}
               buttonLink={"https://kattstallet.se/"}
               buttonStyle={ButtonStyle.Link}
             />
-          </div>
-          <div className="col">
-            <Card
+          </Col>
+
+          <Col>
+            <PawsCard
               image={PoPquestion}
-              buttonText={translate(
-                "Do you want to become our partner? Contact us!"
-              )}
+              text={translate("text.popPartnerJoin")}
+              buttonText={translate("Contact us!")}
               buttonLink={PawsUrl.Contact}
               buttonStyle={ButtonStyle.Primary}
             />
-          </div>
-        </div>
-      </div>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 };

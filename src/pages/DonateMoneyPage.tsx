@@ -1,7 +1,7 @@
 import React from "react";
 import { Header } from "../components/headerAndFooter/header";
 import { Footer } from "../components/headerAndFooter/footer";
-import { Card } from "../components/Card";
+import { PawsCard } from "../components/PawsCard";
 import swishNUF from "../Img/donate/swishNUF.png";
 import BMClogo from "../Img/donate/BMClogo.png";
 import BG from "../Img/donate/BG.png";
@@ -11,7 +11,8 @@ import {
   PawsLanguage,
   useTranslate,
 } from "../components/langSwitcher/langSwitcher";
-import { Paws100Percent } from "../components/prefabs";
+import { Paws100PercentDisclaimer } from "../components/prefabs";
+import { Col, Row } from "react-bootstrap";
 
 const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {
@@ -41,9 +42,9 @@ const DonateMoneyPage = () => {
   return (
     <>
       <Header currentPageId="donateMoney" />
-      <div className="row">
-        <div className="col">
-          <Card
+      <Row>
+        <Col>
+          <PawsCard
             image={swishNUF}
             title={translate("Donate by Swish")}
             text={
@@ -55,9 +56,10 @@ const DonateMoneyPage = () => {
             buttonText={"Swish 123 437 52 83"}
             buttonLink={"https://www.swish.nu/"}
           />
-        </div>
-        <div className="col">
-          <Card
+        </Col>
+
+        <Col>
+          <PawsCard
             image={BG}
             title={translate("Donate by Bankgiro")}
             text={
@@ -69,12 +71,12 @@ const DonateMoneyPage = () => {
             buttonText={"BANKGIRO: 280 8228 Nordic Ukraine Forum"}
             buttonLink={"https://nuforum.se/support-us/donate/"}
           />
-        </div>
-      </div>
+        </Col>
+      </Row>
 
-      <div className="row mt-2">
-        <div className="col">
-          <Card
+      <Row className="mt-2">
+        <Col>
+          <PawsCard
             image={PPlogo}
             title={translate("Donate by PayPal")}
             text={
@@ -88,9 +90,10 @@ const DonateMoneyPage = () => {
               "https://www.paypal.com/donate/?hosted_button_id=CESU98W7BR43S"
             }
           />
-        </div>
-        <div className="col">
-          <Card
+        </Col>
+
+        <Col>
+          <PawsCard
             image={BMClogo}
             title={translate("Donate in our ByMeACoffee fundraiser")}
             text={
@@ -102,9 +105,10 @@ const DonateMoneyPage = () => {
             buttonText={"ByMeACoffee"}
             buttonLink={"https://www.buymeacoffee.com/TanyaL"}
           />
-        </div>
-      </div>
-      <Paws100Percent />
+        </Col>
+      </Row>
+
+      <Paws100PercentDisclaimer />
       <Footer />
     </>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonStyle, Card } from "./Card";
+import { ButtonStyle, PawsCard } from "./PawsCard";
 import logo2 from "../Img/logo2.png";
 import logo from "../Img/logo.png";
 import Tanya from "../Img/teamPhoto/Tanya.png";
@@ -11,6 +11,7 @@ import {
   useTranslate,
 } from "./langSwitcher/langSwitcher";
 import { pawsVolunteerFormUrl } from "../site-const";
+import { Col, Row } from "react-bootstrap";
 
 const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {
@@ -110,10 +111,10 @@ export const TeamPageBody = () => {
 
       <p>{translate("text.board")}</p>
 
-      <div className="row">
+      <Row>
         {board.map((member) => (
-          <div className="col">
-            <Card
+          <Col>
+            <PawsCard
               image={member.image}
               title={member.name}
               text={member.position}
@@ -121,43 +122,43 @@ export const TeamPageBody = () => {
               buttonLink={member.contact}
               buttonStyle={ButtonStyle.Link}
             />
-          </div>
+          </Col>
         ))}
-      </div>
+      </Row>
 
-      <div className="row mt-2">
+      <Row className="mt-2">
         {board2.map((member) => (
-          <div className="col">
-            <Card
+          <Col>
+            <PawsCard
               image={member.image}
               title={member.name}
               text={member.position}
               buttonText={translate("Contact")}
               buttonLink={member.contact}
             />
-          </div>
+          </Col>
         ))}
-      </div>
+      </Row>
 
-      <div className="row bg-light main mt-2">
+      <Row className="mt-2">
         <h3>{translate("Volunteers")}</h3>
-        <Card
+        <PawsCard
           image={logo}
           title={translate("text.volunteer")}
           buttonText={translate("Contact us")}
           buttonLink={pawsVolunteerFormUrl}
         />
-      </div>
+      </Row>
 
-      <div className="row bg-light main mt-2">
+      <Row className="mt-2">
         <h3>{translate("Support us through becoming a member")}</h3>
-        <Card
+        <PawsCard
           image={logo}
           title={translate("text.members")}
           buttonText={translate("Contact us")}
           //buttonLink={"#"}
         />
-      </div>
+      </Row>
 
       {/*<div className="container text-center">*/}
       {/*  <div className="row gray">*/}

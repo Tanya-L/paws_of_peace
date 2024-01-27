@@ -8,11 +8,12 @@ import {
   useTranslate,
 } from "../components/langSwitcher/langSwitcher";
 import {
-  Paws100Percent,
+  Paws100PercentDisclaimer,
   PawsAddress,
   PawsIfYouHaveQuestions,
   PawsOpeningHours,
 } from "../components/prefabs";
+import { Container } from "react-bootstrap";
 
 const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {
@@ -44,9 +45,9 @@ const DonateFoodPage = () => {
     <>
       <Header currentPageId="donateFood" />
       <div>
-        <div className="container text-center">
+        <Container>
           <h1>{translate("donate.title")}</h1>
-          <div className="text-start p-4">
+          <div className="p-4">
             {translate("We welcome donations of")}
             <ul>
               <li>{translate("list.animal food")}</li>
@@ -55,15 +56,17 @@ const DonateFoodPage = () => {
               <li>{translate("toys (old, new)")}</li>{" "}
               <li>{translate("list.medications")}</li>
             </ul>
+
             <p className="fw-bold m-1">
               {translate("text.bringWhere")} <PawsAddress />{" "}
               <PawsOpeningHours />
             </p>
+
             <PawsIfYouHaveQuestions />
             <Map />
-            <Paws100Percent />
+            <Paws100PercentDisclaimer />
           </div>
-        </div>
+        </Container>
       </div>
       <Footer />
     </>
