@@ -30,20 +30,6 @@ export const Map = () => (
   </>
 );
 
-interface MapImageProps {
-  floatSmall: boolean;
-}
-
-export const MapImage: FC<MapImageProps> = ({ floatSmall }) => {
-  if (floatSmall) {
-    return (
-      <img
-        src={map}
-        alt="Paws of Peace location"
-        width="30%"
-        className={styles.floatRight}
-      />
-    );
-  }
+export const MapImage = () => {
   return <img src={map} alt="Paws of Peace location" width="100%" />;
 };

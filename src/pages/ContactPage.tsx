@@ -1,5 +1,5 @@
 import React from "react";
-import { Header } from "../components/headerAndFooter/header";
+import { Header } from "../components/headerAndFooter/Header";
 import Email from "../Img/contact/mail.png";
 import Facebook from "../Img/contact/fb.png";
 import Instagram from "../Img/contact/insta1.png";
@@ -8,7 +8,7 @@ import Linktree from "../Img/contact/linktree.png";
 import styles from "../App.module.css";
 import classNames from "classnames";
 import { Map } from "../components/main/Map";
-import { Footer } from "../components/headerAndFooter/footer";
+import { Footer } from "../components/headerAndFooter/Footer";
 import {
   PawsLangStrings,
   PawsLanguage,

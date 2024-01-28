@@ -1,11 +1,7 @@
 import React from "react";
 import cat3 from "../../Img/cat3.png";
 import dog from "../../Img/dog.png";
-import styles from "../../App.module.css";
-import Facebook from "../../Img/contact/fb.png";
-import Instagram from "../../Img/contact/insta1.png";
 import { Link } from "react-router-dom";
-import classNames from "classnames";
 import { MapImage } from "./Map";
 import {
   PawsLangStrings,
@@ -121,20 +117,29 @@ export const MainPageBody = () => {
   return (
     <Container>
       <Row>
-        <Col className="col-8">
+        <Col lg={8}>
           <h1>{translate("We help animals in Ukraine")}</h1>
 
           <h3>{translate("Our mission")}</h3>
           <p>{translate("text.mission")}</p>
-
+        </Col>
+        <Col lg={4}>
+          <img src={cat3} width="100%" alt="Cat" />
+        </Col>
+      </Row>
+      <Row>
+        <Col lg={8}>
           <h3>{translate("About Paws of Peace")}</h3>
           <p>{translate("text.about")}</p>
-
+        </Col>
+        <Col lg={4}>
+          <img src={dog} width="100%" alt="Dog" />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
           <h3>{translate("How can you help?")}</h3>
           <p>
-            <Link to={PawsUrl.Contact}>
-              <MapImage floatSmall={true} />
-            </Link>
             {translate("text.donateFood")}{" "}
             <b>
               <PawsAddressShort />, <PawsOpeningHoursShort />.
@@ -147,14 +152,11 @@ export const MainPageBody = () => {
             {translate("text.reports")}: <PawsFacebook />, <PawsInstagram />.{" "}
             <Link to={PawsUrl.Reports}>{translate("See Reports")}</Link>
           </p>
-        </Col>
-        <Col className="col-4">
-          <div className="p-4">
-            <img src={cat3} width="100%" alt="Cat" />
-          </div>
-          <div className="p-4">
-            <img src={dog} width="100%" alt="Dog" />
-          </div>
+        </Col>{" "}
+        <Col lg={4}>
+          <Link to={PawsUrl.Contact}>
+            <MapImage />
+          </Link>
         </Col>
       </Row>
     </Container>

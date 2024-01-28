@@ -1,10 +1,16 @@
+li.menuDropdownItem {
+    display: block;
+}
+
 /* Link style */
 a.pawsNavLink {
+    display: inline-block;
     color: black;
-    margin-right: 1em;
-    /*border-radius: 0.25em;*/
-    /*padding: 0.1em 0.25em 0.1em 0.25em;*/
-    /*text-decoration: none;*/
+    border-radius: 0.25em;
+    margin: 0.25em 1em 0.25em 0.25em;
+    padding: 0.25em;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
 a.pawsNavLink:hover {
@@ -18,10 +24,4 @@ a.pawsCurrentPage {
 
 a.pawsCurrentPage:hover {
     color: white;
-}
-
-img.logo {
-    width: 7em;
-    height: 7em;
-    margin-top: -1em; /* Compensate outer padding */
 }

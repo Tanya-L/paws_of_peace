@@ -1,9 +1,9 @@
 import React from "react";
-import { Header } from "../components/headerAndFooter/header";
-import { Footer } from "../components/headerAndFooter/footer";
+import { Header } from "../components/headerAndFooter/Header";
+import { Footer } from "../components/headerAndFooter/Footer";
 import { ButtonStyle, PawsCard } from "../components/PawsCard";
-import secondHelp from "../Img/donate/secondHelp.png";
-import needHelp from "../Img/donate/needHelp.png";
+import secondHelp from "../Img/donate/secondHelp.jpg";
+import needHelp from "../Img/donate/needHelp.jpg";
 import {
   getActiveLanguage,
   PawsLangStrings,
@@ -13,11 +13,9 @@ import {
 import {
   pawsRequestHelpAgainFormUrl,
   pawsRequestHelpFormUrl,
-  PawsUrl,
 } from "../site-const";
 import { Col, Row } from "react-bootstrap";
 import { useCookies } from "react-cookie";
-import { Link, useLocation } from "react-router-dom";
 import { UkrainianOnly } from "../components/prefabs";
 
 const strings: PawsLangStrings = {
@@ -56,7 +54,7 @@ const HelpRequestPage = () => {
       <Row>
         <Col>
           <PawsCard
-            image={needHelp}
+            topImage={needHelp}
             title={"Потрібна допомога?"}
             text={
               <>
@@ -75,7 +73,7 @@ const HelpRequestPage = () => {
 
         <Col>
           <PawsCard
-            image={secondHelp}
+            topImage={secondHelp}
             title={"Знову потрібна допомога?"}
             text={
               <>

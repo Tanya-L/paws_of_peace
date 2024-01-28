@@ -166,6 +166,7 @@ export const TeamPageBody = () => {
               text={member.position}
               buttonText={translate("Contact")}
               buttonLink={member.contact}
+              buttonStyle={ButtonStyle.Link}
             />
           </Col>
         ))}
@@ -187,20 +188,8 @@ export const TeamPageBody = () => {
           image={logo}
           title={translate("text.members")}
           buttonText={translate("Contact us")}
-          //buttonLink={"#"}
         />
       </Row>
-
-      {/*<div className="container text-center">*/}
-      {/*  <div className="row gray">*/}
-      {/*    <div className="col">*/}
-      {/*      <Card image={logo2} title={"Nikolay Kotov"} text={"Supporter"} />*/}
-      {/*    </div>*/}
-      {/*    <div className="col">*/}
-      {/*      <Card image={logo2} title={"Max Giryk"} text={"Supporter"} />*/}
-      {/*    </div>*/}
-      {/*  </div>*/}
-      {/*</div>*/}
     </>
   );
 };

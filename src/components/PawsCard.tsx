@@ -1,13 +1,15 @@
-import React, { FC } from "react";
+import React, { FC, ReactNode } from "react";
 import classNames from "classnames";
 import logo2 from "../Img/logo2.png";
-import styles from "./card.module.css";
+import styles from "./PawsCard.module.css";
 import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 interface PawsCardProps {
+  topImage?: string;
   image?: string;
   title?: string;
-  text?: string | JSX.Element;
+  text?: string | ReactNode;
   buttonText?: string;
   buttonLink?: string;
   buttonStyle?: ButtonStyle;
@@ -24,6 +26,7 @@ export enum ButtonStyle {
 }
 
 export const PawsCard: FC<PawsCardProps> = ({
+  topImage,
   image,
   title,
   text,
@@ -31,42 +34,47 @@ export const PawsCard: FC<PawsCardProps> = ({
   buttonLink,
   buttonStyle = ButtonStyle.Success,
 }) => (
-  <Card className={classNames("card", styles.pawsCard)}>
+  <Card className={styles.pawsCard}>
+    {/* Top image is defined */}
+    {topImage && (
+      <div className={styles.pawsCardTopImageWrap}>
+        <Card.Img
+          className={styles.pawsCardTopImage}
+          variant="top"
+          src={topImage}
+          alt={title}
+        />
+      </div>
+    )}
+    {/* Square image is defined */}
     {image && (
       <Card.Img
         src={image}
-        className={classNames("card-img-top", styles.pawsCardImg)}
-        alt="..."
+        className={classNames(styles.pawsCardImage)}
+        alt={title}
       />
     )}
-    {!image && (
+    {/* Fallback - no image defined */}
+    {!topImage && !image && (
       <Card.Img
+        variant="top"
         src={logo2}
-        className={classNames(
-          "card-img-top",
-          styles.pawsCardImg,
-          styles.desaturated
-        )}
-        alt="..."
+        className={classNames(styles.pawsCardImage, styles.desaturated)}
+        alt={title}
       />
     )}
-    <Card.Body>
+    <Card.Body className={styles.pawsCardBody}>
       <Card.Title className={classNames(styles.pawsCardTitle)}>
         {title}
       </Card.Title>
 
       <Card.Text className={classNames(styles.pawsCardText)}>{text}</Card.Text>
-    </Card.Body>
 
-    {buttonText && buttonLink && (
-      <Card.Body>
-        <Card.Link
-          href={buttonLink}
-          className={classNames("btn", buttonStyle, "pin-button")}
-        >
+      {buttonText && buttonLink && (
+        <Link to={buttonLink} className={classNames("btn", buttonStyle)}>
           {buttonText}
-        </Card.Link>
-      </Card.Body>
-    )}
+        </Link>
+      )}
+    </Card.Body>
   </Card>
 );

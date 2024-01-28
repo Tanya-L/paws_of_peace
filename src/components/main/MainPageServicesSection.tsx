@@ -1,8 +1,8 @@
 import React from "react";
 import { PawsCard } from "../PawsCard";
-import needHelp from "../../Img/donate/needHelp.png";
+import donateCat from "../../Img/donate/donateCat.jpg";
+import needHelp from "../../Img/donate/needHelp.jpg";
 import dogfood from "../../Img/donate/dogfood.png";
-import swishNUF from "../../Img/donate/swishNUF.png";
 import "../../App.module.css";
 import {
   getActiveLanguage,
@@ -70,7 +70,7 @@ export const MainPageServicesSection = () => {
         {activeLang === PawsLanguage.Ukr && (
           <Col>
             <PawsCard
-              image={needHelp}
+              topImage={needHelp}
               title={translate("Need help?")}
               text={translate("text.needHelp")}
               buttonText={translate("button.needHelp")}
@@ -80,7 +80,7 @@ export const MainPageServicesSection = () => {
         )}
         <Col>
           <PawsCard
-            image={dogfood}
+            topImage={dogfood}
             title={translate("Help Ukrainian animal shelters now!")}
             text={translate("text.donateFood")}
             buttonText={translate("button.donateFood")}
@@ -89,7 +89,7 @@ export const MainPageServicesSection = () => {
         </Col>
         <Col>
           <PawsCard
-            image={swishNUF}
+            topImage={donateCat}
             title={translate("Donate, Save Lives!")}
             text={translate("text.donateMoney")}
             buttonText={translate("button.donateMoney")}

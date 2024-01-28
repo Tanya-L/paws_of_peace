@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Header } from "../components/headerAndFooter/header";
-import { Footer } from "../components/headerAndFooter/footer";
+import { Header } from "../components/headerAndFooter/Header";
+import { Footer } from "../components/headerAndFooter/Footer";
 import { MainPageServicesSection } from "../components/main/MainPageServicesSection";
 import { MainPagePartnersSection } from "../components/main/MainPagePartnersSection";
 import { MainPageBody } from "../components/main/MainPageBody";

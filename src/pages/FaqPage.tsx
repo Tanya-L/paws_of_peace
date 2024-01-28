@@ -1,7 +1,7 @@
 import React from "react";
 import { FaqPageBody } from "../components/FaqPageBody";
-import { Header } from "../components/headerAndFooter/header";
-import { Footer } from "../components/headerAndFooter/footer";
+import { Header } from "../components/headerAndFooter/Header";
+import { Footer } from "../components/headerAndFooter/Footer";
 import { useCookies } from "react-cookie";
 import {
   getActiveLanguage,

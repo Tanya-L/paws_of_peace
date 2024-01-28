@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { Link } from "react-router-dom";
 
-import styles from "./header.module.css";
+import styles from "./Header.module.css";
 import logo from "../../Img/logo.png";
 import {
   getActiveLanguage,
@@ -16,7 +16,7 @@ import {
   isMenuitemVisibleWithLanguage,
   MenuBar,
   MenuItemDefinition,
-} from "./menu";
+} from "./Menu";
 import { useCookies } from "react-cookie";
 
 const strings: PawsLangStrings = {
@@ -39,7 +39,7 @@ const strings: PawsLangStrings = {
     FAQs: "", // not visible in English version
     Team: "Vårt team",
     Reports: "Verksamhetsrapporter",
-    Contact: "Kontakt oss",
+    Contact: "Kontakta oss",
     Organisation: "Vår organisation",
   },
   [PawsLanguage.Eng]: {
@@ -102,20 +102,6 @@ interface HeaderProps {
 }
 
 export const Header: FC<HeaderProps> = ({ currentPageId }) => {
-  const { translate } = useTranslate(strings);
-
-  const getMenuitemCssClasses = (menuitemPageId: string): string[] => {
-    return currentPageId === menuitemPageId
-      ? [
-          styles.pawsNavLink,
-          styles.pawsCurrentPage,
-          "btn",
-          "btn-default",
-          "btn-sm",
-        ]
-      : [styles.pawsNavLink, "btn", "btn-default", "btn-sm"];
-  };
-
   const [cookies] = useCookies(["lang"]);
   const activeLang = getActiveLanguage(cookies.lang);
 
@@ -123,19 +109,13 @@ export const Header: FC<HeaderProps> = ({ currentPageId }) => {
     <header className="d-flex flex-wrap justify-content-center py-2 mb-4 border-bottom">
       <Logo />
 
-      <ul className="nav nav-pills">
-        <MenuBar
-          items={menuItems.filter((item) =>
-            isMenuitemVisibleWithLanguage(item, activeLang)
-          )}
-          getMenuitemCssClasses={getMenuitemCssClasses}
-          translate={translate}
-        />
-
-        <li className="nav-item">
-          <LangSwitcher />
-        </li>
-      </ul>
+      <MenuBar
+        strings={strings}
+        currentPageId={currentPageId}
+        items={menuItems.filter((item) =>
+          isMenuitemVisibleWithLanguage(item, activeLang)
+        )}
+      />
     </header>
   );
 };

@@ -1,10 +1,11 @@
 import React from "react";
-import { Header } from "../components/headerAndFooter/header";
-import { Footer } from "../components/headerAndFooter/footer";
+import { Header } from "../components/headerAndFooter/Header";
+import { Footer } from "../components/headerAndFooter/Footer";
 import { PawsCard } from "../components/PawsCard";
-import swishNUF from "../Img/donate/swishNUF.png";
+import swishNUF from "../Img/donate/swishNUFCropped.png";
 import BMClogo from "../Img/donate/BMClogo.png";
-import BG from "../Img/donate/BG.png";
+// import BG from "../Img/donate/BG.png";
+import bankgirot from "../Img/donate/bankgirot_rod_rgb_300dpi.png";
 import PPlogo from "../Img/donate/PPlogo.png";
 import {
   PawsLangStrings,
@@ -81,7 +82,7 @@ const DonateMoneyPage = () => {
 
         <Col>
           <PawsCard
-            image={BG}
+            image={bankgirot}
             title={translate("Donate by Bankgiro")}
             text={
               <>
