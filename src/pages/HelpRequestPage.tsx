@@ -16,6 +16,7 @@ import {
 import { Col, Row } from "react-bootstrap";
 
 const strings: PawsLangStrings = {
+  [PawsLanguage.Swe]: {},
   [PawsLanguage.Ukr]: {
     "eng.Disclaimer": "",
   },

@@ -47,6 +47,10 @@ const App = () => {
       path: PawsUrl.English,
       element: <LangSwitcherPage lang={PawsLanguage.Eng} />,
     },
+    {
+      path: PawsUrl.Swedish,
+      element: <LangSwitcherPage lang={PawsLanguage.Swe} />,
+    },
   ]);
 
   return (

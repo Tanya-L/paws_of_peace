@@ -19,6 +19,9 @@ import {
 import { Link } from "react-router-dom";
 
 const strings: PawsLangStrings = {
+  [PawsLanguage.Swe]: {
+    "text.copy": `© 2024 Paws of Peace. Organisationsnummer ${orgNr}`,
+  },
   [PawsLanguage.Ukr]: {
     "text.copy": `© 2024 Paws of Peace. Зарєстрований номер в Швеції ${orgNr}`,
   },

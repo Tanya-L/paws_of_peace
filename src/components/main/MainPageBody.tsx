@@ -57,6 +57,35 @@ const strings: PawsLangStrings = {
       "Ми публікуємо регулярні звіти про нашу діяльність у соцмедіа",
     "See Reports": "Сторінка звітів",
   },
+  [PawsLanguage.Swe]: {
+    "We help animals in Ukraine": "Vi hjälper djur i Ukraina",
+    "Our mission": "Vår mission",
+    "text.mission":
+      "Vi stödjer projekt för sterilisering och vaccination av djur i Ukraina, " +
+      "och hjälper även hemlösa och övergivna djur med mat och medicinsk vård. " +
+      "Gå med i Paws of Peace för att stödja djurhem i Ukraina genom att donera djurfoder, " +
+      "djurvårdsprodukter eller pengar för att hjälpa oss att göra skillnad.",
+    "About Paws of Peace": "Om Paws of Peace",
+    "text.about":
+      "Vi är en ideell organisation baserad i Sverige som är dedikerad till att göra en positiv " +
+      "skillnad för djurskydd i Ukraina. Vårt primära fokus är att samla in donationer, " +
+      "inklusive financiell stöd, djurfoder och djurvårdsprodukter, som sedan skickas till Ukraina. " +
+      "Vårt mål är att fördela dessa donationer bland djurhem i Ukraina som behöver hjälp. " +
+      "Vårt team arbetar outtröttligt för att säkerställa att de donationer vi får används på " +
+      "bästa möjliga sätt. Vi utvärderar noggrant djurhemmens behov och strävar efter att " +
+      "fördela resurserna där de kommer att ha störst effekt. I kärnan av vår mission ligger " +
+      "övertygelsen att varje djur förtjänar ett tryggt och kärleksfullt hem. Vi är passionerat " +
+      "engagerade i att förvandla denna övertygelse till verklighet. Tillsammans kan vi göra " +
+      "en betydande skillnad i dessa djurs liv.",
+    "How can you help?": "Hur kan du hjälpa till?",
+    "text.donateFood": "Du kan donera djurfoder och förnödenheter på",
+    "text.donateMoney":
+      "Du kan donera pengar via Swish, Bankgiro, Paypal eller Buymeacoffee.",
+    "Our activity reports": "Våra aktivitetsrapporter",
+    "text.reports":
+      "Regelbundna rapporter om vår verksamhet i våra sociala medier",
+    "See Reports": "Se rapporter",
+  },
   [PawsLanguage.Eng]: {
     "text.mission":
       "We support animal sterilization and vaccination projects in " +

@@ -10,6 +10,14 @@ import { orgNr, PawsUrl, stadgarSweUrl, stadgarUkrUrl } from "../site-const";
 import { Link } from "react-router-dom";
 
 const strings: PawsLangStrings = {
+  [PawsLanguage.Swe]: {
+    "Organisation Information": "Information om organisationen",
+    "text.orgReg": `Organisationen är en ideell förening och är registrerad i Sverige under nummer ${orgNr}.`,
+    "text.theBoard": "Styrelsen vald för 2023",
+    "see.team": "se team-sidan",
+    "text.stadgarSwe": "Föreningens stadgar (svenska, original)",
+    "text.stadgarUkr": "Föreningens stadgar (ukrainska, översättning)",
+  },
   [PawsLanguage.Ukr]: {
     "Organisation Information": "Інформація про організацію",
     "text.orgReg": `Організація є неприбутковою та благодійною, і зареєстрована в Швеції під номером ${orgNr}.`,

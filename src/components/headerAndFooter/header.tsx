@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import styles from "./header.module.css";
 import logo from "../../Img/logo.png";
 import {
+  getActiveLanguage,
   LangSwitcher,
   PawsLangStrings,
   PawsLanguage,
@@ -11,7 +12,12 @@ import {
 } from "../langSwitcher/langSwitcher";
 
 import { PawsUrl } from "../../site-const";
-import { MenuBar, MenuItemDefinition } from "./menu";
+import {
+  isMenuitemVisibleWithLanguage,
+  MenuBar,
+  MenuItemDefinition,
+} from "./menu";
+import { useCookies } from "react-cookie";
 
 const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {
@@ -25,12 +31,28 @@ const strings: PawsLangStrings = {
     Contact: "Контакти",
     Organisation: "Організація",
   },
+  [PawsLanguage.Swe]: {
+    Home: "Hem",
+    "Need help?": "Behöver du hjälp?",
+    "Donate Money": "Donera pengar",
+    "Donate Supplies": "Donera saker",
+    FAQs: "Frågor (på ukrainska)",
+    Team: "Team",
+    Reports: "Verksamhetsrapporter",
+    Contact: "Kontakt",
+    Organisation: "Organisation",
+  },
   [PawsLanguage.Eng]: { FAQs: "FAQ (in Ukrainian)" },
 };
 
 const menuItems: MenuItemDefinition[] = [
   { to: PawsUrl.Root, highlightId: "home", text: "Home" },
-  { to: PawsUrl.RequestHelp, highlightId: "needHelp", text: "Need help?" },
+  {
+    to: PawsUrl.RequestHelp,
+    highlightId: "needHelp",
+    text: "Need help?",
+    lang: [PawsLanguage.Ukr],
+  },
   {
     to: PawsUrl.DonateMoney,
     highlightId: "donateMoney",
@@ -43,7 +65,12 @@ const menuItems: MenuItemDefinition[] = [
       },
     ],
   },
-  { to: PawsUrl.Faq, highlightId: "faq", text: "FAQs" },
+  {
+    to: PawsUrl.Faq,
+    highlightId: "faq",
+    text: "FAQs",
+    lang: [PawsLanguage.Ukr],
+  },
   {
     to: PawsUrl.Organisation,
     highlightId: "organisation",
@@ -51,9 +78,9 @@ const menuItems: MenuItemDefinition[] = [
     nested: [
       { to: PawsUrl.Team, highlightId: "team", text: "Team" },
       { to: PawsUrl.Reports, highlightId: "reports", text: "Reports" },
-      { to: PawsUrl.Contact, highlightId: "contact", text: "Contact" },
     ],
   },
+  { to: PawsUrl.Contact, highlightId: "contact", text: "Contact" },
 ];
 
 const Logo = () => {
@@ -86,13 +113,18 @@ export const Header: FC<HeaderProps> = ({ currentPageId }) => {
       : [styles.pawsNavLink, "btn", "btn-default", "btn-sm"];
   };
 
+  const [cookies] = useCookies(["lang"]);
+  const activeLang = getActiveLanguage(cookies.lang);
+
   return (
     <header className="d-flex flex-wrap justify-content-center py-2 mb-4 border-bottom">
       <Logo />
 
       <ul className="nav nav-pills">
         <MenuBar
-          items={menuItems}
+          items={menuItems.filter((item) =>
+            isMenuitemVisibleWithLanguage(item, activeLang)
+          )}
           getMenuitemCssClasses={getMenuitemCssClasses}
           translate={translate}
         />

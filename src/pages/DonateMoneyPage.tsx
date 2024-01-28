@@ -28,6 +28,21 @@ const strings: PawsLangStrings = {
       "Для підтримки нашої справи з усіх країн світу.",
     "Donate in our ByMeACoffee fundraiser": "Пожертвувати через ByMeACoffee",
   },
+  [PawsLanguage.Swe]: {
+    "Thank you!": "Tack!",
+    "Donate by Swish": "Donera via Swish",
+    "swish.text":
+      "Swish-donationer hanteras av Nordic Ukraine Forum. " +
+      "Märk din donation med meddelandet",
+    "Donate by Bankgiro": "Donera via Bankgiro",
+    "bankgiro.text":
+      "Bankgiro-donationer hanteras av Nordic Ukraine Forum. " +
+      "Märk din donation med meddelandet",
+    "Donate by PayPal": "Donera via PayPal",
+    "For international supporters.":
+      "För att stödja vår sak från alla länder i världen.",
+    "Donate in our ByMeACoffee fundraiser": "Donera via ByMeACoffee",
+  },
   [PawsLanguage.Eng]: {
     "swish.text":
       "Swish donations are handled by Nordic Ukraine Forum. Please label your donation with the message",

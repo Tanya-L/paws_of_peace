@@ -29,6 +29,17 @@ const strings: PawsLangStrings = {
       "Ваша організація хоче співпрацювати з нами? Давайте станемо партнерами.",
     "Contact us!": "Зв'яжіться з нами!",
   },
+  [PawsLanguage.Swe]: {
+    "Embassy of Ukraine in The Kingdom of Sweden":
+      "Ukrainas ambassad i Sverige",
+    "Ukrainian Volunteer Hub - Stockholm": "Ukrainska Volontär Hub - Stockholm",
+    Hundstallet: "Hundstallet",
+    Kattstallet: "Kattstallet",
+    "Do you want to become our partner? Contact us!":
+      "Vill du bli vår partner? Kontakta oss!",
+    "text.popPartnerJoin": "Vill din organisation samarbeta med oss?",
+    "Contact us!": "Kontakta oss!",
+  },
   [PawsLanguage.Eng]: {
     "text.popPartnerJoin":
       "Does your organisation want to work together? Let's become partners.",

@@ -1,16 +1,18 @@
 import React, { FC, useEffect } from "react";
-import langUkr from "../../Img/langUkr.png";
-import langEng from "../../Img/langEng.png";
+// import langUkr from "../../Img/langUkr.png";
+// import langEng from "../../Img/langEng.png";
 import styles from "./langSwitcher.module.css";
 import { useCookies } from "react-cookie";
 import classNames from "classnames";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { PawsUrl } from "../../site-const";
+import { Col, Row } from "react-bootstrap";
 
 export enum PawsLanguage {
   Ukr = "Ukr",
   Eng = "Eng",
+  Swe = "Swe",
 }
 
 const getBrowserLanguages = () => {
@@ -33,10 +35,13 @@ export type PawsLangStrings = {
 
 export const useTranslate = (strings: PawsLangStrings) => {
   const browserLanguages = getBrowserLanguages();
-  const guessedLanguage =
-    browserLanguages.includes("uk") || browserLanguages.includes("ru")
-      ? PawsLanguage.Ukr
-      : PawsLanguage.Eng;
+  const guessFn = () => {
+    if (browserLanguages.includes("uk") || browserLanguages.includes("ru"))
+      return PawsLanguage.Ukr;
+    if (browserLanguages.includes("sv")) return PawsLanguage.Swe;
+    return PawsLanguage.Eng;
+  };
+  const guessedLanguage = guessFn();
 
   const [cookies] = useCookies(["lang"]);
   const lang = (cookies.lang as PawsLanguage) || guessedLanguage;
@@ -63,32 +68,58 @@ export const LangSwitcherPage: FC<LangSwitcherSetProps> = ({ lang }) => {
   return <></>;
 };
 
+export const getActiveLanguage = (lang: PawsLanguage | undefined) => {
+  return lang || PawsLanguage.Eng;
+};
+
 export const LangSwitcher = () => {
   const [cookies] = useCookies(["lang"]);
   const location = useLocation();
 
+  let activeLang = getActiveLanguage(cookies.lang);
+  let ukrActive = activeLang === PawsLanguage.Ukr;
+  let ukrSwitchStyle = classNames(styles.langSwitch, {
+    [styles.inactive]: !ukrActive,
+    [styles.active]: ukrActive,
+  });
+
+  let engActive = activeLang === PawsLanguage.Eng;
+  let engSwitchStyle = classNames(styles.langSwitch, {
+    [styles.inactive]: !engActive,
+    [styles.active]: engActive,
+  });
+
+  let sweActive = activeLang === PawsLanguage.Swe;
+  let sweSwitchStyle = classNames(styles.langSwitch, {
+    [styles.inactive]: !sweActive,
+    [styles.active]: sweActive,
+  });
   return (
-    <>
-      <Link to={`${PawsUrl.Ukrainian}?referrer=${location.pathname}`}>
-        <img
-          src={langUkr}
-          alt="Українська"
-          title="Українська"
-          className={classNames(styles.langIcon, {
-            [styles.inactive]: cookies.lang !== PawsLanguage.Ukr,
-          })}
-        />
-      </Link>
-      <Link to={`${PawsUrl.English}?referrer=${location.pathname}`}>
-        <img
-          src={langEng}
-          alt="English"
-          title="English"
-          className={classNames(styles.langIcon, {
-            [styles.inactive]: cookies.lang === PawsLanguage.Ukr,
-          })}
-        />
-      </Link>
-    </>
+    <Col>
+      <Row>
+        <Link
+          to={`${PawsUrl.Ukrainian}?referrer=${location.pathname}`}
+          className={ukrSwitchStyle}
+        >
+          Українська
+        </Link>
+      </Row>
+      <Row>
+        <Link
+          to={`${PawsUrl.English}?referrer=${location.pathname}`}
+          className={engSwitchStyle}
+        >
+          English
+        </Link>
+      </Row>
+      <Row>
+        <Link
+          to={`${PawsUrl.Swedish}?referrer=${location.pathname}`}
+          className={sweSwitchStyle}
+        >
+          Svenska
+        </Link>
+      </Row>
+    </Col>
   );
 };

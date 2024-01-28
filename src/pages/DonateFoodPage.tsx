@@ -29,6 +29,20 @@ const strings: PawsLangStrings = {
     "text.bringWhere":
       "Приносьте та привозьте пожертви на нашу адресу, або можна домовитись про місце і час, де ми заберемо вашу пожертву (якщо багато речей).",
   },
+  [PawsLanguage.Swe]: {
+    "donate.title": "Donera mat och saker till djur",
+    "We welcome donations of": "Vi tar emot följande donationer",
+    "list.animal food":
+      "djurfoder 🐾 (nytt, öppnat, även om det är lite utgången)",
+    cages: "burar (transportburar) för djur",
+    "pet blankets": "filtar för djur",
+    "toys (old, new)": "leksaker (gamla och nya)",
+    "list.medications":
+      "mediciner och medicinska produkter som är inte receptbelagda (avmaskningsmedel, medicinska kragar etc.)",
+    "text.bringWhere":
+      "Ta med dina donationer till vår adress, eller kontakta oss för att komma överens " +
+      "om en tid och plats där vi kan hämta dina donationer (om det är mycket saker).",
+  },
   [PawsLanguage.Eng]: {
     "donate.title": "Donate food and supplies to Paws of Peace",
     "list.animal food": "animal food 🐾 (new, open, slightly expired)",

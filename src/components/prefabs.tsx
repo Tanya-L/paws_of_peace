@@ -32,6 +32,19 @@ const strings: PawsLangStrings = {
     "link.requestHelp": "Форма допомоги (перше звернення)",
     "link.requestHelpAgain": "Форма допомоги (друге та наступні звернення)",
   },
+  [PawsLanguage.Swe]: {
+    "paws.address": "Vi finns på Sveavägen 162B i Stockholm.",
+    "paws.address.short": "Stockholm, Sveavägen 162B",
+    "paws.hours":
+      "Vi har öppet på söndagar, 14:00-18:00, andra dagar enligt överenskommelse för lasthantering.",
+    "paws.hours.short": "Söndagar, 14:00-18:00",
+    "paws.contactUs":
+      "Om du har några frågor, tveka inte att skicka oss ett meddelande.",
+    "paws.100%":
+      "100% av din donation går till att hjälpa djur i Ukraina i regioner som drabbats mest av krig.",
+    "link.requestHelp": "",
+    "link.requestHelpAgain": "",
+  },
   [PawsLanguage.Eng]: {
     "paws.address": "We are located in Stockholm on Sveavägen 162B.",
     "paws.address.short": "Stockholm, Sveavägen 162B",

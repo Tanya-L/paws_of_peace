@@ -25,7 +25,7 @@ const strings: PawsLangStrings = {
     Cashier: "Касир",
     "Dmytro Lytovchenko": "Дмитро Литовченко",
     "Board member": "Член правління",
-    "Rikku Bölske": "Рікку Бельске",
+    ["Rikku Bölske"]: "Рікку Бельске",
     "Ksenia Kalmykova": "Ксенія Калмикова",
     Volunteers: "Волонтери",
     "Support us through becoming a member": "Підтримайте нас ставши учасником",
@@ -43,6 +43,37 @@ const strings: PawsLangStrings = {
       "Членський внесок: 250 кр/рік для дорослих або 100 кр/рік для біженців та студентів, " +
       "які можуть не мати стабільного доходу. Учасники можуть брати участь у щорічних зборах та " +
       "голосувати за членів правління на наступний рік.",
+  },
+  [PawsLanguage.Swe]: {
+    "team.title": "Styrelsen för Paws of Peace",
+    Contact: "Kontakta oss",
+    "Tanya Lytovchenko": "Tanya Lytovchenko",
+    Chairman: "Ordförande",
+    "Tanya Kozoriz": "Tanya Kozoriz",
+    "Vice-chairman": "Vice ordförande",
+    "Karina SH": "Karina Shyrokykh",
+    Cashier: "Kassör",
+    "Dmytro Lytovchenko": "Dmytro Lytovchenko",
+    "Board member": "Styrelsemedlem",
+    ["Rikku Bölske"]: "Rikku Bölske",
+    "Ksenia Kalmykova": "Ksenia Kalmykova",
+    Volunteers: "Volontärer",
+    "Support us through becoming a member": "Stöd oss genom att bli medlem",
+    "text.board":
+      "Styrelsen väljs för 2023 och kan omväljas eller ändras tidigt 2024. " +
+      "Alla betalande medlemmar kan delta i årsmötet, rösta och kan också " +
+      "väljas som styrelsemedlemmar.",
+    "text.volunteer":
+      "Volontärarbete på Paws of Peace är obetalt arbete, " +
+      "vanligtvis innebär det att hjälpa till att flytta och packa donationer " +
+      "i lådor. Vi behöver volontärer tillgängliga på söndagar från 14 till 18. " +
+      "Vill du gå med i volontärteamet?",
+    "Contact us": "Kontakta oss",
+    "text.members":
+      "Medlemmar i Paws of Peace är människor som stöder vår mission och verksamhet. " +
+      "Det finns en medlemsavgift: 250 kr/år för vuxna eller 100 kr/år för flyktingar " +
+      "och studenter som kanske inte har en stabil inkomst. Medlemmar kan delta i " +
+      "årsmöten och rösta för styrelsemedlemmar.",
   },
   [PawsLanguage.Eng]: {
     "team.title": "Paws of Peace Board",

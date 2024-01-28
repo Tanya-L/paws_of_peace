@@ -1,18 +1,14 @@
 import React, { FC } from "react";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
-
-interface MenuItemProps {
-  to: string;
-  className?: string;
-  text: string;
-}
+import { PawsLanguage } from "../langSwitcher/langSwitcher";
 
 export interface MenuItemDefinition {
   to: string;
   highlightId: string;
   text: string;
   nested?: MenuItemDefinition[];
+  lang?: PawsLanguage[];
 }
 
 interface MenuBarProps {
@@ -41,6 +37,13 @@ export const MenuDropdown: FC<MenuBarProps> = ({
       ))}
     </>
   );
+};
+
+export const isMenuitemVisibleWithLanguage = (
+  item: MenuItemDefinition,
+  lang: PawsLanguage
+): boolean => {
+  return item.lang === undefined || item.lang.includes(lang);
 };
 
 export const MenuBar: FC<MenuBarProps> = ({

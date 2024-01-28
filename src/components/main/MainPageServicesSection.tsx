@@ -28,6 +28,19 @@ const strings: PawsLangStrings = {
       "Хочете допомогти нашій діяльності грошима? Пожертвуйте вже сьогодні!",
     "button.donateMoney": "Пожертвувати гроші",
   },
+  [PawsLanguage.Swe]: {
+    "Need help?": "Behöver du hjälp?",
+    "text.needHelp":
+      "Fyll i detta formulär och vi ska göra vårt bästa för att hjälpa dig!",
+    "button.needHelp": "Fyll i formulär",
+    "Help Ukrainian animal shelters now!": "Hjälp ukrainska djurhem nu!",
+    "text.donateFood":
+      "Har du extra djurfoder eller förnödenheter? Donera dem till ett djurhem i Ukraina!",
+    "button.donateFood": "Saker och djurfoder",
+    "Donate, Save Lives!": "Donera, rädda liv!",
+    "text.donateMoney":
+      "Vill du hjälpa oss med pengar? Donera till Paws of Peace idag!",
+  },
   [PawsLanguage.Eng]: {
     "text.needHelp":
       "(Only for residents of Ukraine) Fill this request form and we will do our best to help you!",

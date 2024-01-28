@@ -14,6 +14,11 @@ import {
 } from "../components/prefabs";
 
 const strings: PawsLangStrings = {
+  [PawsLanguage.Swe]: {
+    "Activity reports": "Verksamhetsrapporter",
+    "text.reports":
+      "Vi publicerar regelbundet verksamhetsrapporter i våra sociala medier",
+  },
   [PawsLanguage.Ukr]: {
     "Activity reports": "Звіти про діяльність",
     "text.reports": "Ми публікуємо регулярні звіти про нашу діяльність",

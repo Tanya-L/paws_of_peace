@@ -10,6 +10,7 @@ export enum PawsUrl {
   Contact = "/org/contact",
   Ukrainian = "/lang/uk",
   English = "/lang/en",
+  Swedish = "/lang/sv",
 }
 
 export const orgNr = "802545-0886";

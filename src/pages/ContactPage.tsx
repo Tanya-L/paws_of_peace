@@ -19,6 +19,10 @@ import { pawsInstagram, pawsLinkedin, pawsLinktree } from "../site-const";
 import { Link } from "react-router-dom";
 
 const strings: PawsLangStrings = {
+  [PawsLanguage.Swe]: {
+    "Contact Paws of Peace": "Kontakta Paws of Peace",
+    "Find Us Here": "Hitta oss här",
+  },
   [PawsLanguage.Ukr]: {
     "Contact Paws of Peace": "Зв'язатися з Paws of Peace",
     "Find Us Here": "Знайдіть нас тут",
