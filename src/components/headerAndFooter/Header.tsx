@@ -18,6 +18,7 @@ import {
   MenuItemDefinition,
 } from "./Menu";
 import { useCookies } from "react-cookie";
+import { Col, Row } from "react-bootstrap";
 
 const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {
@@ -49,12 +50,24 @@ const strings: PawsLangStrings = {
 };
 
 const menuItems: MenuItemDefinition[] = [
-  { to: PawsUrl.Root, highlightId: "home", text: "Home" },
   {
-    to: PawsUrl.RequestHelp,
-    highlightId: "needHelp",
-    text: "Need help?",
-    lang: [PawsLanguage.Ukr],
+    to: PawsUrl.Root,
+    highlightId: "home",
+    text: "Home",
+    nested: [
+      {
+        to: PawsUrl.RequestHelp,
+        highlightId: "needHelp",
+        text: "Need help?",
+        lang: [PawsLanguage.Ukr],
+      },
+      {
+        to: PawsUrl.Faq,
+        highlightId: "faq",
+        text: "FAQs",
+        lang: [PawsLanguage.Ukr],
+      },
+    ],
   },
   {
     to: PawsUrl.DonateMoney,
@@ -67,12 +80,6 @@ const menuItems: MenuItemDefinition[] = [
         text: "Donate Supplies",
       },
     ],
-  },
-  {
-    to: PawsUrl.Faq,
-    highlightId: "faq",
-    text: "FAQs",
-    lang: [PawsLanguage.Ukr],
   },
   {
     to: PawsUrl.Organisation,
@@ -88,10 +95,7 @@ const menuItems: MenuItemDefinition[] = [
 
 const Logo = () => {
   return (
-    <Link
-      to={PawsUrl.Root}
-      className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
-    >
+    <Link to={PawsUrl.Root}>
       <img src={logo} className={styles.logo} alt="Paws of Peace" />
     </Link>
   );
@@ -102,20 +106,25 @@ interface HeaderProps {
 }
 
 export const Header: FC<HeaderProps> = ({ currentPageId }) => {
-  const [cookies] = useCookies(["lang"]);
-  const activeLang = getActiveLanguage(cookies.lang);
-
   return (
     <header className="d-flex flex-wrap justify-content-center py-2 mb-4 border-bottom">
-      <Logo />
+      <Row className="w-100">
+        <Col sm={2} lg={2}>
+          <Logo />
+        </Col>
 
-      <MenuBar
-        strings={strings}
-        currentPageId={currentPageId}
-        items={menuItems.filter((item) =>
-          isMenuitemVisibleWithLanguage(item, activeLang)
-        )}
-      />
+        <Col sm={8} lg={8}>
+          <MenuBar
+            strings={strings}
+            currentPageId={currentPageId}
+            items={menuItems}
+          />
+        </Col>
+
+        <Col sm={2} lg={2}>
+          <LangSwitcher />
+        </Col>
+      </Row>
     </header>
   );
 };

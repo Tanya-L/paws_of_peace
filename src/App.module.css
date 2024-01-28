@@ -1,11 +1,11 @@
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
     .pawsMain {
         padding-left: 6em !important;
         padding-right: 6em !important;
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .pawsMain {
         margin-left: 1rem;
         margin-right: 1rem;
