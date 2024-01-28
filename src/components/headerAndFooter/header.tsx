@@ -22,14 +22,14 @@ import { useCookies } from "react-cookie";
 const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {
     Home: "Головна",
-    "Need help?": "Потрібна допомога?",
+    "Need help?": "Потребуєте допомоги?",
     "Donate Money": "Пожертва грошима",
     "Donate Supplies": "Пожертва речами",
     FAQs: "Питання",
-    Team: "Команда",
-    Reports: "Звіти",
+    Team: "Наша команда",
+    Reports: "Звіти про діяльність",
     Contact: "Контакти",
-    Organisation: "Організація",
+    Organisation: "Наша організація",
   },
   [PawsLanguage.Swe]: {
     Home: "Hem",
@@ -39,8 +39,8 @@ const strings: PawsLangStrings = {
     FAQs: "", // not visible in English version
     Team: "Vårt team",
     Reports: "Verksamhetsrapporter",
-    Contact: "Kontakt",
-    Organisation: "Organisation",
+    Contact: "Kontakt oss",
+    Organisation: "Vår organisation",
   },
   [PawsLanguage.Eng]: {
     "Need help?": "@", // not visible in English version

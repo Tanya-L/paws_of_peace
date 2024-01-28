@@ -5,6 +5,7 @@ import { ButtonStyle, PawsCard } from "../components/PawsCard";
 import secondHelp from "../Img/donate/secondHelp.png";
 import needHelp from "../Img/donate/needHelp.png";
 import {
+  getActiveLanguage,
   PawsLangStrings,
   PawsLanguage,
   useTranslate,
@@ -12,8 +13,12 @@ import {
 import {
   pawsRequestHelpAgainFormUrl,
   pawsRequestHelpFormUrl,
+  PawsUrl,
 } from "../site-const";
 import { Col, Row } from "react-bootstrap";
+import { useCookies } from "react-cookie";
+import { Link, useLocation } from "react-router-dom";
+import { UkrainianOnly } from "../components/prefabs";
 
 const strings: PawsLangStrings = {
   [PawsLanguage.Swe]: {},
@@ -28,6 +33,19 @@ const strings: PawsLangStrings = {
 
 const HelpRequestPage = () => {
   const { translate } = useTranslate(strings);
+
+  const [cookies] = useCookies(["lang"]);
+  const activeLang = getActiveLanguage(cookies.lang);
+
+  if (activeLang !== PawsLanguage.Ukr) {
+    return (
+      <>
+        <Header currentPageId="needHelp" />
+        <UkrainianOnly />
+        <Footer />
+      </>
+    );
+  }
 
   return (
     <>

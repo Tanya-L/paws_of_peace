@@ -4,7 +4,7 @@ import {
   PawsLanguage,
   useTranslate,
 } from "./langSwitcher/langSwitcher";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   pawsFacebook,
   pawsInstagram,
@@ -44,6 +44,10 @@ const strings: PawsLangStrings = {
       "100% av din donation går till att hjälpa djur i Ukraina i regioner som drabbats mest av krig.",
     "link.requestHelp": "",
     "link.requestHelpAgain": "",
+    "Page is only available in Ukrainian.":
+      "Sidan är endast tillgänglig på ukrainska.",
+    "Switch to": "Byt språk till",
+    "Return to the front page": "Återgå till förstasidan",
   },
   [PawsLanguage.Eng]: {
     "paws.address": "We are located in Stockholm on Sveavägen 162B.",
@@ -135,3 +139,22 @@ export const PawsInstagram = () => (
     </Link>
   </>
 );
+
+export const UkrainianOnly = () => {
+  const location = useLocation();
+  const { translate } = useTranslate(strings);
+
+  return (
+    <>
+      <p>{translate("Page is only available in Ukrainian.")}</p>
+      <p>
+        <Link to={`${PawsUrl.Ukrainian}?referrer=${location.pathname}`}>
+          {translate("Switch to")}: Українська
+        </Link>
+      </p>
+      <p>
+        <Link to="/">{translate("Return to the front page")}</Link>
+      </p>
+    </>
+  );
+};
