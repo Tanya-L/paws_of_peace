@@ -47,7 +47,7 @@ const strings: PawsLangStrings = {
     "Page is only available in Ukrainian.":
       "Sidan är endast tillgänglig på ukrainska.",
     "Switch to": "Byt språk till",
-    "Return to the front page": "Återgå till förstasidan",
+    "Return to the front page": "Tillbaka till förstasidan",
   },
   [PawsLanguage.Eng]: {
     "paws.address": "We are located in Stockholm on Sveavägen 162B.",

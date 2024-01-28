@@ -23,6 +23,7 @@ import ErrorPage from "./pages/ErrorPage";
 import { PawsUrl } from "./site-const";
 import { OrganisationPage } from "./pages/OrganisationPage";
 import { Container } from "react-bootstrap";
+import classNames from "classnames";
 
 const App = () => {
   const router = createHashRouter([
@@ -56,7 +57,7 @@ const App = () => {
   return (
     <React.StrictMode>
       <CookiesProvider>
-        <Container as="main" className={styles.pawsMain} fluid>
+        <Container as="main" className={classNames(styles.pawsMain)} fluid>
           <RouterProvider router={router} />
         </Container>
       </CookiesProvider>

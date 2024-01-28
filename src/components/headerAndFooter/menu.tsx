@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
 import { PawsLanguage } from "../langSwitcher/langSwitcher";
+import sha1 from "crypto-js/sha1";
 
 export interface MenuItemDefinition {
   to: string;
@@ -17,15 +18,20 @@ interface MenuBarProps {
   translate: (text: string) => string;
 }
 
+const strToHash = (str: string): string => {
+  console.log(str, sha1(str).toString());
+  return sha1(str).toString();
+};
+
 export const MenuDropdown: FC<MenuBarProps> = ({
   items,
   getMenuitemCssClasses,
   translate,
 }) => {
   return (
-    <>
+    <ul className="nav nav-pills">
       {items.map((item) => (
-        <li className="nav-item">
+        <li className="nav-item" key={strToHash(item.text)}>
           <Link
             to={item.to}
             className={classNames(...getMenuitemCssClasses(item.highlightId))}
@@ -35,7 +41,7 @@ export const MenuDropdown: FC<MenuBarProps> = ({
           </Link>
         </li>
       ))}
-    </>
+    </ul>
   );
 };
 
@@ -46,6 +52,7 @@ export const isMenuitemVisibleWithLanguage = (
   return item.lang === undefined || item.lang.includes(lang);
 };
 
+// Must be contained within a <ul> element
 export const MenuBar: FC<MenuBarProps> = ({
   items,
   getMenuitemCssClasses,
@@ -54,7 +61,7 @@ export const MenuBar: FC<MenuBarProps> = ({
   return (
     <>
       {items.map((item) => (
-        <li className="nav-item">
+        <li className="nav-item" key={strToHash(item.text)}>
           <Link
             to={item.to}
             className={classNames(...getMenuitemCssClasses(item.highlightId))}
