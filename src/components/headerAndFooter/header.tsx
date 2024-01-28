@@ -33,16 +33,19 @@ const strings: PawsLangStrings = {
   },
   [PawsLanguage.Swe]: {
     Home: "Hem",
-    "Need help?": "Behöver du hjälp?",
-    "Donate Money": "Donera pengar",
-    "Donate Supplies": "Donera saker",
-    FAQs: "Frågor (på ukrainska)",
-    Team: "Team",
+    "Need help?": "", // not visible in English version
+    "Donate Money": "Skänk pengar",
+    "Donate Supplies": "Skänk saker/foder",
+    FAQs: "", // not visible in English version
+    Team: "Vårt team",
     Reports: "Verksamhetsrapporter",
     Contact: "Kontakt",
     Organisation: "Organisation",
   },
-  [PawsLanguage.Eng]: { FAQs: "FAQ (in Ukrainian)" },
+  [PawsLanguage.Eng]: {
+    "Need help?": "@", // not visible in English version
+    FAQs: "@", // not visible in English version
+  },
 };
 
 const menuItems: MenuItemDefinition[] = [

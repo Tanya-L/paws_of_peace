@@ -13,6 +13,12 @@ import {
 } from "../components/langSwitcher/langSwitcher";
 import { Paws100PercentDisclaimer } from "../components/prefabs";
 import { Col, Row } from "react-bootstrap";
+import {
+  pawsBankgiro,
+  pawsBuymeacoffee,
+  pawsPaypal,
+  pawsSwish,
+} from "../site-const";
 
 const strings: PawsLangStrings = {
   [PawsLanguage.Ukr]: {
@@ -68,7 +74,7 @@ const DonateMoneyPage = () => {
                 {translate("Thank you!")}
               </>
             }
-            buttonText={"Swish 123 437 52 83"}
+            buttonText={`Swish ${pawsSwish}`}
             buttonLink={"https://www.swish.nu/"}
           />
         </Col>
@@ -83,7 +89,7 @@ const DonateMoneyPage = () => {
                 {translate("Thank you!")}
               </>
             }
-            buttonText={"BANKGIRO: 280 8228 Nordic Ukraine Forum"}
+            buttonText={`BANKGIRO ${pawsBankgiro}`}
             buttonLink={"https://nuforum.se/support-us/donate/"}
           />
         </Col>
@@ -101,9 +107,7 @@ const DonateMoneyPage = () => {
               </>
             }
             buttonText={"PayPal"}
-            buttonLink={
-              "https://www.paypal.com/donate/?hosted_button_id=CESU98W7BR43S"
-            }
+            buttonLink={pawsPaypal}
           />
         </Col>
 
@@ -118,7 +122,7 @@ const DonateMoneyPage = () => {
               </>
             }
             buttonText={"ByMeACoffee"}
-            buttonLink={"https://www.buymeacoffee.com/TanyaL"}
+            buttonLink={pawsBuymeacoffee}
           />
         </Col>
       </Row>
