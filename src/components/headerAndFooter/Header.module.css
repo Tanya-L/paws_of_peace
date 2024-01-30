@@ -4,3 +4,8 @@ img.logo {
     margin-top: -1em; /* Compensate outer padding */
     display: inline-block;
 }
+
+.logoContainer {
+    margin-right: 4em;
+    margin-bottom: 2em;
+}

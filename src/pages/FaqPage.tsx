@@ -6,7 +6,7 @@ import { useCookies } from "react-cookie";
 import {
   getActiveLanguage,
   PawsLanguage,
-} from "../components/langSwitcher/langSwitcher";
+} from "../components/langSwitcher/LangSwitcher";
 import { UkrainianOnly } from "../components/prefabs";
 
 const FaqPage = () => {

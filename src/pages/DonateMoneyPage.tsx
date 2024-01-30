@@ -11,7 +11,7 @@ import {
   PawsLangStrings,
   PawsLanguage,
   useTranslate,
-} from "../components/langSwitcher/langSwitcher";
+} from "../components/langSwitcher/LangSwitcher";
 import { Paws100PercentDisclaimer } from "../components/prefabs";
 import { Col, Row } from "react-bootstrap";
 import {

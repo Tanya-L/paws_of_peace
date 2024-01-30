@@ -7,7 +7,7 @@ import {
   PawsLangStrings,
   PawsLanguage,
   useTranslate,
-} from "../langSwitcher/langSwitcher";
+} from "../langSwitcher/LangSwitcher";
 import sha1 from "crypto-js/sha1";
 import styles from "./Menu.module.css";
 import { Col, Row } from "react-bootstrap";

@@ -5,7 +5,7 @@ import {
   PawsLangStrings,
   PawsLanguage,
   useTranslate,
-} from "../components/langSwitcher/langSwitcher";
+} from "../components/langSwitcher/LangSwitcher";
 import { orgNr, PawsUrl, stadgarSweUrl, stadgarUkrUrl } from "../site-const";
 import { Link } from "react-router-dom";
 
@@ -50,14 +50,14 @@ const OrganisationPage = () => {
         <Link to={PawsUrl.Team}>{translate("see.team")}</Link>
       </p>
       <p>
-        <Link target="_blank" to={stadgarSweUrl}>
+        <a target="_blank" href={stadgarSweUrl}>
           {translate("text.stadgarSwe")}
-        </Link>
+        </a>
       </p>
       <p>
-        <Link target="_blank" to={stadgarUkrUrl}>
+        <a target="_blank" href={stadgarUkrUrl}>
           {translate("text.stadgarUkr")}
-        </Link>
+        </a>
       </p>
 
       <Footer />

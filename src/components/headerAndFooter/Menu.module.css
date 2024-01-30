@@ -1,5 +1,6 @@
 li.menuDropdownItem {
     display: block;
+    width: 100%;
 }
 
 /* Link style */
@@ -11,6 +12,7 @@ a.pawsNavLink {
     padding: 0.25em;
     text-decoration: none;
     white-space: nowrap;
+    width: 100%;
 }
 
 a.pawsNavLink:hover {

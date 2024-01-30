@@ -9,7 +9,7 @@ import {
   PawsLangStrings,
   PawsLanguage,
   useTranslate,
-} from "../langSwitcher/langSwitcher";
+} from "../langSwitcher/LangSwitcher";
 
 import { PawsUrl } from "../../site-const";
 import {
@@ -109,11 +109,11 @@ export const Header: FC<HeaderProps> = ({ currentPageId }) => {
   return (
     <header className="d-flex flex-wrap justify-content-center py-2 mb-4 border-bottom">
       <Row className="w-100">
-        <Col sm={2} lg={2}>
+        <Col sm={1} lg={1} className={styles.logoContainer}>
           <Logo />
         </Col>
 
-        <Col sm={8} lg={8}>
+        <Col sm={9} lg={9}>
           <MenuBar
             strings={strings}
             currentPageId={currentPageId}
@@ -121,7 +121,7 @@ export const Header: FC<HeaderProps> = ({ currentPageId }) => {
           />
         </Col>
 
-        <Col sm={2} lg={2}>
+        <Col sm={1} lg={1}>
           <LangSwitcher />
         </Col>
       </Row>

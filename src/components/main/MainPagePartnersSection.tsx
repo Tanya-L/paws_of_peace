@@ -10,7 +10,7 @@ import {
   PawsLangStrings,
   PawsLanguage,
   useTranslate,
-} from "../langSwitcher/langSwitcher";
+} from "../langSwitcher/LangSwitcher";
 
 import { PawsUrl } from "../../site-const";
 import { Col, Container, Row } from "react-bootstrap";
@@ -28,6 +28,7 @@ const strings: PawsLangStrings = {
     "text.popPartnerJoin":
       "Ваша організація хоче співпрацювати з нами? Давайте станемо партнерами.",
     "Contact us!": "Зв'яжіться з нами!",
+    "Our Partners": "Наші партнери",
   },
   [PawsLanguage.Swe]: {
     "Embassy of Ukraine in The Kingdom of Sweden":
@@ -39,6 +40,7 @@ const strings: PawsLangStrings = {
       "Vill du bli vår partner? Kontakta oss!",
     "text.popPartnerJoin": "Vill din organisation samarbeta med oss?",
     "Contact us!": "Kontakta oss!",
+    "Our Partners": "Våra partners",
   },
   [PawsLanguage.Eng]: {
     "text.popPartnerJoin":
@@ -52,7 +54,7 @@ export const MainPagePartnersSection = () => {
   return (
     <div>
       <Container className="text-center ">
-        <h1>Our Partners</h1>
+        <h1>{translate("Our Partners")}</h1>
         <Row>
           <Col className="w-75">
             <PawsCard

@@ -9,7 +9,7 @@ import {
   PawsLangStrings,
   PawsLanguage,
   useTranslate,
-} from "../langSwitcher/langSwitcher";
+} from "../langSwitcher/LangSwitcher";
 
 import { PawsUrl } from "../../site-const";
 import { Col, Container, Row } from "react-bootstrap";

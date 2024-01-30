@@ -7,7 +7,7 @@ import {
   PawsLangStrings,
   PawsLanguage,
   useTranslate,
-} from "../langSwitcher/langSwitcher";
+} from "../langSwitcher/LangSwitcher";
 import {
   PawsAddressShort,
   PawsFacebook,

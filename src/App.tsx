@@ -17,7 +17,7 @@ import { CookiesProvider } from "react-cookie";
 import {
   LangSwitcherPage,
   PawsLanguage,
-} from "./components/langSwitcher/langSwitcher";
+} from "./components/langSwitcher/LangSwitcher";
 import ErrorPage from "./pages/ErrorPage";
 
 import { PawsUrl } from "./site-const";

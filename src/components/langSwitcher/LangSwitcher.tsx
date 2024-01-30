@@ -1,7 +1,7 @@
 import React, { FC, useEffect } from "react";
 // import langUkr from "../../Img/langUkr.png";
 // import langEng from "../../Img/langEng.png";
-import styles from "./langSwitcher.module.css";
+import styles from "./LangSwitcher.module.css";
 import { useCookies } from "react-cookie";
 import classNames from "classnames";
 import { Link, useLocation, useNavigate } from "react-router-dom";

@@ -9,7 +9,7 @@ import {
   PawsLangStrings,
   PawsLanguage,
   useTranslate,
-} from "../components/langSwitcher/langSwitcher";
+} from "../components/langSwitcher/LangSwitcher";
 import {
   pawsRequestHelpAgainFormUrl,
   pawsRequestHelpFormUrl,

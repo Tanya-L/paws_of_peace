@@ -13,7 +13,7 @@ import {
   PawsLangStrings,
   PawsLanguage,
   useTranslate,
-} from "../components/langSwitcher/langSwitcher";
+} from "../components/langSwitcher/LangSwitcher";
 import { PawsAddress, PawsOpeningHours } from "../components/prefabs";
 import { pawsInstagram, pawsLinkedin, pawsLinktree } from "../site-const";
 import { Link } from "react-router-dom";

@@ -3,7 +3,7 @@ import {
   PawsLangStrings,
   PawsLanguage,
   useTranslate,
-} from "./langSwitcher/langSwitcher";
+} from "./langSwitcher/LangSwitcher";
 import { Link, useLocation } from "react-router-dom";
 import {
   pawsFacebook,

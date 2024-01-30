@@ -6,7 +6,7 @@ import {
   PawsLangStrings,
   PawsLanguage,
   useTranslate,
-} from "../components/langSwitcher/langSwitcher";
+} from "../components/langSwitcher/LangSwitcher";
 import {
   Paws100PercentDisclaimer,
   PawsAddress,
