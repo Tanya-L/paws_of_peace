@@ -1,6 +1,5 @@
 import React from "react";
 import { ButtonStyle, PawsCard } from "./PawsCard";
-import logo2 from "../Img/logo2.png";
 import logo from "../Img/logo.png";
 import Tanya from "../Img/teamPhoto/Tanya.png";
 import TanyaK from "../Img/teamPhoto/TanyaK.png";

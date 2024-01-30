@@ -4,20 +4,13 @@ import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 import logo from "../../Img/logo.png";
 import {
-  getActiveLanguage,
   LangSwitcher,
   PawsLangStrings,
   PawsLanguage,
-  useTranslate,
 } from "../langSwitcher/LangSwitcher";
 
 import { PawsUrl } from "../../site-const";
-import {
-  isMenuitemVisibleWithLanguage,
-  MenuBar,
-  MenuItemDefinition,
-} from "./Menu";
-import { useCookies } from "react-cookie";
+import { MenuBar, MenuItemDefinition } from "./Menu";
 import { Col, Row } from "react-bootstrap";
 
 const strings: PawsLangStrings = {

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import classNames from "classnames";
 import {
   getActiveLanguage,
-  LangSwitcher,
   PawsLangStrings,
   PawsLanguage,
   useTranslate,
