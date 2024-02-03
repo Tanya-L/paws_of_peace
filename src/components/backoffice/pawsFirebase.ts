@@ -1,75 +1,66 @@
 import { FirebaseApp, initializeApp } from "firebase/app";
 import {
   getAuth,
-  getRedirectResult,
   GoogleAuthProvider,
-  signInWithRedirect,
+  signInWithPopup,
+  UserCredential,
 } from "firebase/auth";
-import { useEffect, useMemo, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useMemo, useState } from "react";
 
-export const useFirebase = () => {
-  const location = useLocation();
-  const dev = process.env.REACT_APP_DEV === "1";
+export const useFirebaseApp = () => {
+  // const dev = process.env.REACT_APP_DEV === "1";
 
   const firebaseConfig = {
     apiKey: "AIzaSyDdVkMsfmWoy0HPcXiybLqIvaS62ZI1FX0",
-    authDomain: dev ? "localhost:3000" : "pawsofpeace.se",
+    // authDomain: dev ? "localhost:3000" : "pawsofpeace.se",
+    authDomain: "paws-of-peace.firebaseapp.com",
     projectId: "paws-of-peace",
     storageBucket: "paws-of-peace.appspot.com",
     messagingSenderId: "35895836921",
     appId: "1:35895836921:web:d4fec386893e7fb356e228",
     measurementId: "G-8Y708HDYBX",
   };
-  return useMemo(() => {
-    return initializeApp(firebaseConfig);
-  }, []);
+  return useMemo(() => initializeApp(firebaseConfig), []);
 };
 
 export const useFirebaseAuth = (app: FirebaseApp) => {
-  const [auth, setAuth] = useState(getAuth(app));
+  // const [oauthCred, setOauthCred] = useState<OAuthCredential | null>(null);
+  // Undefined = waiting for login
+  // Null = login failed
+  const [userCred, setUserCred] = useState<UserCredential | null | undefined>(
+    undefined
+  );
 
-  useEffect(() => {
-    const updatedAuth = getAuth(app);
+  const doLogin = () => {
+    const provider = new GoogleAuthProvider();
+    provider.addScope("email");
 
-    if (auth.currentUser === null) {
-      const provider = new GoogleAuthProvider();
-      provider.addScope("email");
-      // provider.addScope("https://www.googleapis.com/auth/contacts.readonly");
-      signInWithRedirect(auth, provider);
-    } else {
-      getRedirectResult(auth)
-        .then((result) => {
-          if (result === null) {
-            throw new Error("No result from Google redirect");
-          }
-          // This gives you a Google Access Token. You can use it to access Google APIs.
-          const credential = GoogleAuthProvider.credentialFromResult(result);
+    const auth = getAuth(app);
 
-          if (credential === null) {
-            throw new Error("No credential received from Google redirect");
-          }
-          const token = credential.accessToken;
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        // const token = credential.accessToken;
+        // The signed-in user info.
+        // const user = result.user;
+        // IdP data available using getAdditionalUserInfo(result)
+        // setOauthCred(credential);
+        setUserCred(result);
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        // const errorCode = error.code;
+        // const errorMessage = error.message;
+        // The email of the user's account used.
+        // const email = error.customData.email;
+        // The AuthCredential type that was used.
+        // const credential = GoogleAuthProvider.credentialFromError(error);
+        // setOauthCred(null);
+        setUserCred(null);
+        // TODO: Report error to user
+      });
+  };
 
-          // The signed-in user info.
-          const user = result?.user;
-          // IdP data available using getAdditionalUserInfo(result)
-          console.log("success auth=", auth);
-          setAuth(updatedAuth);
-        })
-        .catch((error) => {
-          // Handle Errors here.
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          // The email of the user's account used.
-          const email = error.customData.email;
-          // The AuthCredential type that was used.
-          const credential = GoogleAuthProvider.credentialFromError(error);
-          // ...
-          console.log("Auth redirect failed=", error);
-        });
-    }
-  }, [app]);
-
-  return auth;
+  return { userCred, doLogin };
 };

@@ -1,21 +1,24 @@
 import React from "react";
 import {
-  useFirebase,
+  useFirebaseApp,
   useFirebaseAuth,
 } from "../../components/backoffice/pawsFirebase";
+import { Button } from "react-bootstrap";
 
 export const BackofficeDashboard = () => {
-  // Initialize the FirebaseUI Widget using Firebase.
-  const app = useFirebase();
-  const auth = useFirebaseAuth(app);
+  const app = useFirebaseApp();
+  const { userCred, doLogin } = useFirebaseAuth(app);
 
   return (
     <div>
       <h1>Backoffice Dashboard</h1>
-      {auth.currentUser && (
-        <div>Authenticated as {auth.currentUser.displayName}</div>
+      {userCred && <div>Authenticated as {userCred.user.displayName}</div>}
+      {!userCred && (
+        <div>
+          <h3>Not authenticated</h3>
+          <Button onClick={doLogin}>Log in with Google</Button>
+        </div>
       )}
-      {!auth.currentUser && <div>Not authenticated</div>}
     </div>
   );
 };

@@ -145,8 +145,8 @@ export const MainPageBody = () => {
             <b>
               <PawsAddressShort />, <PawsOpeningHoursShort />.
             </b>
-            <p>{translate("text.donateMoney")}</p>
           </p>
+          <p>{translate("text.donateMoney")}</p>
 
           <h3>{translate("Our activity reports")}</h3>
           <p>
