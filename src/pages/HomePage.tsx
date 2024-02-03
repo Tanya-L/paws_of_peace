@@ -6,14 +6,16 @@ import { MainPageServicesSection } from "../components/main/MainPageServicesSect
 import { MainPagePartnersSection } from "../components/main/MainPagePartnersSection";
 import { MainPageBody } from "../components/main/MainPageBody";
 
-const HomePage = () => (
-  <>
-    <Header currentPageId="home" />
-    <MainPageBody />
-    <MainPageServicesSection />
-    <MainPagePartnersSection />
-    <Footer />
-  </>
-);
+const HomePage = () => {
+  return (
+    <>
+      <Header currentPageId="home" />
+      <MainPageBody />
+      <MainPageServicesSection />
+      <MainPagePartnersSection />
+      <Footer />
+    </>
+  );
+};
 
 export { HomePage };

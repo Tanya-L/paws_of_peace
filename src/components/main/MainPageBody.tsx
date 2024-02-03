@@ -51,7 +51,7 @@ const strings: PawsLangStrings = {
     "Our activity reports": "Звіти про діяльність",
     "text.reports":
       "Ми публікуємо регулярні звіти про нашу діяльність у соцмедіа",
-    "See Reports": "Сторінка звітів",
+    "link.reportsPage": "Сторінка звітів",
   },
   [PawsLanguage.Swe]: {
     "We help animals in Ukraine": "Vi hjälper djur i Ukraina",
@@ -80,7 +80,7 @@ const strings: PawsLangStrings = {
     "Our activity reports": "Våra aktivitetsrapporter",
     "text.reports":
       "Regelbundna rapporter om vår verksamhet i våra sociala medier",
-    "See Reports": "Se rapporter",
+    "link.reportsPage": "Se Rapportsidan",
   },
   [PawsLanguage.Eng]: {
     "text.mission":
@@ -108,6 +108,7 @@ const strings: PawsLangStrings = {
       "You can donate money via Swish, Bankgiro, Paypal or Buymeacoffee.",
     "text.reports":
       "Regular reports on our activity in our social media accounts",
+    "link.reportsPage": "See the Reports page",
   },
 };
 
@@ -150,7 +151,7 @@ export const MainPageBody = () => {
           <h3>{translate("Our activity reports")}</h3>
           <p>
             {translate("text.reports")}: <PawsFacebook />, <PawsInstagram />.{" "}
-            <Link to={PawsUrl.Reports}>{translate("See Reports")}</Link>
+            <Link to={PawsUrl.Reports}>{translate("link.reportsPage")}</Link>
           </p>
         </Col>{" "}
         <Col lg={4}>

@@ -24,6 +24,7 @@ import { PawsUrl } from "./site-const";
 import { OrganisationPage } from "./pages/OrganisationPage";
 import { Container } from "react-bootstrap";
 import classNames from "classnames";
+import { BackofficeDashboard } from "./pages/backoffice/DashboardPage";
 
 const App = () => {
   const router = createHashRouter([
@@ -51,6 +52,10 @@ const App = () => {
     {
       path: PawsUrl.Swedish,
       element: <LangSwitcherPage lang={PawsLanguage.Swe} />,
+    },
+    {
+      path: PawsUrl.Backoffice,
+      element: <BackofficeDashboard />,
     },
   ]);
 

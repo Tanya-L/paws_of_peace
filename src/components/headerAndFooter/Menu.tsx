@@ -21,7 +21,6 @@ export interface MenuItemDefinition {
 }
 
 const strToHash = (str: string): string => {
-  console.log(str, sha1(str).toString());
   return sha1(str).toString();
 };
 
