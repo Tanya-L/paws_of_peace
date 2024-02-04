@@ -12,6 +12,7 @@ export enum PawsUrl {
   English = "/lang/en",
   Swedish = "/lang/sv",
   Backoffice = "/bo",
+  BackofficeHelpRequestsUnapproved = "/bo/help-requests/unapproved",
 }
 
 export const pawsSwish = "123 4375283 (Nordic Ukraine Forum)";

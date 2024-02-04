@@ -1,7 +1,7 @@
 import { FirebaseApp, initializeApp } from "firebase/app";
 import {
+  browserLocalPersistence,
   getAuth,
-  browserSessionPersistence,
   GoogleAuthProvider,
   setPersistence,
   signInWithPopup,
@@ -67,10 +67,32 @@ export const useFirebaseAuth = (app: FirebaseApp) => {
           // TODO: Report error to user
         });
     };
-    setPersistence(auth, browserSessionPersistence)
+    setPersistence(auth, browserLocalPersistence)
       .then(doSignin)
       .catch(console.log);
   };
 
   return { authUser, doLogin };
+};
+
+export const useQuery = <T>(
+  createPromise: () => Promise<T>,
+  debugName: string
+) => {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [data, setData] = useState<T | undefined | null>(undefined);
+  // const createPromiseCb = useCallback(createPromise, []);
+
+  createPromise()
+    .then((newData) => {
+      console.log(`Query ${debugName}:`, newData);
+      setData(newData);
+    })
+    .catch((err) => {
+      console.error(err);
+      setData(null);
+    })
+    .finally(() => setIsLoading(false));
+
+  return { data, isLoading };
 };
