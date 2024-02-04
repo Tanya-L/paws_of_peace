@@ -7,7 +7,7 @@ import {
   signInWithPopup,
   User,
 } from "firebase/auth";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 export const useFirebaseApp = () => {
   // const dev = process.env.REACT_APP_DEV === "1";
@@ -81,18 +81,19 @@ export const useQuery = <T>(
 ) => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [data, setData] = useState<T | undefined | null>(undefined);
-  // const createPromiseCb = useCallback(createPromise, []);
 
-  createPromise()
-    .then((newData) => {
-      console.log(`Query ${debugName}:`, newData);
-      setData(newData);
-    })
-    .catch((err) => {
-      console.error(err);
-      setData(null);
-    })
-    .finally(() => setIsLoading(false));
+  useEffect(() => {
+    createPromise()
+      .then((newData) => {
+        console.log(`Result for query ${debugName}:`, newData);
+        setData(newData);
+      })
+      .catch((err) => {
+        console.error(err);
+        setData(null);
+      })
+      .finally(() => setIsLoading(false));
+  }, []);
 
   return { data, isLoading };
 };

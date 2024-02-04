@@ -26,10 +26,15 @@ import { Container } from "react-bootstrap";
 import classNames from "classnames";
 import { BackofficeDashboard } from "./pages/backoffice/DashboardPage";
 import { BackofficeHelpRequestsUnapproved } from "./pages/backoffice/helpRequests/Unapproved";
-import { useFirebaseApp } from "./components/backoffice/pawsFirebase";
+import {
+  useFirebaseApp,
+  useFirebaseAuth,
+} from "./components/backoffice/pawsFirebase";
 
 const App = () => {
   const firebaseApp = useFirebaseApp();
+  const { authUser, doLogin } = useFirebaseAuth(firebaseApp);
+
   const router = createHashRouter([
     {
       path: PawsUrl.Root,
@@ -58,11 +63,23 @@ const App = () => {
     },
     {
       path: PawsUrl.Backoffice,
-      element: <BackofficeDashboard app={firebaseApp} />,
+      element: (
+        <BackofficeDashboard
+          app={firebaseApp}
+          authUser={authUser}
+          doLogin={doLogin}
+        />
+      ),
     },
     {
       path: PawsUrl.BackofficeHelpRequestsUnapproved,
-      element: <BackofficeHelpRequestsUnapproved app={firebaseApp} />,
+      element: (
+        <BackofficeHelpRequestsUnapproved
+          app={firebaseApp}
+          authUser={authUser}
+          doLogin={doLogin}
+        />
+      ),
     },
   ]);
 

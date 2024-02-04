@@ -1,10 +1,11 @@
 import {
-  getFirestore,
-  query,
-  where,
   collection,
-  getDocs,
   getCountFromServer,
+  getDocs,
+  getFirestore,
+  orderBy,
+  query,
+  Timestamp,
 } from "firebase/firestore";
 import { FirebaseApp } from "firebase/app";
 
@@ -30,7 +31,7 @@ export interface MHelpRequest {
   organizationName: string;
   personId: string;
   region: string;
-  timestamp: string;
+  timestamp: Timestamp;
   backofficeApproval?: boolean;
 }
 
@@ -45,7 +46,8 @@ export const getUnapprovedHelpRequests = async (app: FirebaseApp) => {
   const db = getFirestore(app);
   const qry = query(
     collection(db, "requests"),
-    where("backofficeApproval", "!=", true)
+    orderBy("timestamp", "desc")
+    // ,where("backofficeApproval", "!=", true)
   );
   const snapshot = await getDocs(qry);
   return snapshot.docs.map((doc) => doc.data() as MHelpRequest);
