@@ -1,9 +1,11 @@
 import { FirebaseApp, initializeApp } from "firebase/app";
 import {
   getAuth,
+  browserSessionPersistence,
   GoogleAuthProvider,
+  setPersistence,
   signInWithPopup,
-  UserCredential,
+  User,
 } from "firebase/auth";
 import { useMemo, useState } from "react";
 
@@ -27,40 +29,48 @@ export const useFirebaseAuth = (app: FirebaseApp) => {
   // const [oauthCred, setOauthCred] = useState<OAuthCredential | null>(null);
   // Undefined = waiting for login
   // Null = login failed
-  const [userCred, setUserCred] = useState<UserCredential | null | undefined>(
-    undefined
-  );
+  const [authUser, setAuthUser] = useState<User | null | undefined>(undefined);
+
+  const auth = getAuth(app);
+  auth.onAuthStateChanged((user) => {
+    if (user) {
+      setAuthUser(user);
+    }
+  });
 
   const doLogin = () => {
     const provider = new GoogleAuthProvider();
     provider.addScope("email");
 
-    const auth = getAuth(app);
-
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        // const token = credential.accessToken;
-        // The signed-in user info.
-        // const user = result.user;
-        // IdP data available using getAdditionalUserInfo(result)
-        // setOauthCred(credential);
-        setUserCred(result);
-      })
-      .catch((error) => {
-        // Handle Errors here.
-        // const errorCode = error.code;
-        // const errorMessage = error.message;
-        // The email of the user's account used.
-        // const email = error.customData.email;
-        // The AuthCredential type that was used.
-        // const credential = GoogleAuthProvider.credentialFromError(error);
-        // setOauthCred(null);
-        setUserCred(null);
-        // TODO: Report error to user
-      });
+    const doSignin = () => {
+      signInWithPopup(auth, provider)
+        .then((result) => {
+          // This gives you a Google Access Token. You can use it to access the Google API.
+          // const credential = GoogleAuthProvider.credentialFromResult(result);
+          // const token = credential.accessToken;
+          // The signed-in user info.
+          // const user = result.user;
+          // IdP data available using getAdditionalUserInfo(result)
+          // setOauthCred(credential);
+          setAuthUser(result.user);
+        })
+        .catch((error) => {
+          // Handle Errors here.
+          // const errorCode = error.code;
+          // const errorMessage = error.message;
+          // The email of the user's account used.
+          // const email = error.customData.email;
+          // The AuthCredential type that was used.
+          // const credential = GoogleAuthProvider.credentialFromError(error);
+          // setOauthCred(null);
+          setAuthUser(null);
+          // TODO: Report error to user
+        });
+    };
+    setPersistence(auth, browserSessionPersistence)
+      .then(doSignin)
+      .catch(console.log);
   };
 
-  return { userCred, doLogin };
+  return { authUser, doLogin };
 };
