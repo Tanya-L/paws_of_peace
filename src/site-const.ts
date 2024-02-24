@@ -5,7 +5,7 @@ export enum PawsUrl {
   DonateMoney = "/donate-money",
   DonateSupplies = "/donate-supplies",
   Organisation = "/org",
-  Reports = "/org/reports",
+  Achievements = "/org/reports",
   Team = "/org/team",
   Contact = "/org/contact",
   Ukrainian = "/lang/uk",

@@ -150,7 +150,7 @@ export const MainPageBody = () => {
           <h3>{translate("Our activity reports")}</h3>
           <p>
             {translate("text.reports")}: <PawsFacebook />, <PawsInstagram />.{" "}
-            <Link to={PawsUrl.Reports}>{translate("See Reports")}</Link>
+            <Link to={PawsUrl.Achievements}>{translate("See Reports")}</Link>
           </p>
         </Col>{" "}
         <Col lg={4}>

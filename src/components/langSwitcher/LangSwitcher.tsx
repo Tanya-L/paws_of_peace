@@ -15,6 +15,8 @@ export enum PawsLanguage {
   Swe = "Swe",
 }
 
+export type PawsTranslateFn = (key: string) => string;
+
 const getBrowserLanguages = () => {
   const languages = navigator.languages || [];
   return languages.map((lang) => lang.split("-")[0]);

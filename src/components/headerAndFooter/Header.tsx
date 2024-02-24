@@ -3,11 +3,7 @@ import { Link } from "react-router-dom";
 
 import styles from "./Header.module.css";
 import logo from "../../Img/logo.png";
-import {
-  LangSwitcher,
-  PawsLangStrings,
-  PawsLanguage,
-} from "../langSwitcher/LangSwitcher";
+import { LangSwitcher, PawsLangStrings, PawsLanguage } from "../langSwitcher/LangSwitcher";
 
 import { PawsUrl } from "../../site-const";
 import { MenuBar, MenuItemDefinition } from "./Menu";
@@ -21,7 +17,7 @@ const strings: PawsLangStrings = {
     "Donate Supplies": "Пожертва речами",
     FAQs: "Питання",
     Team: "Наша команда",
-    Reports: "Звіти про діяльність",
+    Achievements: "Наші досягнення",
     Contact: "Контакти",
     Organisation: "Наша організація",
   },
@@ -32,7 +28,7 @@ const strings: PawsLangStrings = {
     "Donate Supplies": "Skänk saker/foder",
     FAQs: "", // not visible in English version
     Team: "Vårt team",
-    Reports: "Verksamhetsrapporter",
+    Achievements: "Våra prestationer",
     Contact: "Kontakta oss",
     Organisation: "Vår organisation",
   },
@@ -48,31 +44,15 @@ const menuItems: MenuItemDefinition[] = [
     highlightId: "home",
     text: "Home",
     nested: [
-      {
-        to: PawsUrl.RequestHelp,
-        highlightId: "needHelp",
-        text: "Need help?",
-        lang: [PawsLanguage.Ukr],
-      },
-      {
-        to: PawsUrl.Faq,
-        highlightId: "faq",
-        text: "FAQs",
-        lang: [PawsLanguage.Ukr],
-      },
+      { to: PawsUrl.RequestHelp, highlightId: "needHelp", text: "Need help?", lang: [PawsLanguage.Ukr] },
+      { to: PawsUrl.Faq, highlightId: "faq", text: "FAQs", lang: [PawsLanguage.Ukr] },
     ],
   },
   {
     to: PawsUrl.DonateMoney,
     highlightId: "donateMoney",
     text: "Donate Money",
-    nested: [
-      {
-        to: PawsUrl.DonateSupplies,
-        highlightId: "donateFood",
-        text: "Donate Supplies",
-      },
-    ],
+    nested: [{ to: PawsUrl.DonateSupplies, highlightId: "donateFood", text: "Donate Supplies" }],
   },
   {
     to: PawsUrl.Organisation,
@@ -80,7 +60,7 @@ const menuItems: MenuItemDefinition[] = [
     text: "Organisation",
     nested: [
       { to: PawsUrl.Team, highlightId: "team", text: "Team" },
-      { to: PawsUrl.Reports, highlightId: "reports", text: "Reports" },
+      { to: PawsUrl.Achievements, highlightId: "achievements", text: "Achievements" },
     ],
   },
   { to: PawsUrl.Contact, highlightId: "contact", text: "Contact" },
@@ -107,11 +87,7 @@ export const Header: FC<HeaderProps> = ({ currentPageId }) => {
         </Col>
 
         <Col sm={9} lg={9}>
-          <MenuBar
-            strings={strings}
-            currentPageId={currentPageId}
-            items={menuItems}
-          />
+          <MenuBar strings={strings} currentPageId={currentPageId} items={menuItems} />
         </Col>
 
         <Col sm={1} lg={1}>
