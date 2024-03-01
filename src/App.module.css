@@ -48,6 +48,8 @@ table.tab {
 table.tab thead {
     background-color: #aaa;
     font-weight: bold;
+    position: sticky;
+    top: 0;
 }
 
 table.tab thead tr td {

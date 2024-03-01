@@ -42,6 +42,7 @@ const strings: PawsLangStrings = {
     "Public Actions": "Offentliga Protester",
     Accreditations: "Ackrediteringar",
     Statistics: "Statistik",
+    "text.Total requests for help in 2022-2023": "Antal hjälpbegäranden 2022-2023",
   },
   [PawsLanguage.Ukr]: {
     "Activity reports": "Звіти про діяльність",
@@ -77,6 +78,7 @@ const strings: PawsLangStrings = {
     "Public Actions": "Громадські акції протесту",
     Accreditations: "Акредитації",
     Statistics: "Статистика",
+    "text.Total requests for help in 2022-2023": "Всього запитів на допомогу в 2022-2023 роках",
   },
   [PawsLanguage.Eng]: {
     "text.reports": "We regularly publish activity reports in our social media accounts",
@@ -105,6 +107,7 @@ const strings: PawsLangStrings = {
     "region.Cherkasy": "Cherkaska region",
     "region.Chernyhyv": "Chernyhyvska region",
     "text.total": "Total",
+    "text.Total requests for help in 2022-2023": "Total requests for help in 2022-2023",
   },
 };
 
@@ -219,14 +222,28 @@ const AchievementsPage = () => {
 
       <h3>{t("Statistics")}</h3>
 
-      <Row className={"my-5"}>
+      <Row className={"my-3"}>
+        <p>
+          {t("text.Total requests for help in 2022-2023")}: <strong>525</strong>
+        </p>
+
         <Col sm={12} lg={6}>
-          <Collapsible trigger={t("text.processed-2022-2023")} className="btn btn-secondary">
+          <Collapsible
+            trigger={t("text.processed-2022-2023")}
+            className="btn btn-secondary"
+            transitionCloseTime={1}
+            transitionTime={1}
+          >
             <ProcessedReport2022_2023 />
           </Collapsible>
         </Col>
         <Col sm={12} lg={6}>
-          <Collapsible trigger={t("text.sent-2022-2023")} className="btn btn-secondary">
+          <Collapsible
+            trigger={t("text.sent-2022-2023")}
+            className="btn btn-secondary"
+            transitionCloseTime={1}
+            transitionTime={1}
+          >
             <SentReport2022_2023 />
           </Collapsible>
         </Col>
