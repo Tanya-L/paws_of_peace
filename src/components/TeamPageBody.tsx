@@ -26,6 +26,7 @@ const strings: PawsLangStrings = {
     "Board member": "Член правління",
     ["Rikku Bölske"]: "Рікку Бельске",
     "Ksenia Kalmykova": "Ксенія Калмикова",
+    ["Charlotte Lindström"]: "Шарлотта Ліндстрьом",
     Volunteers: "Волонтери",
     "Support us through becoming a member": "Підтримайте нас ставши учасником",
     "text.board": (
@@ -62,7 +63,6 @@ const strings: PawsLangStrings = {
     Cashier: "Kassör",
     "Dmytro Lytovchenko": "Dmytro Lytovchenko",
     "Board member": "Styrelsemedlem",
-    ["Rikku Bölske"]: "Rikku Bölske",
     "Ksenia Kalmykova": "Ksenia Kalmykova",
     Volunteers: "Volontärer",
     "Support us through becoming a member": "Stöd oss genom att bli medlem",
