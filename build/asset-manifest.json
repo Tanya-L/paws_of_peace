@@ -1,13 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.eb427ae6.css",
-    "main.js": "/static/js/main.24155ccd.js",
+    "main.css": "/static/css/main.860c415d.css",
+    "main.js": "/static/js/main.e1ed0ffe.js",
     "static/js/787.0573d3aa.chunk.js": "/static/js/787.0573d3aa.chunk.js",
     "static/media/dogfood.png": "/static/media/dogfood.ecb1327db09bd0ef9aee.png",
     "static/media/map.png": "/static/media/map.2b4fbcf689ebe990854d.png",
     "static/media/hub.png": "/static/media/hub.fb0263a2d923fff95149.png",
     "static/media/kattstallet.png": "/static/media/kattstallet.cded2fbc0ea2d24809c8.png",
-    "static/media/Karina.png": "/static/media/Karina.23bc3bc4b7cff5f1d916.png",
     "static/media/dog.png": "/static/media/dog.e8f830ae009742b2a2df.png",
     "static/media/PPlogo.png": "/static/media/PPlogo.9ce55b2e0ae1b874b943.png",
     "static/media/cat3.png": "/static/media/cat3.1da29d5788ae19d041e3.png",
@@ -28,12 +27,12 @@
     "static/media/BMClogo.png": "/static/media/BMClogo.a3e6bb8ebf181b4147d5.png",
     "static/media/linkedin.png": "/static/media/linkedin.aac2bd0e899c2f82cb7b.png",
     "index.html": "/index.html",
-    "main.eb427ae6.css.map": "/static/css/main.eb427ae6.css.map",
-    "main.24155ccd.js.map": "/static/js/main.24155ccd.js.map",
+    "main.860c415d.css.map": "/static/css/main.860c415d.css.map",
+    "main.e1ed0ffe.js.map": "/static/js/main.e1ed0ffe.js.map",
     "787.0573d3aa.chunk.js.map": "/static/js/787.0573d3aa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb427ae6.css",
-    "static/js/main.24155ccd.js"
+    "static/css/main.860c415d.css",
+    "static/js/main.e1ed0ffe.js"
   ]
 }

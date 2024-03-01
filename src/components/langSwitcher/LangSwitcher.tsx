@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from "react";
+import React, { FC, ReactNode, useEffect } from "react";
 // import langUkr from "../../Img/langUkr.png";
 // import langEng from "../../Img/langEng.png";
 import styles from "./LangSwitcher.module.css";
@@ -32,14 +32,13 @@ const useQuery = () => {
 };
 
 export type PawsLangStrings = {
-  [lang in PawsLanguage]: { [key: string]: string };
+  [lang in PawsLanguage]: { [key: string]: ReactNode };
 };
 
 export const useTranslate = (strings: PawsLangStrings) => {
   const browserLanguages = getBrowserLanguages();
   const guessFn = () => {
-    if (browserLanguages.includes("uk") || browserLanguages.includes("ru"))
-      return PawsLanguage.Ukr;
+    if (browserLanguages.includes("uk") || browserLanguages.includes("ru")) return PawsLanguage.Ukr;
     if (browserLanguages.includes("sv")) return PawsLanguage.Swe;
     return PawsLanguage.Eng;
   };
@@ -48,12 +47,16 @@ export const useTranslate = (strings: PawsLangStrings) => {
   const [cookies] = useCookies(["lang"]);
   const lang = (cookies.lang as PawsLanguage) || guessedLanguage;
 
-  const translate = (key: string) => {
-    const candidate = strings[lang][key];
-    return candidate !== undefined ? candidate : key;
+  const translate = (key: string): string => {
+    const candidate = strings[lang][key] ?? key;
+    return candidate.toString();
   };
 
-  return { lang, translate };
+  const translateJsx = (key: string): ReactNode => {
+    return strings[lang][key] ?? key;
+  };
+
+  return { lang, translate, translateJsx };
 };
 
 export const LangSwitcherPage: FC<LangSwitcherSetProps> = ({ lang }) => {
@@ -99,26 +102,17 @@ export const LangSwitcher = () => {
   return (
     <Col>
       <Row>
-        <Link
-          to={`${PawsUrl.Ukrainian}?referrer=${location.pathname}`}
-          className={ukrSwitchStyle}
-        >
+        <Link to={`${PawsUrl.Ukrainian}?referrer=${location.pathname}`} className={ukrSwitchStyle}>
           Українська
         </Link>
       </Row>
       <Row>
-        <Link
-          to={`${PawsUrl.English}?referrer=${location.pathname}`}
-          className={engSwitchStyle}
-        >
+        <Link to={`${PawsUrl.English}?referrer=${location.pathname}`} className={engSwitchStyle}>
           English
         </Link>
       </Row>
       <Row>
-        <Link
-          to={`${PawsUrl.Swedish}?referrer=${location.pathname}`}
-          className={sweSwitchStyle}
-        >
+        <Link to={`${PawsUrl.Swedish}?referrer=${location.pathname}`} className={sweSwitchStyle}>
           Svenska
         </Link>
       </Row>

@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 interface PawsCardProps {
   topImage?: string;
   image?: string;
-  title?: string;
-  text?: string | ReactNode;
+  title?: ReactNode;
+  text?: ReactNode;
   buttonText?: string;
   buttonLink?: string;
   buttonStyle?: ButtonStyle;
@@ -38,35 +38,22 @@ export const PawsCard: FC<PawsCardProps> = ({
     {/* Top image is defined */}
     {topImage && (
       <div className={styles.pawsCardTopImageWrap}>
-        <Card.Img
-          className={styles.pawsCardTopImage}
-          variant="top"
-          src={topImage}
-          alt={title}
-        />
+        <Card.Img className={styles.pawsCardTopImage} variant="top" src={topImage} alt={title?.toString()} />
       </div>
     )}
     {/* Square image is defined */}
-    {image && (
-      <Card.Img
-        src={image}
-        className={classNames(styles.pawsCardImage)}
-        alt={title}
-      />
-    )}
+    {image && <Card.Img src={image} className={classNames(styles.pawsCardImage)} alt={title?.toString()} />}
     {/* Fallback - no image defined */}
     {!topImage && !image && (
       <Card.Img
         variant="top"
         src={logo2}
         className={classNames(styles.pawsCardImage, styles.desaturated)}
-        alt={title}
+        alt={title?.toString()}
       />
     )}
     <Card.Body className={styles.pawsCardBody}>
-      <Card.Title className={classNames(styles.pawsCardTitle)}>
-        {title}
-      </Card.Title>
+      <Card.Title className={classNames(styles.pawsCardTitle)}>{title}</Card.Title>
 
       <Card.Text className={classNames(styles.pawsCardText)}>{text}</Card.Text>
 
