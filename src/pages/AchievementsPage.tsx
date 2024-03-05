@@ -6,6 +6,7 @@ import { PawsFacebook, PawsIfYouHaveQuestions, PawsInstagram } from "../componen
 import Collapsible from "react-collapsible";
 import styles from "../App.module.css";
 import { Col, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const strings: PawsLangStrings = {
   [PawsLanguage.Swe]: {
@@ -43,6 +44,14 @@ const strings: PawsLangStrings = {
     Accreditations: "Ackrediteringar",
     Statistics: "Statistik",
     "text.Total requests for help in 2022-2023": "Antal hjälpbegäranden 2022-2023",
+    "link.kattliv2-2024": "Artikel publicerad i numret 2/2024 av Kattliv.",
+    "text.omKattliv":
+      "Kattliv — Sveriges största kattmagasin! " +
+      "Spinnande kattläsning, vackra kattbilder, veterinärråd samt beteenderåd, " +
+      "pryltester, kattreportage, tävlingar, intervjuer med kända och okända " +
+      "kattägare, raspresentationer och mycket mer. Kattliv - För alla oss som " +
+      "älskar katter!",
+    "link.pdf": "Ladda ner som PDF-fil",
   },
   [PawsLanguage.Ukr]: {
     "Activity reports": "Звіти про діяльність",
@@ -79,6 +88,13 @@ const strings: PawsLangStrings = {
     Accreditations: "Акредитації",
     Statistics: "Статистика",
     "text.Total requests for help in 2022-2023": "Всього запитів на допомогу в 2022-2023 роках",
+    "link.kattliv2-2024": "Стаття опублікована в номері 2/2024 журналу Kattliv.",
+    "text.omKattliv":
+      "Kattliv — найбільший в Швеції журнал про кішок! " +
+      "Цікаві статті, чудові фотографії, ветеринарні та поведінкові поради, " +
+      "тестування товарів, репортажі про кішок, конкурси, інтерв'ю з відомими та невідомими " +
+      "власниками кішок, описи порід та багато іншого. Kattliv - для всіх нас, хто любить кішок!",
+    "link.pdf": "Завантажити у форматі PDF",
   },
   [PawsLanguage.Eng]: {
     "text.reports": "We regularly publish activity reports in our social media accounts",
@@ -108,6 +124,13 @@ const strings: PawsLangStrings = {
     "region.Chernyhyv": "Chernyhyvska region",
     "text.total": "Total",
     "text.Total requests for help in 2022-2023": "Total requests for help in 2022-2023",
+    "link.kattliv2-2024": "Article published in issue 2/2024 of Kattliv.",
+    "text.omKattliv":
+      "Kattliv — Sweden's largest cat magazine! " +
+      "Purring cat reading, beautiful cat pictures, veterinary advice and behavior advice, " +
+      "product tests, cat reports, competitions, interviews with famous and unknown " +
+      "cat owners, breed presentations and much more. Kattliv - For all of us who love cats!",
+    "link.pdf": "Download as PDF file",
   },
 };
 
@@ -211,17 +234,12 @@ const AchievementsPage = () => {
   return (
     <>
       {/*<PawsFacebookScript />*/}
-
       <Header currentPageId="achievements" />
-
       <h3>{t("Activity reports")}</h3>
-
       <p>
         {t("text.reports")}: <PawsFacebook />, <PawsInstagram />
       </p>
-
       <h3>{t("Statistics")}</h3>
-
       <Row className={"my-3"}>
         <p>
           {t("text.Total requests for help in 2022-2023")}: <strong>525</strong>
@@ -248,17 +266,21 @@ const AchievementsPage = () => {
           </Collapsible>
         </Col>
       </Row>
-
       <h3>{t("Awards")}</h3>
       <h3>{t("Media Mentions")}</h3>
+      <p>
+        <Link to="https://readly.com/products/magazine/kattliv">{t("link.kattliv2-2024")}</Link>
+      </p>
+      <p>{t("text.omKattliv")}</p>
+      <p>
+        <a href="/publications/kattliv-202402.pdf">{t("link.pdf")}</a>
+      </p>
       <h3>{t("Events and Demonstrations")}</h3>
       {/*<h3>{t("Public Actions")}</h3>*/}
       <h3>{t("Accreditations")}</h3>
-
       <p>
         <PawsIfYouHaveQuestions />
       </p>
-
       <Footer />
     </>
   );

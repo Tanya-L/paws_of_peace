@@ -47,7 +47,7 @@ const strings: PawsLangStrings = {
         Учасники Paws of Peace — це люди, які підтримують нашу місію та діяльність. Членський внесок: 250 кр/рік для
         дорослих або 100 кр/рік для біженців та студентів, які можуть не мати стабільного доходу. Учасники можуть брати
         участь у щорічних зборах та голосувати за членів правління на наступний рік.{" "}
-        <Link to={pawsMemberFormUrl}>Заповніть форму учасника</Link>в формі також є QR-код для переводу членського
+        <Link to={pawsMemberFormUrl}>Заповніть форму учасника</Link> в формі також є QR-код для переводу членського
         внеску (на суму 100 або 250 крон).
       </>
     ),
@@ -68,8 +68,8 @@ const strings: PawsLangStrings = {
     "Support us through becoming a member": "Stöd oss genom att bli medlem",
     "text.board": (
       <>
-        Styrelsen väljs för {styrelsenValdFor} och kan omväljas eller ändras tidigt {styrelsenValdFor + 1}
-        Alla betalande medlemmar kan delta i årsmötet, rösta och kan också väljas som styrelsemedlemmar. Du kan kontakta
+        Styrelsen väljs för {styrelsenValdFor} och kan omväljas eller ändras tidigt {styrelsenValdFor + 1}. Alla
+        betalande medlemmar kan delta i årsmötet, rösta och kan också väljas som styrelsemedlemmar. Du kan kontakta
         styrelsen genom att skicka ett e-postmeddelande till <MailTo email="board@pawsofpeace.se" />.
       </>
     ),
@@ -93,10 +93,9 @@ const strings: PawsLangStrings = {
     "Larisa Ostapenko": "Larisa Ostapenko",
     "text.board": (
       <>
-        The current board is elected for ${styrelsenValdFor} and can be re-elected or changed early in $
-        {styrelsenValdFor + 1}. " + "All paying members can join the annual meeting, cast their votes and also can be
-        elected as board members. You can contact the board by sending an email to{" "}
-        <MailTo email="board@pawsofpeace.se" />.
+        The current board is elected for {styrelsenValdFor} and can be re-elected or changed early in{" "}
+        {styrelsenValdFor + 1}. All paying members can join the annual meeting, cast their votes and also can be elected
+        as board members. You can contact the board by sending an email to <MailTo email="board@pawsofpeace.se" />.
       </>
     ),
     "text.volunteer":

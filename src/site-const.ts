@@ -19,7 +19,7 @@ export const pawsBuymeacoffee = "https://www.buymeacoffee.com/TanyaL";
 export const pawsPaypal = "https://www.paypal.com/donate/?hosted_button_id=CESU98W7BR43S";
 
 export const orgNr = "802545-0886";
-export const styrelsenValdFor: string = "2024";
+export const styrelsenValdFor: number = 2024;
 
 export const pawsFacebook = "https://www.facebook.com/pawsofpeace";
 export const pawsInstagram = "https://www.instagram.com/thepawsofpeace/";
